@@ -4,6 +4,7 @@ class_name CharacterStateMachine
 
 @export var current_state : State
 @export var character : CharacterBody2D
+@export var animation_tree :AnimationTree 
 
 var states: Array[State]
 
@@ -13,6 +14,7 @@ func _ready():
 			states.append(child)
 			
 			child.character = character
+			child.playback = animation_tree["parameters/playback"]
 		else:
 			push_warning("child " + child.name + "is not a  Character State")
 
