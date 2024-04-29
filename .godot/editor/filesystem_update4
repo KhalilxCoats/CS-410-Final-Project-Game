@@ -1,3 +1,11 @@
-res://Levels/level.tscn
 res://Characters/LandingState.gd
+res://Characters/testEnemy.tscn
+res://Levels/level.tscn
 res://Characters/Fire Knight.tscn
+res://Characters/Character.gd
+res://Characters/Default.gd
+res://Characters/testEnemy/testEnemy.tscn
+res://Characters/testEnemy/AttackState.gd
+res://Characters/testEnemy/DefaultState.gd
+res://Characters/CharacterStateMachine.gd
+res://Characters/State.gd
