@@ -10,4 +10,5 @@ func state_process(delta):
 		next_state = landing_state
 
 func on_exit():
-	playback.travel(landing_animation)
+	if(next_state == landing_state):
+		playback.travel(landing_animation)

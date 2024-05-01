@@ -245,8 +245,6 @@ advance_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mydij"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ib7hj"]
-switch_mode = 2
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i51pn"]
 switch_mode = 2
@@ -258,12 +256,13 @@ states/Start/position = Vector2(427, 270)
 states/jump/node = SubResource("AnimationNodeAnimation_j6bhb")
 states/jump/position = Vector2(662, 156)
 states/land/node = SubResource("AnimationNodeAnimation_o3ux6")
-states/land/position = Vector2(849, 255)
+states/land/position = Vector2(852, 278)
 states/move/node = SubResource("AnimationNodeBlendSpace1D_p1gl1")
 states/move/position = Vector2(656, 270)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_2p227"), "move", "jump", SubResource("AnimationNodeStateMachineTransition_mydij"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_ib7hj"), "land", "move", SubResource("AnimationNodeStateMachineTransition_i51pn")]
 
 [node name="playerCharacter" type="CharacterBody2D"]
+floor_stop_on_slope = false
 safe_margin = 0.01
 script = ExtResource("1_lncs4")
 
@@ -282,12 +281,13 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 libraries = {
 "": SubResource("AnimationLibrary_syyae")
 }
 tree_root = SubResource("AnimationNodeStateMachine_b4iqi")
 anim_player = NodePath("../AnimationPlayer")
-parameters/move/blend_position = 0.025
+parameters/move/blend_position = 0.00171328
 
 [node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
 script = ExtResource("4_vb18u")
