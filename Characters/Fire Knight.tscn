@@ -291,7 +291,7 @@ parameters/move/blend_position = 0.025
 
 [node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
 script = ExtResource("4_vb18u")
-current_state = NodePath("Air")
+current_state = NodePath("Ground")
 character = NodePath("..")
 animation_tree = NodePath("../AnimationTree")
 
