@@ -11,10 +11,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cp1bt"]
 height = 42.0
 
-[sub_resource type="Animation" id="Animation_do70g"]
-resource_name = "Flight"
+[sub_resource type="Animation" id="Animation_02cw6"]
+resource_name = "Attack"
 length = 1.00001
-loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -26,7 +25,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_f6daw")]
+"values": [ExtResource("2_rueq7")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -53,36 +52,9 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
-[sub_resource type="Animation" id="Animation_je46h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_02cw6"]
-resource_name = "Attack"
-length = 1.00001
+[sub_resource type="Animation" id="Animation_r37be"]
+resource_name = "Death"
+length = 0.500013
 step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -94,7 +66,49 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_rueq7")]
+"values": [ExtResource("4_yh3wn")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_do70g"]
+resource_name = "Flight"
+length = 1.00001
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_f6daw")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -162,21 +176,19 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_r37be"]
-resource_name = "Death"
-length = 0.500013
-step = 0.125
+[sub_resource type="Animation" id="Animation_je46h"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_yh3wn")]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -188,19 +200,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [4]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
+"values": [1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b2jp8"]
@@ -250,7 +250,7 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_a2kq5"]
 states/Attack/node = SubResource("AnimationNodeAnimation_yoq0n")
-states/Attack/position = Vector2(466.667, 32)
+states/Attack/position = Vector2(465.889, 32)
 states/Death/node = SubResource("AnimationNodeAnimation_k35cl")
 states/Death/position = Vector2(661, 99.7778)
 states/Flight/node = SubResource("AnimationNodeAnimation_282dg")
@@ -283,11 +283,11 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_a2kq5")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "animation_tree", "character")]
+[node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
 script = ExtResource("1_5yt7g")
 current_state = NodePath("Default")
-animation_tree = NodePath("../AnimationTree")
 character = NodePath("..")
+animation_tree = NodePath("../AnimationTree")
 
 [node name="Default" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("attack_state")]
 script = ExtResource("6_hscfx")

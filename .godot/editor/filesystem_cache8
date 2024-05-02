@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714415754
+::res://::1714605149
 icon.svg::CompressedTexture2D::6610577374880866086::1713424273::1713424278::1::::<><>::
 ::res://addons/::1713474126
 ::res://addons/godot-git-plugin/::1713474127
@@ -8,7 +8,7 @@ plugin.cfg::TextFile::-1::1713474127::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1713474127::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1713474127
 ::res://addons/godot-git-plugin/macos/::1713474127
-::res://addons/godot-git-plugin/win64/::1714415749
+::res://addons/godot-git-plugin/win64/::1714605144
 ::res://assets/::1713695755
 ::res://assets/characters/::1713695747
 ::res://assets/characters/npc/::1713695747
@@ -3707,17 +3707,20 @@ tile79.png::CompressedTexture2D::8377846259319867363::1713426804::1713426814::1:
 tile80.png::CompressedTexture2D::7172553715407182970::1713426804::1713426814::1::::<><>::
 tile81.png::CompressedTexture2D::7042830601632282686::1713426804::1713426814::1::::<><>::
 tile82.png::CompressedTexture2D::1126279696513954962::1713426804::1713426815::1::::<><>::
-::res://Characters/::1714415560
-AirState.gd::GDScript::-1::1714415477::0::1::::AirState<>State<>::
+::res://Characters/::1714561626
+AirState.gd::GDScript::-1::1714559099::0::1::::AirState<>State<>::
 Character.gd::GDScript::-1::1714415477::0::1::::<>CharacterBody2D<>::
 Character.tscn::PackedScene::4093913657604637736::1713595978::0::1::::<><>::res://Characters/Character.gd<>uid://orthistlk8k7::::res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Fall.png<>uid://c71ruqvxj7mh1::::res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Idle.png<>uid://bybn2kxle0yp7::::res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Jump.png<>uid://drtxjcedl5tv8::::res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Run.png
 CharacterStateMachine.gd::GDScript::-1::1714415560::0::1::::CharacterStateMachine<>Node<>::
-Fire Knight.tscn::PackedScene::5048910450638387784::1714415477::0::1::::<><>::res://Characters/Character.gd<>uid://bygdv85xcdjgx::::res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png<>uid://tn8ugcmxplve::::res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png<>res://Characters/CharacterStateMachine.gd<>uid://b63qnwyjebvae::::res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png<>res://Characters/AirState.gd<>res://Characters/GroundState.gd<>res://Characters/LandingState.gd<>res://Characters/stateLabel.gd
-GroundState.gd::GDScript::-1::1714415477::0::1::::GroundState<>State<>::
-LandingState.gd::GDScript::-1::1714415560::0::1::::LandingState<>State<>::
+Fire Knight.tscn::PackedScene::5048910450638387784::1714561626::0::1::::<><>::res://Characters/Character.gd<>uid://bygdv85xcdjgx::::res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png<>uid://tn8ugcmxplve::::res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png<>res://Characters/CharacterStateMachine.gd<>uid://b63qnwyjebvae::::res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png<>res://Characters/AirState.gd<>res://Characters/GroundState.gd<>res://Characters/LandingState.gd<>res://Characters/stateLabel.gd
+GroundState.gd::GDScript::-1::1714557608::0::1::::GroundState<>State<>::
+LandingState.gd::GDScript::-1::1714561531::0::1::::LandingState<>State<>::
 State.gd::GDScript::-1::1714415477::0::1::::State<>Node<>::
 stateLabel.gd::GDScript::-1::1713592176::0::1::::<>Label<>::
-::res://Characters/Enemies/::1714415709
-testEnemy.tscn::PackedScene::3558179399874417708::1714415709::0::1::::<><>::uid://3gqqb8u2rsdx::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png<>uid://bqykb4rorfk3i::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png<>uid://dwlfk50heoate::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png<>uid://cwgep40cs7oj::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png<>res://Characters/CharacterStateMachine.gd<>res://Characters/testEnemy/DefaultState.gd<>res://Characters/testEnemy/AttackState.gd
-::res://Levels/::1714415477
-level.tscn::PackedScene::4720839038676477453::1714415477::0::1::::<><>::uid://dmt70jvoimdm4::::res://assets/Tiles/tileset/tileset.png<>uid://cd6y218ysgqds::::res://Characters/Fire Knight.tscn
+::res://Characters/Enemies/::1714416568
+::res://Characters/Enemies/testEnemy/::1714561626
+AttackState.gd::GDScript::-1::1714377328::0::1::::<>State<>::
+DefaultState.gd::GDScript::-1::1714377758::0::1::::<>State<>::
+testEnemy.tscn::PackedScene::8689922222261318095::1714561626::0::1::::<><>::res://Characters/CharacterStateMachine.gd<>uid://3gqqb8u2rsdx::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png<>uid://bqykb4rorfk3i::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png<>uid://cwgep40cs7oj::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png<>uid://dwlfk50heoate::::res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png<>res://Characters/Enemies/testEnemy/DefaultState.gd<>res://Characters/Enemies/testEnemy/AttackState.gd
+::res://Levels/::1714561625
+level.tscn::PackedScene::4720839038676477453::1714561625::0::1::::<><>::uid://dmt70jvoimdm4::::res://assets/Tiles/tileset/tileset.png<>uid://cd6y218ysgqds::::res://Characters/Fire Knight.tscn
