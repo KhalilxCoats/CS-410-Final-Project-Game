@@ -1,4 +1,4 @@
-res://Characters/Fire Knight.tscn
-res://Characters/LandingState.gd
 res://Levels/level.tscn
+res://Characters/LandingState.gd
+res://Characters/Fire Knight.tscn
 res://Characters/Enemies/testEnemy/testEnemy.tscn

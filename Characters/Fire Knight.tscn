@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cd6y218ysgqds"]
+[gd_scene load_steps=29 format=3 uid="uid://cd6y218ysgqds"]
 
 [ext_resource type="Script" path="res://Characters/Character.gd" id="1_lncs4"]
 [ext_resource type="Texture2D" uid="uid://bygdv85xcdjgx" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
@@ -39,6 +39,45 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ylxth"]
+resource_name = "attack 1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
 }
 
 [sub_resource type="Animation" id="Animation_4lnnv"]
@@ -207,6 +246,7 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_syyae"]
 _data = {
 "RESET": SubResource("Animation_ms3pd"),
+"attack 1": SubResource("Animation_ylxth"),
 "idle": SubResource("Animation_4lnnv"),
 "jump": SubResource("Animation_xy24d"),
 "land": SubResource("Animation_vdx70"),
@@ -259,6 +299,7 @@ states/land/position = Vector2(852, 278)
 states/move/node = SubResource("AnimationNodeBlendSpace1D_p1gl1")
 states/move/position = Vector2(656, 270)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_2p227"), "move", "jump", SubResource("AnimationNodeStateMachineTransition_mydij"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_ib7hj"), "land", "move", SubResource("AnimationNodeStateMachineTransition_i51pn")]
+graph_offset = Vector2(0, 51.8806)
 
 [node name="playerCharacter" type="CharacterBody2D"]
 floor_stop_on_slope = false
