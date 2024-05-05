@@ -1,9 +1,0 @@
-res://Menus/character_select_v_2.tscn
-res://Menus/options_menu.tscn
-res://Levels/level.tscn
-res://Characters/LandingState.gd
-res://Characters/Fire Knight.tscn
-res://Characters/Enemies/testEnemy/testEnemy.tscn
-res://Menus/character_select_v_2.gd
-res://Menus/menu.tscn
-res://Menus/options_menu.gd
