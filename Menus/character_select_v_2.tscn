@@ -1,0 +1,196 @@
+[gd_scene load_steps=21 format=3 uid="uid://cxdbmvpv4xale"]
+
+[ext_resource type="Script" path="res://Menus/character_select_v_2.gd" id="1_qinu0"]
+[ext_resource type="Texture2D" uid="uid://c12tv4rfg86dg" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/fire_knight.png" id="2_h7glp"]
+[ext_resource type="Texture2D" uid="uid://dt7d0l8qeaecx" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_1.png" id="2_up4sm"]
+[ext_resource type="Texture2D" uid="uid://oupgc6umgb63" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_2.png" id="3_nvt6v"]
+[ext_resource type="Texture2D" uid="uid://cpnfsskwpaw3g" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_3.png" id="4_oarib"]
+[ext_resource type="Texture2D" uid="uid://bg72ltvm8j4v6" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_4.png" id="5_x0oln"]
+[ext_resource type="Texture2D" uid="uid://62bwbe6b7xq4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_5.png" id="6_tcujx"]
+[ext_resource type="Texture2D" uid="uid://cmjghx0qa2o64" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_7.png" id="7_qwjr8"]
+[ext_resource type="Texture2D" uid="uid://caa6k6t73xwc5" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_6.png" id="8_knrvw"]
+[ext_resource type="Texture2D" uid="uid://dipmifns60i4a" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/idle_8.png" id="9_h05em"]
+[ext_resource type="Texture2D" uid="uid://c4oancgw7226y" path="res://assets/characters/playable/Elementals_ground_monk_FULL_v1.3/ground_monk.png" id="11_yhqb3"]
+[ext_resource type="Texture2D" uid="uid://dqh40ku5fpfe5" path="res://assets/characters/playable/Elementals_ground_monk_FULL_v1.3/png/idle/idle_1.png" id="12_6m7a3"]
+[ext_resource type="Texture2D" uid="uid://bggqmas4lvblj" path="res://assets/characters/playable/Elementals_lightning_ronin_full_v1.0/lightning_ronin.png" id="13_nabxn"]
+[ext_resource type="Texture2D" uid="uid://d3smmf7pw70hc" path="res://assets/characters/playable/Elementals_lightning_ronin_full_v1.0/animations/PNG/idle/idle_1.png" id="14_xd663"]
+[ext_resource type="Texture2D" uid="uid://bvldwun2ydwxc" path="res://assets/characters/playable/Elementals_water_priestess_FULL_v1.1/water_priestess.png" id="15_4vomm"]
+[ext_resource type="Texture2D" uid="uid://be3lw2ernnqfi" path="res://assets/characters/playable/Elementals_water_priestess_FULL_v1.1/Elementals_water_priestess_FULL_v1.1/png/01_idle/idle_1.png" id="16_hcot7"]
+[ext_resource type="Texture2D" uid="uid://crk40gepcmi31" path="res://assets/characters/playable/elementals_wind_hashashin_FULL_v1.1/wind_hashashin.png" id="17_5fvrx"]
+[ext_resource type="Texture2D" uid="uid://5q2dkxipufe4" path="res://assets/characters/playable/elementals_wind_hashashin_FULL_v1.1/PNG/idle/idle_1.png" id="18_eufpv"]
+[ext_resource type="Texture2D" uid="uid://c6oqhie0ivqa1" path="res://assets/Tiles/Background Cave/03 water.png" id="19_hlrxt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efwtn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_up4sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nvt6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oarib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x0oln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tcujx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qwjr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_knrvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h05em")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterSelectV2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = 16.0
+offset_right = -40.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qinu0")
+
+[node name="ReturnToMain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 450.0
+offset_right = 224.0
+offset_bottom = 481.0
+text = "Return to main menu
+"
+
+[node name="FireKnight" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 172.0
+text = "Fire Knight"
+icon = ExtResource("2_h7glp")
+
+[node name="FireKnightSprite" type="Sprite2D" parent="FireKnight"]
+position = Vector2(2.08165e-12, -300)
+scale = Vector2(5, 5)
+texture = ExtResource("2_up4sm")
+centered = false
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="FireKnight"]
+visible = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FireKnight/CharacterBody2D"]
+visible = false
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_efwtn")
+animation = &"idle"
+frame = 7
+frame_progress = 1.0
+
+[node name="CharacterSelectTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 50.0
+offset_right = 587.0
+offset_bottom = 73.0
+text = "Choose Your Character"
+
+[node name="GroundMonk" type="Button" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 100.0
+offset_right = 460.0
+offset_bottom = 172.0
+text = "Ground Monk"
+icon = ExtResource("11_yhqb3")
+
+[node name="GroundMonkSprite" type="Sprite2D" parent="GroundMonk"]
+position = Vector2(-200, -270)
+scale = Vector2(5, 5)
+texture = ExtResource("12_6m7a3")
+centered = false
+
+[node name="LightningRonin" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 180.0
+offset_right = 250.0
+offset_bottom = 252.0
+text = "Lightning Ronin
+"
+icon = ExtResource("13_nabxn")
+
+[node name="LightningRoninSprite" type="Sprite2D" parent="LightningRonin"]
+position = Vector2(2.08165e-12, -375)
+scale = Vector2(5, 5)
+texture = ExtResource("14_xd663")
+centered = false
+
+[node name="WaterPreistess" type="Button" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 180.0
+offset_right = 460.0
+offset_bottom = 252.0
+text = "Water Preistess"
+icon = ExtResource("15_4vomm")
+
+[node name="WaterPreistessSprite" type="Sprite2D" parent="WaterPreistess"]
+position = Vector2(-200, -380)
+scale = Vector2(5, 5)
+texture = ExtResource("16_hcot7")
+centered = false
+
+[node name="WindHashashin" type="Button" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 260.0
+offset_right = 356.0
+offset_bottom = 332.0
+text = "Wind Hashashin
+"
+icon = ExtResource("17_5fvrx")
+
+[node name="WindHashashinSprite" type="Sprite2D" parent="WindHashashin"]
+position = Vector2(-100, -450)
+scale = Vector2(5, 5)
+texture = ExtResource("18_eufpv")
+centered = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("19_hlrxt")
+centered = false
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="pressed" from="ReturnToMain" to="." method="_on_return_to_main_pressed"]
+[connection signal="mouse_entered" from="FireKnight" to="." method="_on_fire_knight_mouse_entered"]
+[connection signal="mouse_exited" from="FireKnight" to="." method="_on_fire_knight_mouse_exited"]
+[connection signal="pressed" from="FireKnight" to="." method="_on_fire_knight_pressed"]
+[connection signal="mouse_entered" from="GroundMonk" to="." method="_on_ground_monk_mouse_entered"]
+[connection signal="mouse_exited" from="GroundMonk" to="." method="_on_ground_monk_mouse_exited"]
+[connection signal="mouse_entered" from="LightningRonin" to="." method="_on_lightning_ronin_mouse_entered"]
+[connection signal="mouse_exited" from="LightningRonin" to="." method="_on_lightning_ronin_mouse_exited"]
+[connection signal="mouse_entered" from="WaterPreistess" to="." method="_on_water_preistess_mouse_entered"]
+[connection signal="mouse_exited" from="WaterPreistess" to="." method="_on_water_preistess_mouse_exited"]
+[connection signal="mouse_entered" from="WindHashashin" to="." method="_on_wind_hashashin_mouse_entered"]
+[connection signal="mouse_exited" from="WindHashashin" to="." method="_on_wind_hashashin_mouse_exited"]

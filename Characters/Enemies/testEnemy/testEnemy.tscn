@@ -277,9 +277,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_b2jp8")
-}
 tree_root = SubResource("AnimationNodeStateMachine_a2kq5")
 anim_player = NodePath("../AnimationPlayer")
 

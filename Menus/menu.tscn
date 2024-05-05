@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpqieb0xluenk"]
+
+[ext_resource type="Texture2D" uid="uid://c6oqhie0ivqa1" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+
+[sub_resource type="GDScript" id="GDScript_5cvnc"]
+script/source = "extends Control
+
+func _on_play_pressed():
+	get_tree().change_scene_to_file(\"res://Menus/character_select_v_2.tscn\")
+
+
+
+func _on_options_pressed():
+	get_tree().change_scene_to_file(\"res://Menus/options_menu.tscn\")
+
+
+func _on_quit_pressed():
+	get_tree().quit()
+"
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_5cvnc")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 326.0
+offset_top = 100.0
+offset_right = 826.0
+offset_bottom = 150.0
+text = "Untitled Game
+"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 250.0
+offset_right = 826.0
+offset_bottom = 372.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -1
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_i8hxu")
+centered = false
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
