@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfbb7u6nn5ia7"
-path="res://.godot/imported/FlameDemon.png-91e0f727806d817535af0944e8f6b4d3.ctex"
+path="res://.godot/imported/FlameDemon.png-5377af8190cb28ddc381694af43344b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npc/FlameDemon.png"
-dest_files=["res://.godot/imported/FlameDemon.png-91e0f727806d817535af0944e8f6b4d3.ctex"]
+source_file="res://assets/characters/npc/enemies/FlameDemon.png"
+dest_files=["res://.godot/imported/FlameDemon.png-5377af8190cb28ddc381694af43344b2.ctex"]
 
 [params]
 
