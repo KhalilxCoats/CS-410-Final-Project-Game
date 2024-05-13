@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diq6ebrh0lvgh"
-path="res://.godot/imported/mainlev_build.png-42ff585e6222224bcdb2281b59a36104.ctex"
+path="res://.godot/imported/mainlev_build.png-c9a5771a5428d221998dbc864a5fb698.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/PixelFantasy_Caves_1.0/mainlev_build.png"
-dest_files=["res://.godot/imported/mainlev_build.png-42ff585e6222224bcdb2281b59a36104.ctex"]
+source_file="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png"
+dest_files=["res://.godot/imported/mainlev_build.png-c9a5771a5428d221998dbc864a5fb698.ctex"]
 
 [params]
 

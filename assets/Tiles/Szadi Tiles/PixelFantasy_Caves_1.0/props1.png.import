@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blbunt0836yk6"
-path="res://.godot/imported/props1.png-2ffd22fb81251189e6e739723920e9f6.ctex"
+path="res://.godot/imported/props1.png-e17f557de4de010f7db5cfb603a5aebf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png"
-dest_files=["res://.godot/imported/props1.png-2ffd22fb81251189e6e739723920e9f6.ctex"]
+source_file="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/props1.png"
+dest_files=["res://.godot/imported/props1.png-e17f557de4de010f7db5cfb603a5aebf.ctex"]
 
 [params]
 

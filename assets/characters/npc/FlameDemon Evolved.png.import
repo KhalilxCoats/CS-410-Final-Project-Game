@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1vvxpl0vhue8"
-path="res://.godot/imported/FlameDemon Evolved.png-e40f2ba3bac73d68d054fbd5b428be52.ctex"
+path="res://.godot/imported/FlameDemon Evolved.png-01d17e4e67bf7a18d912622626753487.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npc/enemies/FlameDemon Evolved.png"
-dest_files=["res://.godot/imported/FlameDemon Evolved.png-e40f2ba3bac73d68d054fbd5b428be52.ctex"]
+source_file="res://assets/characters/npc/FlameDemon Evolved.png"
+dest_files=["res://.godot/imported/FlameDemon Evolved.png-01d17e4e67bf7a18d912622626753487.ctex"]
 
 [params]
 
