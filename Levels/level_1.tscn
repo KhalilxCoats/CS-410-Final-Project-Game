@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2fj7tq3ggwsa"]
+[gd_scene load_steps=9 format=3 uid="uid://b23k44mgwravy"]
 
 [ext_resource type="PackedScene" uid="uid://b8i2r82nr28fx" path="res://Levels/level.tscn" id="1_hrqlx"]
-[ext_resource type="Texture2D" uid="uid://34cmru4nuyer" path="res://assets/Tiles/4maps/1) Tilemaps/tiles-skulls.png" id="2_cuc60"]
-[ext_resource type="Texture2D" uid="uid://dufa5h24xs38c" path="res://assets/Tiles/PixelFantasy_Caves_1.0/background1.png" id="3_ojp20"]
-[ext_resource type="Texture2D" uid="uid://ei737b4onawg" path="res://assets/Tiles/PixelFantasy_Caves_1.0/background2.png" id="4_4csew"]
-[ext_resource type="Texture2D" uid="uid://dqthlnhfdkixe" path="res://assets/Tiles/PixelFantasy_Caves_1.0/background3.png" id="5_xqr0f"]
-[ext_resource type="Texture2D" uid="uid://dgx3tjw1byc4c" path="res://assets/Tiles/PixelFantasy_Caves_1.0/background4a.png" id="6_8aus4"]
+[ext_resource type="Texture2D" uid="uid://ddujymrcxav0j" path="res://assets/Tiles/4maps/1) Tilemaps/tiles-skulls.png" id="2_cuc60"]
+[ext_resource type="Texture2D" uid="uid://dlyc4rigyidjg" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="3_ojp20"]
+[ext_resource type="Texture2D" uid="uid://bed7f861kw5lx" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="4_4csew"]
+[ext_resource type="Texture2D" uid="uid://b3osmtr5ge33f" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="5_xqr0f"]
+[ext_resource type="Texture2D" uid="uid://bb7yj132ghmru" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="6_8aus4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3axgt"]
 texture = ExtResource("2_cuc60")

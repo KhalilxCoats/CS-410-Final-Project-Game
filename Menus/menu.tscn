@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpqieb0xluenk"]
 
-[ext_resource type="Texture2D" uid="uid://c6oqhie0ivqa1" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+[ext_resource type="Texture2D" uid="uid://dghui3q46hms" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
 script/source = "extends Control
@@ -20,11 +20,10 @@ func _on_quit_pressed():
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
+anchor_right = 0.608
+anchor_bottom = 0.619
+offset_right = -700.416
+offset_bottom = -401.112
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_5cvnc")
@@ -46,6 +45,7 @@ offset_left = 326.0
 offset_top = 250.0
 offset_right = 826.0
 offset_bottom = 372.0
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -76,5 +76,5 @@ centered = false
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]
