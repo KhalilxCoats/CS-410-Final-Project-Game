@@ -3083,8 +3083,6 @@ sources/0 = SubResource("TileSetAtlasSource_ufxbe")
 sources/1 = SubResource("TileSetAtlasSource_ivib1")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_oar5r"]
-vertices = PackedVector2Array(1188, 355, -328, 355, -328, 10, 1188, 10)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-338, 365, 1198, 365, 1198, 0, -338, 0)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 

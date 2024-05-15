@@ -1,10 +1,10 @@
 [gd_scene load_steps=28 format=3 uid="uid://dv2p0qj58phbj"]
 
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="1_5yt7g"]
-[ext_resource type="Texture2D" uid="uid://3gqqb8u2rsdx" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
-[ext_resource type="Texture2D" uid="uid://bqykb4rorfk3i" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
-[ext_resource type="Texture2D" uid="uid://cwgep40cs7oj" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
-[ext_resource type="Texture2D" uid="uid://dwlfk50heoate" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
+[ext_resource type="Texture2D" uid="uid://bn1vgdyvn4fxc" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
+[ext_resource type="Texture2D" uid="uid://pc5jrg2f70v8" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
+[ext_resource type="Texture2D" uid="uid://b3pgw1bhrqk7b" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
+[ext_resource type="Texture2D" uid="uid://ow0lsg0nrmlw" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/DefaultState.gd" id="6_hscfx"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/AttackState.gd" id="7_pv1si"]
 
@@ -277,6 +277,9 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b2jp8")
+}
 tree_root = SubResource("AnimationNodeStateMachine_a2kq5")
 anim_player = NodePath("../AnimationPlayer")
 
@@ -294,4 +297,4 @@ attack_state = NodePath("../Attack")
 script = ExtResource("7_pv1si")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_postprocessing = 1
+debug_enabled = true
