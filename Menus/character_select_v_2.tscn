@@ -170,6 +170,7 @@ texture = ExtResource("18_eufpv")
 centered = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(576, 2.08165e-12)

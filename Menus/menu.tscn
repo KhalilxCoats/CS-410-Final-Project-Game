@@ -26,6 +26,7 @@ offset_right = -700.416
 offset_bottom = -401.112
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.876974, 0.876974)
 script = SubResource("GDScript_5cvnc")
 metadata/_edit_group_ = true
 
@@ -76,5 +77,5 @@ centered = false
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
