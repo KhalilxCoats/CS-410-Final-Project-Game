@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cd6y218ysgqds"]
+[gd_scene load_steps=53 format=3 uid="uid://cd6y218ysgqds"]
 
 [ext_resource type="Script" path="res://Characters/Character.gd" id="1_lncs4"]
 [ext_resource type="Texture2D" uid="uid://5w530tge32bp" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://Characters/stateLabel.gd" id="8_d7xao"]
 [ext_resource type="Texture2D" uid="uid://b1lgl1gl7ltkd" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
 [ext_resource type="Script" path="res://Characters/Attack.gd" id="11_md3ro"]
+[ext_resource type="Script" path="res://Characters/State.gd" id="14_283ux"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53g3s"]
 radius = 11.6789
@@ -458,9 +459,9 @@ animation = &"run"
 blend_point_0/node = SubResource("AnimationNodeAnimation_5u1ue")
 blend_point_0/pos = 0.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_fu1b3")
-blend_point_1/pos = -1.0
+blend_point_1/pos = -0.1
 blend_point_2/node = SubResource("AnimationNodeAnimation_3twsc")
-blend_point_2/pos = 1.0
+blend_point_2/pos = 0.1
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nro2l"]
@@ -527,7 +528,7 @@ script = ExtResource("1_lncs4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4, -41)
-hframes = 20
+hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 1)
@@ -546,7 +547,7 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_b4iqi")
 anim_player = NodePath("../AnimationPlayer")
-parameters/move/blend_position = 0.00171328
+parameters/move/blend_position = 0.00837925
 
 [node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
 script = ExtResource("4_vb18u")
@@ -576,6 +577,12 @@ can_move = false
 [node name="Timer" type="Timer" parent="CharacterStateMachine/Attack"]
 wait_time = 0.335
 one_shot = true
+
+[node name="Defend" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("14_283ux")
+
+[node name="Dodge" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("14_283ux")
 
 [node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 offset_left = -34.0

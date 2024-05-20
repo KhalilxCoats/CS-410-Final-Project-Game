@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b8i2r82nr28fx"]
+[gd_scene load_steps=20 format=3 uid="uid://b8i2r82nr28fx"]
 
 [ext_resource type="Texture2D" uid="uid://cjfcbwpur7yqj" path="res://assets/Tiles/tileset/tileset.png" id="1_oyh2q"]
 [ext_resource type="Texture2D" uid="uid://nvq55mne2biy" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bed7f861kw5lx" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="7_erwi0"]
 [ext_resource type="Texture2D" uid="uid://b3osmtr5ge33f" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="8_df3lg"]
 [ext_resource type="Texture2D" uid="uid://bb7yj132ghmru" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="9_x1t7p"]
+[ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="12_68p4t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufxbe"]
 texture = ExtResource("1_oyh2q")
@@ -23560,3 +23561,6 @@ texture_repeat = 2
 position = Vector2(-383.25, 662)
 scale = Vector2(1.56302, 1.525)
 texture = ExtResource("9_x1t7p")
+
+[node name="enemyCharacter" parent="." instance=ExtResource("12_68p4t")]
+position = Vector2(426, 519)
