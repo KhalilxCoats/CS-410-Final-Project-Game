@@ -1,18 +1,18 @@
 [gd_scene load_steps=52 format=3 uid="uid://cd6y218ysgqds"]
 
 [ext_resource type="Script" path="res://Characters/Character.gd" id="1_lncs4"]
-[ext_resource type="Texture2D" uid="uid://6ma05ar745sm" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
-[ext_resource type="Texture2D" uid="uid://b8oqqiljlllrr" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
-[ext_resource type="Texture2D" uid="uid://boxa2l51dc5bu" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
+[ext_resource type="Texture2D" uid="uid://kmwnp5a7knf" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
+[ext_resource type="Texture2D" uid="uid://bkcigvajmybr4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
+[ext_resource type="Texture2D" uid="uid://dgh8bj4djd5vx" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="4_vb18u"]
-[ext_resource type="Texture2D" uid="uid://dhxr1wip0m0r0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
+[ext_resource type="Texture2D" uid="uid://ccu1neoi0hpho" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
 [ext_resource type="Script" path="res://Characters/AirState.gd" id="5_sw0be"]
 [ext_resource type="Script" path="res://Characters/GroundState.gd" id="5_uyt4m"]
 [ext_resource type="Script" path="res://Characters/LandingState.gd" id="6_5y2rv"]
-[ext_resource type="Texture2D" uid="uid://d65cveo8mvku" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
-[ext_resource type="Texture2D" uid="uid://01jkqs2qtup0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
+[ext_resource type="Texture2D" uid="uid://cmxicil33njk3" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
+[ext_resource type="Texture2D" uid="uid://bq4cab40np0o3" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
 [ext_resource type="Script" path="res://Characters/stateLabel.gd" id="8_d7xao"]
-[ext_resource type="Texture2D" uid="uid://1ol6eprjucxt" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
+[ext_resource type="Texture2D" uid="uid://c4upljj87pcm0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
 [ext_resource type="Script" path="res://Characters/Attack.gd" id="11_md3ro"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53g3s"]
@@ -541,9 +541,6 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
-libraries = {
-"": SubResource("AnimationLibrary_syyae")
-}
 tree_root = SubResource("AnimationNodeStateMachine_b4iqi")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = 0.00171328
@@ -585,6 +582,16 @@ offset_bottom = -24.0
 text = "state:"
 script = ExtResource("8_d7xao")
 state_machine = NodePath("../CharacterStateMachine")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.322069, 0.990593, 0.130506, 1)
+offset_left = -31.0
+offset_top = -60.0
+offset_right = 69.0
+offset_bottom = -33.0
+scale = Vector2(0.5, 0.5)
+value = 100.0
+show_percentage = false
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Landing" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]

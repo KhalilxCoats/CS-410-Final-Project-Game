@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpqieb0xluenk"]
+[gd_scene load_steps=4 format=3 uid="uid://cpqieb0xluenk"]
 
-[ext_resource type="Texture2D" uid="uid://dghui3q46hms" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+[ext_resource type="Texture2D" uid="uid://nq6d1q8tda4b" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+[ext_resource type="AudioStream" uid="uid://yusd1f4jxy8d" path="res://Music/2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3" id="2_aachl"]
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
 script/source = "extends Control
@@ -20,10 +21,10 @@ func _on_quit_pressed():
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchor_right = 0.608
-anchor_bottom = 0.619
-offset_right = -700.416
-offset_bottom = -401.112
+anchor_right = 1.0
+anchor_bottom = 1.091
+offset_right = -1152.0
+offset_bottom = -706.968
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_5cvnc")
@@ -73,6 +74,10 @@ z_index = -1
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("1_i8hxu")
 centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_aachl")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

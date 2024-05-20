@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b8i2r82nr28fx"]
 
-[ext_resource type="Texture2D" uid="uid://cdny3ll2ng3p" path="res://assets/Tiles/tileset/tileset.png" id="1_oyh2q"]
-[ext_resource type="Texture2D" uid="uid://ojfwadiiww4j" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
+[ext_resource type="Texture2D" uid="uid://bmg4j2ya1eyvo" path="res://assets/Tiles/tileset/tileset.png" id="1_oyh2q"]
+[ext_resource type="Texture2D" uid="uid://bmnv37isobf7y" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="3_8j14c"]
 [ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="4_juh6w"]
 

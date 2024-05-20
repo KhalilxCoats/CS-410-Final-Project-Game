@@ -11,9 +11,13 @@ extends CharacterBody2D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2 = Vector2.ZERO
+var health = 100.0
+
+
 
 func _ready():
 	animation_tree.active = true;
+	update_health();
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -33,6 +37,9 @@ func _physics_process(delta):
 	move_and_slide()
 	change_animation()
 	update_facing()
+	if health <= 0:
+		health = 0
+		print("player has been killed")
 func change_animation():
 	animation_tree.set("parameters/move/blend_position",direction.x)
 
@@ -41,3 +48,7 @@ func update_facing():
 		sprite.flip_h = false
 	elif direction.x < 0:
 		sprite.flip_h = true	
+
+func update_health():
+	var healthbar = $HealthBar
+	healthbar.value = 50.0
