@@ -1,15 +1,17 @@
-[gd_scene load_steps=28 format=3 uid="uid://dv2p0qj58phbj"]
+[gd_scene load_steps=29 format=3 uid="uid://dv2p0qj58phbj"]
 
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="1_5yt7g"]
-[ext_resource type="Texture2D" uid="uid://bjucl2h3v0tdp" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
-[ext_resource type="Texture2D" uid="uid://bbfxk43pd2jhw" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
-[ext_resource type="Texture2D" uid="uid://cy0kaxwi7841p" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
-[ext_resource type="Texture2D" uid="uid://3ce03abrg0vu" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
+[ext_resource type="Texture2D" uid="uid://p780vt26yjli" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
+[ext_resource type="Texture2D" uid="uid://nidm0r4sdb5h" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
+[ext_resource type="Texture2D" uid="uid://b8flet4i2jkcx" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
+[ext_resource type="Texture2D" uid="uid://dqjus668xkyyw" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/DefaultState.gd" id="6_hscfx"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/AttackState.gd" id="7_pv1si"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cp1bt"]
 height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3euk6"]
 
 [sub_resource type="Animation" id="Animation_02cw6"]
 resource_name = "Attack"
@@ -271,12 +273,21 @@ position = Vector2(2, 1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cp1bt")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23, 18)
+rotation = -0.755728
+shape = SubResource("CapsuleShape2D_3euk6")
+debug_color = Color(0.964706, 0, 0.498039, 0.419608)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_b2jp8")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b2jp8")
+}
 tree_root = SubResource("AnimationNodeStateMachine_a2kq5")
 anim_player = NodePath("../AnimationPlayer")
 
