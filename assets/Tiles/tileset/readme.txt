@@ -16,3 +16,4 @@ https://www.patreon.com/gurigraphics
 Youtube channel 
 https://www.youtube.com/user/gurigraphics
 
+z
