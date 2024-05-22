@@ -28,6 +28,7 @@ offset_right = -1152.0
 offset_bottom = -706.968
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.876974, 0.876974)
 script = SubResource("GDScript_5cvnc")
 metadata/_edit_group_ = true
 
