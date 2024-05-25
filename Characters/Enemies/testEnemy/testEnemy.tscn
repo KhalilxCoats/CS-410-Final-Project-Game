@@ -1,10 +1,10 @@
 [gd_scene load_steps=28 format=3 uid="uid://dv2p0qj58phbj"]
 
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="1_5yt7g"]
-[ext_resource type="Texture2D" uid="uid://bq6nm43c7r6jx" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
-[ext_resource type="Texture2D" uid="uid://dr7vt8nfdl40h" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
-[ext_resource type="Texture2D" uid="uid://dr4ex1kcmssvq" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
-[ext_resource type="Texture2D" uid="uid://dyv5q4oabacue" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
+[ext_resource type="Texture2D" uid="uid://ckvodytfc68tx" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
+[ext_resource type="Texture2D" uid="uid://ctg7hpa76bbkt" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
+[ext_resource type="Texture2D" uid="uid://c0q27hc1rpvf0" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
+[ext_resource type="Texture2D" uid="uid://catw00sq5mr8" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/DefaultState.gd" id="6_hscfx"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/AttackState.gd" id="7_pv1si"]
 

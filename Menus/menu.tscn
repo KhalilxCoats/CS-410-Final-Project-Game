@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpqieb0xluenk"]
 
-[ext_resource type="Texture2D" uid="uid://dghui3q46hms" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+[ext_resource type="Texture2D" uid="uid://c30av2ypppshe" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
 script/source = "extends Control

@@ -19,6 +19,8 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor() && state_machine.get_can_fall():
 		velocity.y += gravity * delta
+	elif state_machine.current_state.name == "Attack":
+		velocity.y = 0
 	
 
 	# Get the input direction and handle the movement/deceleration.
