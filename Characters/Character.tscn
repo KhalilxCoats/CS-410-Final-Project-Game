@@ -1,10 +1,10 @@
 [gd_scene load_steps=35 format=3 uid="uid://bylefo0jfw4n1"]
 
 [ext_resource type="Script" path="res://Characters/Character.gd" id="1_strtd"]
-[ext_resource type="Texture2D" uid="uid://orthistlk8k7" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Fall.png" id="2_a3xc4"]
-[ext_resource type="Texture2D" uid="uid://c71ruqvxj7mh1" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Idle.png" id="3_uyg5e"]
-[ext_resource type="Texture2D" uid="uid://bybn2kxle0yp7" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Jump.png" id="4_j8m3j"]
-[ext_resource type="Texture2D" uid="uid://drtxjcedl5tv8" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Run.png" id="5_1jish"]
+[ext_resource type="Texture2D" uid="uid://bddwd7i3kyj4p" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Fall.png" id="2_a3xc4"]
+[ext_resource type="Texture2D" uid="uid://dm0cj8ei4ov7" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Idle.png" id="3_uyg5e"]
+[ext_resource type="Texture2D" uid="uid://dn4lk5tfgvw3p" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Jump.png" id="4_j8m3j"]
+[ext_resource type="Texture2D" uid="uid://dym6xf2w0i4m1" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Run.png" id="5_1jish"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srcyf"]
 atlas = ExtResource("2_a3xc4")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cd6y218ysgqds"]
+[gd_scene load_steps=55 format=3 uid="uid://cd6y218ysgqds"]
 
 [ext_resource type="Script" path="res://Characters/Character.gd" id="1_lncs4"]
 [ext_resource type="Texture2D" uid="uid://kmwnp5a7knf" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
@@ -15,6 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://c4upljj87pcm0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
 [ext_resource type="Script" path="res://Characters/Attack.gd" id="11_md3ro"]
 [ext_resource type="Script" path="res://Characters/State.gd" id="14_283ux"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0w653"]
+radius = 20.0
+height = 70.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_acwu5"]
+radius = 15.0
+height = 40.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53g3s"]
 radius = 11.6789
@@ -45,6 +53,54 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-22, 50)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:shape:radius")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [20.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:shape:height")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [70.0]
 }
 
 [sub_resource type="Animation" id="Animation_ylxth"]
@@ -86,6 +142,54 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-22, 50), Vector2(-24, 41), Vector2(-17, 40), Vector2(-10, 15), Vector2(48, 28), Vector2(47, 27)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.083, 0.166, 0.415, 0.498),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:shape:radius")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.332),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [20.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:shape:height")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.332),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [70.0]
 }
 
 [sub_resource type="Animation" id="Animation_wny5r"]
@@ -250,6 +354,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ExtResource("3_myvym")]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_xy24d"]
 resource_name = "jump"
@@ -371,6 +487,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [ExtResource("5_1at5y")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/WeaponArea2D/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_fy80v"]
@@ -528,7 +656,22 @@ script = ExtResource("1_lncs4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4, -41)
-hframes = 8
+hframes = 11
+
+[node name="WeaponArea2D" type="Area2D" parent="Sprite2D" groups=["Weapon"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/WeaponArea2D"]
+position = Vector2(-22, 50)
+shape = SubResource("CapsuleShape2D_0w653")
+disabled = true
+
+[node name="Hurtbox" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Hurtbox"]
+position = Vector2(2, 42)
+shape = SubResource("CapsuleShape2D_acwu5")
+debug_color = Color(0.916897, 0.222421, 0.463818, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 1)
@@ -590,15 +733,7 @@ text = "state:"
 script = ExtResource("8_d7xao")
 state_machine = NodePath("../CharacterStateMachine")
 
-[node name="HealthBar" type="ProgressBar" parent="."]
-modulate = Color(0.322069, 0.990593, 0.130506, 1)
-offset_left = -31.0
-offset_top = -60.0
-offset_right = 69.0
-offset_bottom = -33.0
-scale = Vector2(0.5, 0.5)
-value = 100.0
-show_percentage = false
-
+[connection signal="body_entered" from="Sprite2D/WeaponArea2D" to="." method="_on_weapon_area_2d_body_entered"]
+[connection signal="body_entered" from="Sprite2D/Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Landing" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
