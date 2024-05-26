@@ -1,6 +1,9 @@
 extends CharacterBody2D
+class_name Character
 
+signal healthChanged
 
+@export var maxHealth = 30
 @export var speed: float = 200.0
 @export var dodge_speed : float = 350
 
@@ -8,13 +11,17 @@ extends CharacterBody2D
 
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var state_machine : CharacterStateMachine = $CharacterStateMachine
+@onready var currentHealth: int = maxHealth
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction : Vector2 = Vector2.ZERO
 
+
+
 func _ready():
 	animation_tree.active = true;
+	update_health();
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -41,9 +48,8 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	change_animation()
-	
-	if(state_machine.current_state.can_flip == true):
-		update_facing()
+	update_facing()
+	update_health()
 	
 func change_animation():
 	animation_tree.set("parameters/move/blend_position",direction.x)
@@ -52,4 +58,17 @@ func update_facing():
 	if direction.x > 0:
 		sprite.flip_h = false
 	elif direction.x < 0:
-		sprite.flip_h = true
+		sprite.flip_h = true	
+
+func update_health():
+	healthChanged.emit()
+
+
+func _on_weapon_area_2d_body_entered(body):
+	if body.is_in_group("Enemy"):
+		print("hit")
+
+
+func _on_hurtbox_body_entered(body):
+	if body.is_in_group("Enemy"):
+		currentHealth -= 5

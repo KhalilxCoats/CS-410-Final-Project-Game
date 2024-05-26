@@ -3,8 +3,8 @@ extends Control
 
 
 
-func _on_volume_pressed():
-	pass # Replace with function body.
+var master_bus = AudioServer.get_bus_index("Master")
+
 
 
 func _on_return_to_main_menu_pressed():
@@ -13,3 +13,13 @@ func _on_return_to_main_menu_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+
+func _on_volume_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(master_bus, value)
+	
+	if value == -30:
+		AudioServer.set_bus_mute(master_bus,true)
+	else:
+		AudioServer.set_bus_mute(master_bus,false)

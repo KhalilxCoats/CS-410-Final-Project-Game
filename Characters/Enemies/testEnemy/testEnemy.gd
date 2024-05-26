@@ -6,7 +6,12 @@ const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var maxHealth = 5
+@onready var currentHealth = maxHealth
+@export var knockBackPower: int = 2000
 
+func _ready():
+	$healthbar.max_value = maxHealth
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -26,3 +31,23 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+
+func _on_area_2d_area_entered(area):
+	currentHealth -= 1
+	update_health()
+	knock_back()
+	if currentHealth <= 0:
+		queue_free()
+	
+
+func knock_back():
+	var knockBackDirection = -velocity.normalized() * knockBackPower
+	velocity = knockBackDirection
+	move_and_slide()
+
+func update_health():
+	$healthbar.value = currentHealth
+	
+	
