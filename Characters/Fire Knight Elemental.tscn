@@ -1,27 +1,28 @@
-[gd_scene load_steps=93 format=3 uid="uid://cd6y218ysgqds"]
+[gd_scene load_steps=95 format=3 uid="uid://cev3g2jy4fe6v"]
 
-[ext_resource type="Script" path="res://Characters/Character.gd" id="1_lncs4"]
-[ext_resource type="Texture2D" uid="uid://c7b3kn6o0wlfa" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
-[ext_resource type="Texture2D" uid="uid://uggcueiusphs" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/air_atk/fire knight air attack sprite sheet.png" id="2_baoq7"]
-[ext_resource type="Texture2D" uid="uid://dipmrj34yn4gu" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/10_take_hit/fire knight take hit sprite sheet.png" id="2_f0qcp"]
-[ext_resource type="Texture2D" uid="uid://cjccjq572njre" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/09_defend/fire knight defend sprite sheet.png" id="2_m3c10"]
-[ext_resource type="Texture2D" uid="uid://cyxbxoxqhedj4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
-[ext_resource type="Texture2D" uid="uid://d3hyjen3t2bjf" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
-[ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="4_vb18u"]
-[ext_resource type="Texture2D" uid="uid://daqq1v6hwnx3p" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
-[ext_resource type="Script" path="res://Characters/AirState.gd" id="5_sw0be"]
-[ext_resource type="Script" path="res://Characters/GroundState.gd" id="5_uyt4m"]
-[ext_resource type="Script" path="res://Characters/LandingState.gd" id="6_5y2rv"]
-[ext_resource type="Texture2D" uid="uid://d1nvyf2rd6svh" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
-[ext_resource type="Texture2D" uid="uid://c83gmdvbxt0li" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
-[ext_resource type="Script" path="res://Characters/stateLabel.gd" id="8_d7xao"]
-[ext_resource type="Texture2D" uid="uid://dxh6aiujxuyu6" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
-[ext_resource type="Texture2D" uid="uid://2v1os0l7kepn" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/04_roll/fire knight roll sprite sheet.png" id="9_5loqi"]
-[ext_resource type="Script" path="res://Characters/Attack.gd" id="11_md3ro"]
-[ext_resource type="Texture2D" uid="uid://betmj4q1p8nhf" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/12_transform/fire knight elemental transform sprite sheet.png" id="13_lvrnh"]
-[ext_resource type="Script" path="res://Characters/DefendState.gd" id="17_70kdt"]
-[ext_resource type="Script" path="res://Characters/DodgeState.gd" id="18_0oabr"]
-[ext_resource type="Script" path="res://Characters/TransformState.gd" id="19_cj5fe"]
+[ext_resource type="Script" path="res://Characters/Character.gd" id="1_jlaj5"]
+[ext_resource type="Texture2D" uid="uid://dipmrj34yn4gu" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/10_take_hit/fire knight take hit sprite sheet.png" id="2_hqpp8"]
+[ext_resource type="Texture2D" uid="uid://uggcueiusphs" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/air_atk/fire knight air attack sprite sheet.png" id="3_l4stq"]
+[ext_resource type="Texture2D" uid="uid://c7b3kn6o0wlfa" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="4_l5ko3"]
+[ext_resource type="Texture2D" uid="uid://d1nvyf2rd6svh" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="5_athlx"]
+[ext_resource type="Texture2D" uid="uid://c83gmdvbxt0li" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="6_ir6ov"]
+[ext_resource type="Texture2D" uid="uid://cjccjq572njre" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/09_defend/fire knight defend sprite sheet.png" id="7_0gi5d"]
+[ext_resource type="Texture2D" uid="uid://2v1os0l7kepn" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/04_roll/fire knight roll sprite sheet.png" id="8_huiew"]
+[ext_resource type="Texture2D" uid="uid://d3hyjen3t2bjf" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="9_rn0vl"]
+[ext_resource type="Texture2D" uid="uid://cyxbxoxqhedj4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="10_a8b2m"]
+[ext_resource type="Texture2D" uid="uid://daqq1v6hwnx3p" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="11_bv27m"]
+[ext_resource type="Texture2D" uid="uid://dxh6aiujxuyu6" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="12_xji4d"]
+[ext_resource type="Texture2D" uid="uid://betmj4q1p8nhf" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/12_transform/fire knight elemental transform sprite sheet.png" id="13_ps7m2"]
+[ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="14_3g75b"]
+[ext_resource type="Texture2D" uid="uid://cpgu7do08jqu4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/11_death/fire knight death sprite sheet.png" id="14_qvvdr"]
+[ext_resource type="Script" path="res://Characters/GroundState.gd" id="15_r5buu"]
+[ext_resource type="Script" path="res://Characters/AirState.gd" id="16_c5h20"]
+[ext_resource type="Script" path="res://Characters/LandingState.gd" id="17_imjtj"]
+[ext_resource type="Script" path="res://Characters/Attack.gd" id="18_5xktc"]
+[ext_resource type="Script" path="res://Characters/DefendState.gd" id="19_tgjqc"]
+[ext_resource type="Script" path="res://Characters/DodgeState.gd" id="20_xawiq"]
+[ext_resource type="Script" path="res://Characters/TransformState.gd" id="21_2nt07"]
+[ext_resource type="Script" path="res://Characters/stateLabel.gd" id="22_0s4xk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53g3s"]
 radius = 9.11577
@@ -75,7 +76,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_f0qcp")]
+"values": [ExtResource("2_hqpp8")]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -88,6 +89,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [6]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_pmut0"]
@@ -104,7 +117,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_baoq7")]
+"values": [ExtResource("3_l4stq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -168,7 +181,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_6iqrw")]
+"values": [ExtResource("4_l5ko3")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -245,7 +258,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_6iqrw")]
+"values": [ExtResource("4_l5ko3")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -310,7 +323,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_6iqrw")]
+"values": [ExtResource("4_l5ko3")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -375,7 +388,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("6_7cn6q")]
+"values": [ExtResource("5_athlx")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -439,7 +452,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_07tpi")]
+"values": [ExtResource("6_ir6ov")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -504,7 +517,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_m3c10")]
+"values": [ExtResource("7_0gi5d")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -569,7 +582,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_5loqi")]
+"values": [ExtResource("8_huiew")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -645,7 +658,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_m3c10")]
+"values": [ExtResource("7_0gi5d")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -709,7 +722,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_m3c10")]
+"values": [ExtResource("7_0gi5d")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -775,7 +788,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_t0xla")]
+"values": [ExtResource("9_rn0vl")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -864,7 +877,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("3_myvym")]
+"values": [ExtResource("10_a8b2m")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -929,7 +942,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("4_t0xla")]
+"values": [ExtResource("9_rn0vl")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -993,7 +1006,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("4_t0xla")]
+"values": [ExtResource("9_rn0vl")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1058,7 +1071,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("5_1at5y")]
+"values": [ExtResource("11_bv27m")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1099,7 +1112,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("8_il06f")]
+"values": [ExtResource("12_xji4d")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1164,7 +1177,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_f0qcp")]
+"values": [ExtResource("2_hqpp8")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1229,7 +1242,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("13_lvrnh")]
+"values": [ExtResource("13_ps7m2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1280,6 +1293,83 @@ tracks/4/keys = {
 "values": [Vector2(1, 0.82), Vector2(1.427, 1.2), Vector2(0.987, 1.22), Vector2(0.802, 1.22), Vector2(0.802, 1.22), Vector2(0.802, 1.22), Vector2(0.957, 1.15), Vector2(1.062, 1.15)]
 }
 
+[sub_resource type="Animation" id="Animation_6hu4s"]
+resource_name = "death"
+length = 1.1
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("14_qvvdr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.249),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(2.295, 2.21), Vector2(12.285, 5.075)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.249),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.249),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(1.002, 0.82), Vector2(1.002, 0.71)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_syyae"]
 _data = {
 "RESET": SubResource("Animation_rny7l"),
@@ -1289,6 +1379,7 @@ _data = {
 "attack 1 return": SubResource("Animation_wny5r"),
 "attack 2": SubResource("Animation_y38of"),
 "attack 3": SubResource("Animation_5ye60"),
+"death": SubResource("Animation_6hu4s"),
 "defend": SubResource("Animation_s3gu5"),
 "dodge": SubResource("Animation_gt0qe"),
 "enter defend": SubResource("Animation_pw14u"),
@@ -1464,17 +1555,17 @@ states/move/position = Vector2(806, 285)
 states/transform/node = SubResource("AnimationNodeAnimation_l1cdl")
 states/transform/position = Vector2(613.499, 187.707)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_2p227"), "move", "jump", SubResource("AnimationNodeStateMachineTransition_mydij"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_ib7hj"), "land", "move", SubResource("AnimationNodeStateMachineTransition_i51pn"), "move", "attack 1", SubResource("AnimationNodeStateMachineTransition_2w6pe"), "attack 1", "attack 2", SubResource("AnimationNodeStateMachineTransition_gv8to"), "attack 2", "move", SubResource("AnimationNodeStateMachineTransition_bidtu"), "attack 1", "attack 1 return", SubResource("AnimationNodeStateMachineTransition_6j34x"), "attack 1 return", "move", SubResource("AnimationNodeStateMachineTransition_dvcr2"), "move", "attack 3", SubResource("AnimationNodeStateMachineTransition_7nlck"), "attack 3", "move", SubResource("AnimationNodeStateMachineTransition_c4esg"), "move", "special attack", SubResource("AnimationNodeStateMachineTransition_k1ck0"), "special attack", "move", SubResource("AnimationNodeStateMachineTransition_3sqnx"), "move", "dodge", SubResource("AnimationNodeStateMachineTransition_2mwt1"), "dodge", "move", SubResource("AnimationNodeStateMachineTransition_0qbyh"), "move", "fall", SubResource("AnimationNodeStateMachineTransition_bwfa1"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_f0ffd"), "air attack 1", "air attack 2", SubResource("AnimationNodeStateMachineTransition_rskuo"), "air attack 2", "fall", SubResource("AnimationNodeStateMachineTransition_lktmq"), "air attack 1", "fall", SubResource("AnimationNodeStateMachineTransition_8sldf"), "jump", "air attack 1", SubResource("AnimationNodeStateMachineTransition_rtn8m"), "exit defend", "move", SubResource("AnimationNodeStateMachineTransition_u5jwt"), "move", "enter defend", SubResource("AnimationNodeStateMachineTransition_d1mfq"), "enter defend", "defend", SubResource("AnimationNodeStateMachineTransition_2x7km"), "defend", "exit defend", SubResource("AnimationNodeStateMachineTransition_5jnfi"), "fall", "air attack 1", SubResource("AnimationNodeStateMachineTransition_mpbak"), "fall", "move", SubResource("AnimationNodeStateMachineTransition_2etyb"), "jump", "move", SubResource("AnimationNodeStateMachineTransition_ruc7a"), "move", "transform", SubResource("AnimationNodeStateMachineTransition_qlbev")]
-graph_offset = Vector2(316.499, 84.2823)
+graph_offset = Vector2(74.1878, -119.093)
 
 [node name="Fire Knight" type="CharacterBody2D"]
 slide_on_ceiling = false
 floor_stop_on_slope = false
 floor_max_angle = 0.692896
-script = ExtResource("1_lncs4")
+script = ExtResource("1_jlaj5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
-texture = ExtResource("2_f0qcp")
+texture = ExtResource("2_hqpp8")
 hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1497,13 +1588,13 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = -0.0981857
 
 [node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
-script = ExtResource("4_vb18u")
+script = ExtResource("14_3g75b")
 current_state = NodePath("Ground")
 character = NodePath("..")
 animation_tree = NodePath("../AnimationTree")
 
 [node name="Ground" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("air_state", "attack_state", "transform_state", "dodge_state", "defend_state")]
-script = ExtResource("5_uyt4m")
+script = ExtResource("15_r5buu")
 air_state = NodePath("../Air")
 attack_state = NodePath("../Attack")
 transform_state = NodePath("../Transform")
@@ -1515,18 +1606,18 @@ wait_time = 0.1
 one_shot = true
 
 [node name="Air" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("landing_state", "attack_state", "ground_state")]
-script = ExtResource("5_sw0be")
+script = ExtResource("16_c5h20")
 landing_state = NodePath("../Landing")
 attack_state = NodePath("../Attack")
 ground_state = NodePath("../Ground")
 
 [node name="Landing" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
-script = ExtResource("6_5y2rv")
+script = ExtResource("17_imjtj")
 ground_state = NodePath("../Ground")
 can_move = false
 
 [node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state", "air_state")]
-script = ExtResource("11_md3ro")
+script = ExtResource("18_5xktc")
 ground_state = NodePath("../Ground")
 air_state = NodePath("../Air")
 can_move = false
@@ -1538,18 +1629,18 @@ wait_time = 0.335
 one_shot = true
 
 [node name="Defend" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
-script = ExtResource("17_70kdt")
+script = ExtResource("19_tgjqc")
 ground_state = NodePath("../Ground")
 can_move = false
 
 [node name="Dodge" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
-script = ExtResource("18_0oabr")
+script = ExtResource("20_xawiq")
 ground_state = NodePath("../Ground")
 can_flip = false
 diferent_speed = true
 
 [node name="Transform" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
-script = ExtResource("19_cj5fe")
+script = ExtResource("21_2nt07")
 ground_state = NodePath("../Ground")
 
 [node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
@@ -1558,7 +1649,7 @@ offset_top = -47.0
 offset_right = 80.0
 offset_bottom = -24.0
 text = "state:"
-script = ExtResource("8_d7xao")
+script = ExtResource("22_0s4xk")
 state_machine = NodePath("../CharacterStateMachine")
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Landing" method="_on_animation_tree_animation_finished"]

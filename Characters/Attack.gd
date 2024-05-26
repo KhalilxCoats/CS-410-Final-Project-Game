@@ -14,7 +14,7 @@ extends State
 @export var attack2_node : String = "attack 2"
 @export var air_attack2_node : String = "air attack 2"
 @export var attack_return_name : String = "attack 1 return"
-@onready var timer : Timer = $Timer
+@onready var timer : Timer = $AttackTimer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -26,10 +26,7 @@ func _process(delta):
 func state_input(event : InputEvent):
 	if(event.is_action_pressed("attack")):
 		timer.start()
-		
 
-func on_exit():
-	can_move = false
 
 func _on_animation_tree_animation_finished(anim_name):
 	if(anim_name == attack1_name):

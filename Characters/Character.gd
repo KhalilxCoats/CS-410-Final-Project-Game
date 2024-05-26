@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 @export var speed: float = 200.0
+@export var dodge_speed : float = 350
 
 @onready var sprite : Sprite2D = $Sprite2D
 
@@ -21,7 +22,6 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	elif state_machine.current_state.name == "Attack":
 		velocity.y = 0
-	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -29,15 +29,20 @@ func _physics_process(delta):
 	
 	if (direction.x != 0 && state_machine.get_can_move() && state_machine.current_state.name != "Dodge"):
 		velocity.x = direction.x * speed
-	elif(direction.x != 0 && state_machine.get_can_move() && state_machine.current_state.name == "Dodge"):
-		velocity.x = direction.x * speed * 1.75
+	elif(state_machine.current_state.name == "Dodge"):
+		if sprite.flip_h == false:
+			if state_machine.current_state.diferent_speed == true:
+				velocity.x = dodge_speed
+		elif sprite.flip_h == true:
+			if state_machine.current_state.diferent_speed == true:
+				velocity.x = -dodge_speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
 	move_and_slide()
 	change_animation()
 	
-	if(state_machine.get_can_move()):
+	if(state_machine.current_state.can_flip == true):
 		update_facing()
 	
 func change_animation():

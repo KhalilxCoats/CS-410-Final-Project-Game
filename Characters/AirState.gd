@@ -4,6 +4,7 @@ class_name AirState
 
 @export var landing_state : State
 @export var attack_state: State
+@export var ground_state: State
 @export var landing_animation : String = "land"
 @export var air_attack_animation : String = "air attack 1"
 
@@ -23,3 +24,5 @@ func air_attack():
 func on_exit():
 	if(next_state == landing_state):
 		playback.travel(landing_animation)
+	if(next_state == ground_state):
+		playback.travel("move")

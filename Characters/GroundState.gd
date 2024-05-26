@@ -3,7 +3,6 @@ extends State
 class_name GroundState
 
 @export var jump_velocity : float = -200.0
-@export var dodge_speed : float = 1500.0
 @export var jump_animation : String = "jump"
 @export var fall_animation : String = "fall"
 @export var dodge_animation : String = "dodge"
@@ -14,6 +13,7 @@ class_name GroundState
 @export var special_attack_animation : String = "special attack"
 
 @export var enter_defend_animation : String = "enter defend"
+@export var transform_animation : String = "transform"
 
 #character states
 @export var air_state : State
@@ -21,6 +21,11 @@ class_name GroundState
 @export var transform_state: State
 @export var dodge_state: State
 @export var defend_state: State
+
+@onready var input_timer : Timer = $TransformTimer
+
+var start_click_left : bool = false
+var start_click_right : bool = false
 
 func state_process(delta):
 	if(!character.is_on_floor()):
@@ -36,13 +41,32 @@ func state_input(event : InputEvent):
 		power_attack()
 	if(event.is_action_pressed("special attack")):
 		special_attack()
-	if(event.is_action_pressed("dodge") && character.velocity.x != 0):
+	if(event.is_action_pressed("dodge")):
 		dodge()
 	if(event.is_action_pressed("defend")):
 		defend()
-	if(event.is_action_pressed("transform (key)") || (event.is_action_pressed("transform(left trigger)") && event.is_action_pressed("transform(right trigger)"))):
+	if(event.is_action_pressed("transform (key)")):
 		transform()
+	
+	if(event.is_action_pressed("transform right stick") && !start_click_left):
+		input_timer.start()
+		start_click_left = false
+		start_click_right = true
+	elif(event.is_action_pressed("transform left stick") && !start_click_right):
+		input_timer.start()
+		start_click_left = true
+		start_click_right =false
+		
+	
+	if(!input_timer.is_stopped() && start_click_left == false):
+		if(event.is_action_pressed("transform left stick")):
+			transform()
+	elif(!input_timer.is_stopped() && start_click_left == true):
+		if(event.is_action_pressed("transform right stick")):
+			transform()
 
+func start_left():
+	pass
 
 func light_attack():
 	next_state = attack_state
@@ -66,9 +90,9 @@ func defend():
 	playback.travel(enter_defend_animation)
 
 func dodge():
-	character.velocity.x += dodge_speed
 	next_state = dodge_state
 	playback.travel(dodge_animation)
 
 func transform():
-	pass
+		next_state = transform_state
+		playback.travel(transform_animation)
