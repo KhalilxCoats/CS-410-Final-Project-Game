@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cot8vcq654eiw"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_dgxie"]
-[ext_resource type="Texture2D" uid="uid://ctc2v6ok2tjjy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_day1.png" id="2_7h86o"]
-[ext_resource type="Texture2D" uid="uid://bf18y32vk21xs" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_day2.png" id="3_crmwn"]
-[ext_resource type="Texture2D" uid="uid://o1a635bx5b6y" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_day3.png" id="4_6u54h"]
+[ext_resource type="Texture2D" uid="uid://cwkuac2mn11jx" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_lhoo5"]
+[ext_resource type="Texture2D" uid="uid://batyg7uc1ut2n" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_tum5m"]
+[ext_resource type="Texture2D" uid="uid://ck6lrrif4gmqr" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_yrr3k"]
 
 [node name="Level" instance=ExtResource("1_dgxie")]
 
@@ -11,19 +11,19 @@
 motion_mirroring = Vector2(1024, 640)
 
 [node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
-texture = ExtResource("2_7h86o")
+texture = ExtResource("2_lhoo5")
 
 [node name="ParallaxLayer2" parent="ParallaxBackground" index="1"]
 motion_mirroring = Vector2(1024, 640)
 
 [node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="0"]
-texture = ExtResource("3_crmwn")
+texture = ExtResource("3_tum5m")
 
 [node name="ParallaxLayer3" parent="ParallaxBackground" index="2"]
 motion_mirroring = Vector2(1024, 640)
 
 [node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="0"]
-texture = ExtResource("4_6u54h")
+texture = ExtResource("4_yrr3k")
 
 [node name="ParallaxLayer4" parent="ParallaxBackground" index="3"]
 motion_mirroring = Vector2(1024, 640)

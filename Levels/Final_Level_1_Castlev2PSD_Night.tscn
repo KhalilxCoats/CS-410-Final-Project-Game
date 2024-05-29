@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsx3pnh5sigak"]
+
+[ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
+[ext_resource type="Texture2D" uid="uid://cwkuac2mn11jx" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
+[ext_resource type="Texture2D" uid="uid://batyg7uc1ut2n" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
+[ext_resource type="Texture2D" uid="uid://ck6lrrif4gmqr" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
+
+[node name="Level" instance=ExtResource("1_vxj2i")]
+
+[node name="ParallaxLayer" parent="ParallaxBackground" index="0"]
+motion_mirroring = Vector2(1024, 640)
+
+[node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
+texture = ExtResource("2_21vv8")
+
+[node name="ParallaxLayer2" parent="ParallaxBackground" index="1"]
+motion_mirroring = Vector2(1024, 640)
+
+[node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+texture = ExtResource("3_34sqd")
+
+[node name="ParallaxLayer3" parent="ParallaxBackground" index="2"]
+motion_mirroring = Vector2(1024, 640)
+
+[node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="0"]
+texture = ExtResource("4_n8dm8")
+
+[node name="ParallaxLayer4" parent="ParallaxBackground" index="3"]
+motion_mirroring = Vector2(1024, 640)
+
+[node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" index="0"]
+texture = null
