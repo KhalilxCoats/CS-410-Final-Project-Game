@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://de2ykk3fqrviv"]
 
-[ext_resource type="Texture2D" uid="uid://bx82iu8juu5hj" path="res://assets/Tiles/4maps/1) Tilemaps/tiles-skulls.png" id="1_fb5n6"]
+[ext_resource type="Texture2D" uid="uid://c2mfsuunk3jdd" path="res://assets/Tiles/4maps/1) Tilemaps/tiles-skulls.png" id="1_fb5n6"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="2_22b4o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yat7j"]

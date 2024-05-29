@@ -1,20 +1,20 @@
-[gd_scene load_steps=21 format=3 uid="uid://b8i2r82nr28fx"]
+[gd_scene load_steps=21 format=3 uid="uid://c87oi3jr7dxue"]
 
-[ext_resource type="Texture2D" uid="uid://bd3mnsvvcrgpe" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
-[ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="3_8j14c"]
-[ext_resource type="Texture2D" uid="uid://wbnkeq1drirf" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="3_142r7"]
-[ext_resource type="Texture2D" uid="uid://bi62sefycuebl" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="4_nnkin"]
-[ext_resource type="Texture2D" uid="uid://cwhdk0on655s5" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="5_x0lpu"]
-[ext_resource type="Texture2D" uid="uid://ww2vggd1usg8" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="6_n5vfa"]
-[ext_resource type="Texture2D" uid="uid://qdcf5yna2amv" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="6_voh63"]
-[ext_resource type="Texture2D" uid="uid://da34sc7qii3gw" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="7_erwi0"]
-[ext_resource type="Texture2D" uid="uid://bt6cw4bayratq" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="8_df3lg"]
-[ext_resource type="Texture2D" uid="uid://bd7a2tjsllsf4" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="9_x1t7p"]
-[ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="12_68p4t"]
-[ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="13_tetqv"]
+[ext_resource type="Texture2D" uid="uid://bd3mnsvvcrgpe" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_ch6qx"]
+[ext_resource type="Texture2D" uid="uid://wbnkeq1drirf" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="2_a6yck"]
+[ext_resource type="Texture2D" uid="uid://bi62sefycuebl" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="3_uguue"]
+[ext_resource type="Texture2D" uid="uid://cwhdk0on655s5" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_vndgm"]
+[ext_resource type="Texture2D" uid="uid://qdcf5yna2amv" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_i0k21"]
+[ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="6_shebp"]
+[ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="7_tcnql"]
+[ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="8_a1aic"]
+[ext_resource type="Texture2D" uid="uid://ww2vggd1usg8" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_35m51"]
+[ext_resource type="Texture2D" uid="uid://da34sc7qii3gw" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_28fmx"]
+[ext_resource type="Texture2D" uid="uid://bt6cw4bayratq" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_rr4jf"]
+[ext_resource type="Texture2D" uid="uid://bd7a2tjsllsf4" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_kr50g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
-texture = ExtResource("2_r1wy4")
+texture = ExtResource("1_ch6qx")
 6:1/0 = 0
 6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:1/0/physics_layer_0/angular_velocity = 0.0
@@ -2732,7 +2732,7 @@ texture = ExtResource("2_r1wy4")
 29:63/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7tn74"]
-texture = ExtResource("3_142r7")
+texture = ExtResource("2_a6yck")
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -7325,7 +7325,7 @@ texture = ExtResource("3_142r7")
 14:5/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0o68"]
-texture = ExtResource("4_nnkin")
+texture = ExtResource("3_uguue")
 5:0/0 = 0
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
@@ -11552,7 +11552,7 @@ texture = ExtResource("4_nnkin")
 44:62/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijp24"]
-texture = ExtResource("5_x0lpu")
+texture = ExtResource("4_vndgm")
 5:1/0 = 0
 5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:1/0/physics_layer_0/angular_velocity = 0.0
@@ -18428,7 +18428,7 @@ texture = ExtResource("5_x0lpu")
 62:79/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxt3e"]
-texture = ExtResource("6_voh63")
+texture = ExtResource("5_i0k21")
 9:0/0 = 0
 9:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:0/0/physics_layer_0/angular_velocity = 0.0
@@ -23146,7 +23146,7 @@ layer_3/name = "Non-CollisionGround"
 layer_3/tile_data = PackedInt32Array(2490496, 327682, 5, 2490497, 393218, 5, 2490498, 458754, 5, 2490499, 524290, 5, 2490500, 589826, 5, 2490501, 655362, 5, 2490502, 720898, 5, 2490503, 786434, 5, 2490504, 851970, 5, 2490505, 917506, 5, 2490506, 983042, 5, 2490507, 1048578, 5, 2490484, 327682, 5, 2490485, 393218, 5, 2490486, 458754, 5, 2490487, 524290, 5, 2490488, 589826, 5, 2490489, 655362, 5, 2490490, 720898, 5, 2490491, 786434, 5, 2490492, 851970, 5, 2490493, 917506, 5, 2490494, 983042, 5, 2490495, 1048578, 5, 2490472, 327682, 5, 2490473, 393218, 5, 2490474, 458754, 5, 2490475, 524290, 5, 2490476, 589826, 5, 2490477, 655362, 5, 2490478, 720898, 5, 2490479, 786434, 5, 2490480, 851970, 5, 2490481, 917506, 5, 2490482, 983042, 5, 2490483, 1048578, 5, 2490460, 327682, 5, 2490461, 393218, 5, 2490462, 458754, 5, 2490463, 524290, 5, 2490464, 589826, 5, 2490465, 655362, 5, 2490466, 720898, 5, 2490467, 786434, 5, 2490468, 851970, 5, 2490469, 917506, 5, 2490470, 983042, 5, 2490471, 1048578, 5, 2490448, 327682, 5, 2490449, 393218, 5, 2490450, 458754, 5, 2490451, 524290, 5, 2490452, 589826, 5, 2490453, 655362, 5, 2490454, 720898, 5, 2490455, 786434, 5, 2490456, 851970, 5, 2490457, 917506, 5, 2490458, 983042, 5, 2490459, 1048578, 5, 2490436, 327682, 5, 2490437, 393218, 5, 2490438, 458754, 5, 2490439, 524290, 5, 2490440, 589826, 5, 2490441, 655362, 5, 2490442, 720898, 5, 2490443, 786434, 5, 2490444, 851970, 5, 2490445, 917506, 5, 2490446, 983042, 5, 2490447, 1048578, 5, 2490424, 327682, 5, 2490425, 393218, 5, 2490426, 458754, 5, 2490427, 524290, 5, 2490428, 589826, 5, 2490429, 655362, 5, 2490430, 720898, 5, 2490431, 786434, 5, 2490432, 851970, 5, 2490433, 917506, 5, 2490434, 983042, 5, 2490435, 1048578, 5, 2490412, 327682, 5, 2490413, 393218, 5, 2490414, 458754, 5, 2490415, 524290, 5, 2490416, 589826, 5, 2490417, 655362, 5, 2490418, 720898, 5, 2490419, 786434, 5, 2490420, 851970, 5, 2490421, 917506, 5, 2490422, 983042, 5, 2490423, 1048578, 5, 2490400, 983042, 5, 2490401, 1048578, 5, 2490402, 458754, 5, 2490403, 524290, 5, 2490404, 589826, 5, 2490405, 655362, 5, 2490406, 720898, 5, 2490407, 786434, 5, 2490408, 851970, 5, 2490409, 917506, 5, 2490410, 983042, 5, 2490411, 1048578, 5, 2490390, 327682, 5, 2490391, 393218, 5, 2490392, 458754, 5, 2490393, 524290, 5, 2490394, 589826, 5, 2490395, 655362, 5, 2490396, 720898, 5, 2490397, 786434, 5, 2490398, 851970, 5, 2490399, 917506, 5, 2490378, 327682, 5, 2490379, 393218, 5, 2490380, 458754, 5, 2490381, 524290, 5, 2490382, 589826, 5, 2490383, 655362, 5, 2490384, 720898, 5, 2490385, 786434, 5, 2490386, 851970, 5, 2490387, 917506, 5, 2490388, 983042, 5, 2490389, 1048578, 5, 2555894, 327682, 5, 2555895, 393218, 5, 2555896, 458754, 5, 2555897, 524290, 5, 2555898, 589826, 5, 2555899, 655362, 5, 2555900, 720898, 5, 2555901, 786434, 5, 2555902, 327682, 5, 2555903, 393218, 5, 2490368, 458754, 5, 2490369, 524290, 5, 2490370, 589826, 5, 2490371, 655362, 5, 2490372, 720898, 5, 2490373, 786434, 5, 2490374, 851970, 5, 2490375, 917506, 5, 2490376, 983042, 5, 2490377, 1048578, 5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
-script = ExtResource("13_tetqv")
+script = ExtResource("6_shebp")
 tilemap_nodepath = NodePath("..")
 target_tiles_layer = 1
 
@@ -23166,13 +23166,13 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="playerCharacter" parent="." instance=ExtResource("3_8j14c")]
+[node name="playerCharacter" parent="." instance=ExtResource("7_tcnql")]
 position = Vector2(154, 402)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="playerCharacter"]
 remote_path = NodePath("../../Camera2D")
 
-[node name="enemyCharacter" parent="." instance=ExtResource("12_68p4t")]
+[node name="enemyCharacter" parent="." instance=ExtResource("8_a1aic")]
 position = Vector2(1080, 389)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -23188,7 +23188,7 @@ motion_scale = Vector2(0.4, 0.4)
 motion_mirroring = Vector2(960, 480)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("6_n5vfa")
+texture = ExtResource("9_35m51")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -23196,7 +23196,7 @@ motion_scale = Vector2(0.6, 0.6)
 motion_mirroring = Vector2(960, 480)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture = ExtResource("7_erwi0")
+texture = ExtResource("10_28fmx")
 centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -23204,12 +23204,12 @@ motion_scale = Vector2(0.8, 0.8)
 motion_mirroring = Vector2(960, 480)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-texture = ExtResource("8_df3lg")
+texture = ExtResource("11_rr4jf")
 centered = false
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(960, 480)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-texture = ExtResource("9_x1t7p")
+texture = ExtResource("12_kr50g")
 centered = false
