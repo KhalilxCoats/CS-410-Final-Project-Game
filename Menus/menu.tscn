@@ -1,12 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpqieb0xluenk"]
 
-[ext_resource type="Texture2D" uid="uid://c30av2ypppshe" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+[ext_resource type="Texture2D" uid="uid://d23n4mktqm60j" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
 script/source = "extends Control
 
+func _ready():
+	pass#MenuMusic.play_music_menu()
+	
+
 func _on_play_pressed():
 	get_tree().change_scene_to_file(\"res://Menus/character_select_v_2.tscn\")
+
 
 
 func _on_options_pressed():
@@ -14,15 +19,19 @@ func _on_options_pressed():
 
 
 func _on_quit_pressed():
+	#get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 	get_tree().quit()
+
 "
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchor_right = 0.608
-anchor_bottom = 0.619
-offset_right = -700.416
-offset_bottom = -401.112
+anchor_right = 1.0
+anchor_bottom = 1.091
+offset_left = 44.0
+offset_top = 52.0
+offset_right = -1108.0
+offset_bottom = -654.968
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.876974, 0.876974)
@@ -74,6 +83,7 @@ scale = Vector2(4.5, 4.5)
 texture = ExtResource("1_i8hxu")
 centered = false
 
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]

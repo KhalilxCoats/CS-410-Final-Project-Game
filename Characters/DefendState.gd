@@ -3,6 +3,7 @@ extends State
 class_name DefendState
 
 @export var return_to_move : String = "move"
+@export var exit_defend_animation : String = "Human Animations/exit defend"
 @export var ground_state : State
 
 func state_input(event : InputEvent):
@@ -13,6 +14,6 @@ func state_input(event : InputEvent):
 		playback.travel("exit defend")
 
 func _on_animation_tree_animation_finished(anim_name):
-	if(anim_name == "exit defend"):
+	if(anim_name == exit_defend_animation):
 		next_state = ground_state
 		playback.travel(return_to_move)

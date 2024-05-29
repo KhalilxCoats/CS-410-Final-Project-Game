@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqqsqfi2t0w3l"]
+
+[ext_resource type="Script" path="res://Menus/Menu_Music.gd" id="1_relag"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+script = ExtResource("1_relag")

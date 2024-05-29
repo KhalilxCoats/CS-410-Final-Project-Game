@@ -6,7 +6,7 @@ class_name State
 @export var can_fall : bool = true
 @export var can_flip : bool = true
 @export var diferent_speed : bool = false
-
+var is_elemental : bool = false;
 
 var character :CharacterBody2D
 var playback : AnimationNodeStateMachinePlayback

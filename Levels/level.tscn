@@ -1,17 +1,21 @@
-[gd_scene load_steps=21 format=3 uid="uid://b8i2r82nr28fx"]
+[gd_scene load_steps=25 format=3 uid="uid://b8i2r82nr28fx"]
 
-[ext_resource type="Texture2D" uid="uid://ckiniqiw2q3ry" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
+[ext_resource type="Script" path="res://Levels/level.gd" id="1_ovmx8"]
+[ext_resource type="Texture2D" uid="uid://dy4wmry5cqmbm" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="3_8j14c"]
-[ext_resource type="Texture2D" uid="uid://cqiw67mn2ymkg" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="3_142r7"]
-[ext_resource type="Texture2D" uid="uid://c62tf6kdypq2w" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="4_nnkin"]
-[ext_resource type="Texture2D" uid="uid://dy4tlpxlcwykp" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="5_x0lpu"]
-[ext_resource type="Texture2D" uid="uid://d3qp8sngfaf2o" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="6_n5vfa"]
-[ext_resource type="Texture2D" uid="uid://dijvqd32vxjk" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="6_voh63"]
-[ext_resource type="Texture2D" uid="uid://84jui1i4nl17" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="7_erwi0"]
-[ext_resource type="Texture2D" uid="uid://0lm0fnq77taj" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="8_df3lg"]
-[ext_resource type="Texture2D" uid="uid://rhw6cn3klems" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="9_x1t7p"]
+[ext_resource type="Texture2D" uid="uid://bi0k83vj1a0me" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="3_142r7"]
+[ext_resource type="Texture2D" uid="uid://5dmhgge7oh5d" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="4_nnkin"]
+[ext_resource type="Texture2D" uid="uid://cxf22n6r8kpsi" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="5_x0lpu"]
+[ext_resource type="Texture2D" uid="uid://c1avqjeye4itm" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="6_n5vfa"]
+[ext_resource type="Texture2D" uid="uid://douls7w10o0vg" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="6_voh63"]
+[ext_resource type="Texture2D" uid="uid://cxhnrdnd8tav0" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="7_erwi0"]
+[ext_resource type="Texture2D" uid="uid://crk1u1dua7cki" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="8_df3lg"]
+[ext_resource type="Texture2D" uid="uid://d01ut7krvkbyq" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="9_x1t7p"]
 [ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="12_68p4t"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="13_tetqv"]
+[ext_resource type="PackedScene" uid="uid://06irypelgf84" path="res://Menus/health_bar.tscn" id="13_wexer"]
+[ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="14_55tgv"]
+[ext_resource type="Script" path="res://Menus/Menu_Music.gd" id="16_eeidy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
 texture = ExtResource("2_r1wy4")
@@ -23131,6 +23135,7 @@ size = Vector2(2400, 160)
 size = Vector2(59, 59)
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_ovmx8")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(57, -199)
@@ -23213,3 +23218,12 @@ motion_mirroring = Vector2(960, 480)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
 texture = ExtResource("9_x1t7p")
 centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" parent="CanvasLayer" instance=ExtResource("13_wexer")]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("14_55tgv")]
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+script = ExtResource("16_eeidy")

@@ -1,15 +1,19 @@
-[gd_scene load_steps=28 format=3 uid="uid://dv2p0qj58phbj"]
+[gd_scene load_steps=30 format=3 uid="uid://dv2p0qj58phbj"]
 
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="1_5yt7g"]
-[ext_resource type="Texture2D" uid="uid://ckvodytfc68tx" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
-[ext_resource type="Texture2D" uid="uid://ctg7hpa76bbkt" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
-[ext_resource type="Texture2D" uid="uid://c0q27hc1rpvf0" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
-[ext_resource type="Texture2D" uid="uid://catw00sq5mr8" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
+[ext_resource type="Texture2D" uid="uid://btjgy6jgei7s4" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
+[ext_resource type="Script" path="res://Characters/Enemies/testEnemy/testEnemy.gd" id="1_t5x2w"]
+[ext_resource type="Texture2D" uid="uid://bg3314c3t28dn" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
+[ext_resource type="Texture2D" uid="uid://boo3e6wu1lbi7" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
+[ext_resource type="Texture2D" uid="uid://epd827rqq8tw" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/DefaultState.gd" id="6_hscfx"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/AttackState.gd" id="7_pv1si"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cp1bt"]
 height = 42.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_urew1"]
+radius = 25.0
 
 [sub_resource type="Animation" id="Animation_02cw6"]
 resource_name = "Attack"
@@ -258,10 +262,11 @@ states/Flight/position = Vector2(310, 100.222)
 states/Hit/node = SubResource("AnimationNodeAnimation_d8yli")
 states/Hit/position = Vector2(465.889, 164.667)
 transitions = ["Start", "Flight", SubResource("AnimationNodeStateMachineTransition_fh5hy"), "Flight", "Attack", SubResource("AnimationNodeStateMachineTransition_pgdsv"), "Attack", "Flight", SubResource("AnimationNodeStateMachineTransition_vd16w"), "Death", "End", SubResource("AnimationNodeStateMachineTransition_nmfoa"), "Hit", "Death", SubResource("AnimationNodeStateMachineTransition_5vdb8"), "Flight", "Hit", SubResource("AnimationNodeStateMachineTransition_jb5jk"), "Attack", "Hit", SubResource("AnimationNodeStateMachineTransition_6u60q"), "Hit", "Flight", SubResource("AnimationNodeStateMachineTransition_80qn0")]
-graph_offset = Vector2(-9, -45)
+graph_offset = Vector2(84.4498, -33.3675)
 
-[node name="enemyCharacter" type="CharacterBody2D"]
+[node name="enemyCharacter" type="CharacterBody2D" groups=["Enemy"]]
 motion_mode = 1
+script = ExtResource("1_t5x2w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_f6daw")
@@ -270,6 +275,15 @@ texture = ExtResource("1_f6daw")
 position = Vector2(2, 1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cp1bt")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 0)
+shape = SubResource("CircleShape2D_urew1")
+debug_color = Color(0.962569, 0.0729701, 0.454434, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -297,4 +311,16 @@ attack_state = NodePath("../Attack")
 script = ExtResource("7_pv1si")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_postprocessing = 1
+debug_enabled = true
+
+[node name="healthbar" type="ProgressBar" parent="."]
+offset_left = -22.0
+offset_top = -34.0
+offset_right = 78.0
+offset_bottom = -7.0
+scale = Vector2(0.5, 0.5)
+value = 100.0
+show_percentage = false
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
