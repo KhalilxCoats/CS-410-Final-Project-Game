@@ -1,33 +1,33 @@
 [gd_scene load_steps=156 format=3 uid="uid://cd6y218ysgqds"]
 
 [ext_resource type="Script" path="res://Characters/Character.gd" id="1_lncs4"]
-[ext_resource type="Texture2D" uid="uid://pvutvr2au8ll" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
-[ext_resource type="Texture2D" uid="uid://ckkllm1cfyfq4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/air_atk/fire knight air attack sprite sheet.png" id="2_baoq7"]
-[ext_resource type="Texture2D" uid="uid://b63exsp4o0r2c" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/10_take_hit/fire knight take hit sprite sheet.png" id="2_f0qcp"]
-[ext_resource type="Texture2D" uid="uid://c7iey62r4eqvr" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/09_defend/fire knight defend sprite sheet.png" id="2_m3c10"]
-[ext_resource type="Texture2D" uid="uid://c65yc44gjvcvc" path="res://assets/SFX/Fire Effect 2/Fire Effect 2/Explosion 2 SpriteSheet.png" id="3_fqrqh"]
-[ext_resource type="Texture2D" uid="uid://d1u1e1e1ymrap" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
-[ext_resource type="Texture2D" uid="uid://c4buojcq7l4tp" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/13_e_idle/fire knight elemental idle sprite sheet.png" id="3_snsvd"]
-[ext_resource type="Texture2D" uid="uid://cyekte6ge8r5s" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/14_e_run/fire knight elemental run sprite sheet.png" id="4_mbuxg"]
-[ext_resource type="Texture2D" uid="uid://cpgf1kjp4kpaj" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
+[ext_resource type="Texture2D" uid="uid://dfngiwdb5w5hs" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
+[ext_resource type="Texture2D" uid="uid://d1klpan5f3hak" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/air_atk/fire knight air attack sprite sheet.png" id="2_baoq7"]
+[ext_resource type="Texture2D" uid="uid://c5idr6718us0f" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/10_take_hit/fire knight take hit sprite sheet.png" id="2_f0qcp"]
+[ext_resource type="Texture2D" uid="uid://btdlxgudt83jq" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/09_defend/fire knight defend sprite sheet.png" id="2_m3c10"]
+[ext_resource type="Texture2D" uid="uid://bij27ph4gy2lw" path="res://assets/SFX/Fire Effect 2/Fire Effect 2/Explosion 2 SpriteSheet.png" id="3_fqrqh"]
+[ext_resource type="Texture2D" uid="uid://dk360kaokwih3" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
+[ext_resource type="Texture2D" uid="uid://chjqtja5jhmw1" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/13_e_idle/fire knight elemental idle sprite sheet.png" id="3_snsvd"]
+[ext_resource type="Texture2D" uid="uid://bxos3je1f2c2l" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/14_e_run/fire knight elemental run sprite sheet.png" id="4_mbuxg"]
+[ext_resource type="Texture2D" uid="uid://ct45v4o03y732" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="4_vb18u"]
-[ext_resource type="Texture2D" uid="uid://cnl8mi4pumfwn" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
-[ext_resource type="Texture2D" uid="uid://c3dk652j1nlai" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/17_e_1_atk/fire knight elemental attack 1 sprite sheet.png" id="5_5kkll"]
+[ext_resource type="Texture2D" uid="uid://cbxye8xgo48r1" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
+[ext_resource type="Texture2D" uid="uid://dmf3mggg1tptn" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/17_e_1_atk/fire knight elemental attack 1 sprite sheet.png" id="5_5kkll"]
 [ext_resource type="Script" path="res://Characters/AirState.gd" id="5_sw0be"]
 [ext_resource type="Script" path="res://Characters/GroundState.gd" id="5_uyt4m"]
-[ext_resource type="Texture2D" uid="uid://brq2teiblw7k1" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
-[ext_resource type="Texture2D" uid="uid://oqejke7qnqvc" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/18_e_2_atk/fire knight elemental attack 2 sprite sheet.png" id="6_e1gjk"]
-[ext_resource type="Texture2D" uid="uid://cnv8rjf1vkqbr" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/19_e_3_atk/fire knight elemental attack 3 sprite sheet.png" id="7_1jse7"]
-[ext_resource type="Texture2D" uid="uid://dds4agdnuxuf2" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
+[ext_resource type="Texture2D" uid="uid://b11x7nont5dif" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
+[ext_resource type="Texture2D" uid="uid://dnhqb5vyomp07" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/18_e_2_atk/fire knight elemental attack 2 sprite sheet.png" id="6_e1gjk"]
+[ext_resource type="Texture2D" uid="uid://djcqextce72xh" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/19_e_3_atk/fire knight elemental attack 3 sprite sheet.png" id="7_1jse7"]
+[ext_resource type="Texture2D" uid="uid://bt012tlotqprd" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
 [ext_resource type="Script" path="res://Characters/stateLabel.gd" id="8_d7xao"]
-[ext_resource type="Texture2D" uid="uid://ckjmikws2f07o" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
-[ext_resource type="Texture2D" uid="uid://bd82qk2t7hf17" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/e_air_atk/fire knight elemental air attack sprite sheet.png" id="8_ja1vb"]
-[ext_resource type="Texture2D" uid="uid://cuttx0qelxwhe" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/04_roll/fire knight roll sprite sheet.png" id="9_5loqi"]
-[ext_resource type="Texture2D" uid="uid://burxr5k46evyl" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/15_e_jump/fire knight elemental jump sprite sheet.png" id="9_43p8d"]
-[ext_resource type="Texture2D" uid="uid://dr20fimp0p7ib" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/20_e_sp_atk/fire knight elemental special attack  sprite sheet.png" id="9_arjux"]
-[ext_resource type="Texture2D" uid="uid://dqnfmoxvujt0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/23_back2human/fire knight human transform sprite sheet.png" id="11_5mqqp"]
+[ext_resource type="Texture2D" uid="uid://demfq5du5uat6" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
+[ext_resource type="Texture2D" uid="uid://xxq4336nmjex" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/e_air_atk/fire knight elemental air attack sprite sheet.png" id="8_ja1vb"]
+[ext_resource type="Texture2D" uid="uid://kct7afay4jh3" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/04_roll/fire knight roll sprite sheet.png" id="9_5loqi"]
+[ext_resource type="Texture2D" uid="uid://djxafmi0ju1wd" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/15_e_jump/fire knight elemental jump sprite sheet.png" id="9_43p8d"]
+[ext_resource type="Texture2D" uid="uid://r8djao08jbpl" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/20_e_sp_atk/fire knight elemental special attack  sprite sheet.png" id="9_arjux"]
+[ext_resource type="Texture2D" uid="uid://ba8ngukhk8m2j" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/23_back2human/fire knight human transform sprite sheet.png" id="11_5mqqp"]
 [ext_resource type="Script" path="res://Characters/Attack.gd" id="11_md3ro"]
-[ext_resource type="Texture2D" uid="uid://ctxwbbmn6ykfv" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/12_transform/fire knight elemental transform sprite sheet.png" id="13_lvrnh"]
+[ext_resource type="Texture2D" uid="uid://cdnr3qbugiwrk" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/12_transform/fire knight elemental transform sprite sheet.png" id="13_lvrnh"]
 [ext_resource type="Script" path="res://Characters/DefendState.gd" id="17_70kdt"]
 [ext_resource type="Script" path="res://Characters/DodgeState.gd" id="18_0oabr"]
 [ext_resource type="Script" path="res://Characters/TransformState.gd" id="19_cj5fe"]
@@ -2564,11 +2564,6 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
-libraries = {
-"": SubResource("AnimationLibrary_hjut0"),
-"Elemental": SubResource("AnimationLibrary_7tqpb"),
-"Human": SubResource("AnimationLibrary_syyae")
-}
 tree_root = SubResource("AnimationNodeStateMachine_b4iqi")
 anim_player = NodePath("../AnimationPlayer")
 "parameters/elemental move/blend_position" = 0
