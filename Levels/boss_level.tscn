@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://38o2rss1q5wt"]
+[gd_scene load_steps=8 format=3 uid="uid://38o2rss1q5wt"]
 
+[ext_resource type="Script" path="res://Levels/boss_level.gd" id="1_k77wc"]
 [ext_resource type="Texture2D" uid="uid://c6bwq62erjb6i" path="res://assets/Tiles/castle.png" id="1_rsg7p"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="2_phvn3"]
 [ext_resource type="PackedScene" uid="uid://ciher7eh13t8x" path="res://Characters/Enemies/Bosses/boss_death.tscn" id="3_882yl"]
+[ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="4_7xyq3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpghw"]
 texture = ExtResource("1_rsg7p")
@@ -5293,6 +5295,7 @@ physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_jpghw")
 
 [node name="bossLevel" type="Node2D"]
+script = ExtResource("1_k77wc")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -34)
@@ -5315,3 +5318,7 @@ position = Vector2(48, 273)
 
 [node name="boss" parent="." instance=ExtResource("3_882yl")]
 position = Vector2(573, 179)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_7xyq3")]

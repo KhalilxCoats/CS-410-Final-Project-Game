@@ -6,8 +6,8 @@
 script/source = "extends Control
 
 func _ready():
-	pass#MenuMusic.play_music_menu()
-	
+	MenuMusic.play_music_menu()
+
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file(\"res://Menus/character_select_v_2.tscn\")

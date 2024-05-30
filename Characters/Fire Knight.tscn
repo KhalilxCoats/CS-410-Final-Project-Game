@@ -1,4 +1,4 @@
-[gd_scene load_steps=156 format=3 uid="uid://cd6y218ysgqds"]
+[gd_scene load_steps=157 format=3 uid="uid://cd6y218ysgqds"]
 
 [ext_resource type="Script" path="res://Characters/Character.gd" id="1_lncs4"]
 [ext_resource type="Texture2D" uid="uid://dfngiwdb5w5hs" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
@@ -2529,7 +2529,12 @@ states/land/position = Vector2(823, -154)
 transitions = ["Start", "human move", SubResource("AnimationNodeStateMachineTransition_2p227"), "human move", "jump", SubResource("AnimationNodeStateMachineTransition_mydij"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_ib7hj"), "land", "human move", SubResource("AnimationNodeStateMachineTransition_i51pn"), "human move", "attack 1", SubResource("AnimationNodeStateMachineTransition_2w6pe"), "attack 1", "attack 2", SubResource("AnimationNodeStateMachineTransition_gv8to"), "attack 2", "human move", SubResource("AnimationNodeStateMachineTransition_bidtu"), "attack 1", "attack 1 return", SubResource("AnimationNodeStateMachineTransition_6j34x"), "attack 1 return", "human move", SubResource("AnimationNodeStateMachineTransition_dvcr2"), "human move", "attack 3", SubResource("AnimationNodeStateMachineTransition_7nlck"), "attack 3", "human move", SubResource("AnimationNodeStateMachineTransition_c4esg"), "human move", "special attack", SubResource("AnimationNodeStateMachineTransition_k1ck0"), "special attack", "human move", SubResource("AnimationNodeStateMachineTransition_3sqnx"), "human move", "dodge", SubResource("AnimationNodeStateMachineTransition_2mwt1"), "dodge", "human move", SubResource("AnimationNodeStateMachineTransition_0qbyh"), "human move", "fall", SubResource("AnimationNodeStateMachineTransition_bwfa1"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_f0ffd"), "air attack 1", "air attack 2", SubResource("AnimationNodeStateMachineTransition_rskuo"), "air attack 2", "fall", SubResource("AnimationNodeStateMachineTransition_lktmq"), "air attack 1", "fall", SubResource("AnimationNodeStateMachineTransition_8sldf"), "jump", "air attack 1", SubResource("AnimationNodeStateMachineTransition_rtn8m"), "exit defend", "human move", SubResource("AnimationNodeStateMachineTransition_u5jwt"), "human move", "enter defend", SubResource("AnimationNodeStateMachineTransition_d1mfq"), "enter defend", "defend", SubResource("AnimationNodeStateMachineTransition_2x7km"), "defend", "exit defend", SubResource("AnimationNodeStateMachineTransition_5jnfi"), "fall", "air attack 1", SubResource("AnimationNodeStateMachineTransition_mpbak"), "human move", "elemental transform", SubResource("AnimationNodeStateMachineTransition_qlbev"), "elemental transform", "elemental move", SubResource("AnimationNodeStateMachineTransition_8qkgw"), "elemental move", "human transform", SubResource("AnimationNodeStateMachineTransition_1dsg5"), "human transform", "human move", SubResource("AnimationNodeStateMachineTransition_26fvs"), "elemental move", "Elemental_jump", SubResource("AnimationNodeStateMachineTransition_jblvc"), "Elemental_jump", "elemental land", SubResource("AnimationNodeStateMachineTransition_g23st"), "elemental land", "elemental move", SubResource("AnimationNodeStateMachineTransition_n7iqs"), "elemental move", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_lo3bn"), "Elemental_fall", "elemental land", SubResource("AnimationNodeStateMachineTransition_dd5m7"), "Elemental_jump", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_4q7t8"), "Elemental_air attack 1", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_uq1gi"), "Elemental_air attack 1", "Elemental_air attack 2", SubResource("AnimationNodeStateMachineTransition_268n6"), "Elemental_air attack 2", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_d0mx7"), "Elemental_fall", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_14ch2"), "elemental move", "Elemental_attack 1", SubResource("AnimationNodeStateMachineTransition_gjbwp"), "Elemental_attack 1", "Elemental_attack 2", SubResource("AnimationNodeStateMachineTransition_c7jnt"), "Elemental_attack 2", "elemental move", SubResource("AnimationNodeStateMachineTransition_j7x1w"), "Elemental_attack 1", "Elemental_attack 1 return", SubResource("AnimationNodeStateMachineTransition_jj1bw"), "Elemental_attack 1 return", "elemental move", SubResource("AnimationNodeStateMachineTransition_4k6sw"), "elemental move", "Elemental_attack 3", SubResource("AnimationNodeStateMachineTransition_e504j"), "Elemental_attack 3", "elemental move", SubResource("AnimationNodeStateMachineTransition_oifqo"), "elemental move", "Elemental_special attack", SubResource("AnimationNodeStateMachineTransition_jb3jc"), "Elemental_special attack", "elemental move", SubResource("AnimationNodeStateMachineTransition_mdv4t"), "jump", "human move", SubResource("AnimationNodeStateMachineTransition_1svrf"), "fall", "human move", SubResource("AnimationNodeStateMachineTransition_yhekj")]
 graph_offset = Vector2(321.852, -15.4355)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wg8y1"]
+radius = 19.0
+height = 68.0
+
 [node name="Fire Knight" type="CharacterBody2D" groups=["playerCharacter"]]
+collision_mask = 9
 slide_on_ceiling = false
 floor_stop_on_slope = false
 floor_max_angle = 0.692896
@@ -2673,6 +2678,14 @@ offset_bottom = -24.0
 text = "state:"
 script = ExtResource("8_d7xao")
 state_machine = NodePath("../CharacterStateMachine")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_wg8y1")
+debug_color = Color(0.970824, 0, 0.45212, 0.42)
 
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Defend" method="_on_animation_tree_animation_finished"]

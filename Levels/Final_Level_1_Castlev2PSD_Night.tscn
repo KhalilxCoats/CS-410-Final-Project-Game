@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsx3pnh5sigak"]
+[gd_scene load_steps=6 format=3 uid="uid://bsx3pnh5sigak"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
-[ext_resource type="Texture2D" uid="uid://cwkuac2mn11jx" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
-[ext_resource type="Texture2D" uid="uid://batyg7uc1ut2n" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
-[ext_resource type="Texture2D" uid="uid://ck6lrrif4gmqr" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
+[ext_resource type="Texture2D" uid="uid://b2ium8i3ca750" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
+[ext_resource type="Texture2D" uid="uid://b2xhgq664tmt3" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
+[ext_resource type="Texture2D" uid="uid://d28cj44adlnpy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
+[ext_resource type="PackedScene" uid="uid://ciher7eh13t8x" path="res://Characters/Enemies/Bosses/boss_death.tscn" id="5_rotuk"]
 
 [node name="Level" instance=ExtResource("1_vxj2i")]
 
@@ -30,3 +31,6 @@ motion_mirroring = Vector2(1024, 640)
 
 [node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" index="0"]
 texture = null
+
+[node name="boss_death" parent="." index="6" instance=ExtResource("5_rotuk")]
+position = Vector2(811, 304)
