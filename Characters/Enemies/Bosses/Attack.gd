@@ -1,6 +1,8 @@
 extends "res://Characters/Enemies/Bosses/state2.gd"
 var can_transition: bool = false
 
+#When entering this state, attack animation is played
+#then transitions back to move
 func enter():
 	super.enter()
 	animation_player.play("death_meleeattack")
