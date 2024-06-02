@@ -1,16 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpqieb0xluenk"]
+[gd_scene load_steps=7 format=3 uid="uid://cpqieb0xluenk"]
 
 [ext_resource type="Texture2D" uid="uid://cy6v3avddvkm3" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
 script/source = "extends Control
+@onready var animation_player = $FadeLayer/AnimationPlayer
 
 func _ready():
 	MenuMusic.play_music_menu()
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file(\"res://Menus/character_select_v_2.tscn\")
+	animation_player.play(\"Transition_out\")
+	await animation_player.animation_finished
+	get_tree().change_scene_to_file(\"res://Levels/Final_Level_1_Castlev2PSD_Night.tscn\")
 
 
 
@@ -23,6 +26,82 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 "
+
+[sub_resource type="Animation" id="Animation_1oxcv"]
+resource_name = "Transition_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer/AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer/AnimationPlayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_610l2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer/AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s0eqx"]
+resource_name = "Transition_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeLayer/AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeLayer/AnimationPlayer/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jim3y"]
+_data = {
+"RESET": SubResource("Animation_610l2"),
+"Transition_in": SubResource("Animation_1oxcv"),
+"Transition_out": SubResource("Animation_s0eqx")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -83,6 +162,20 @@ z_index = -1
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("1_i8hxu")
 centered = false
+
+[node name="FadeLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeLayer"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_jim3y")
+}
+
+[node name="ColorRect" type="ColorRect" parent="FadeLayer/AnimationPlayer"]
+visible = false
+offset_right = 1152.0
+offset_bottom = 641.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
