@@ -1,18 +1,18 @@
 [gd_scene load_steps=79 format=3 uid="uid://crlolvr5ottdh"]
 
 [ext_resource type="Script" path="res://Levels/Final_Level_2_PixelFantasyCave.gd" id="1_0s3hv"]
-[ext_resource type="Texture2D" uid="uid://di2cnweuvbw5d" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_8h3fx"]
-[ext_resource type="Texture2D" uid="uid://b2jo3crb7og3s" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="2_14h0u"]
-[ext_resource type="Texture2D" uid="uid://bt0ipiam5u0xi" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="3_wymex"]
-[ext_resource type="Texture2D" uid="uid://b112m2lan3at6" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_0wt5r"]
-[ext_resource type="Texture2D" uid="uid://couc0jo4tswmc" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_s1jjc"]
+[ext_resource type="Texture2D" uid="uid://byyxfmhb2sy78" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_8h3fx"]
+[ext_resource type="Texture2D" uid="uid://bphthblk0is61" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="2_14h0u"]
+[ext_resource type="Texture2D" uid="uid://cqsiowwhdas8k" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="3_wymex"]
+[ext_resource type="Texture2D" uid="uid://dgs28gbaebikx" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_0wt5r"]
+[ext_resource type="Texture2D" uid="uid://d26ue34ifc4w7" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_s1jjc"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="6_5kth0"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="7_msxsc"]
 [ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="8_cpc70"]
-[ext_resource type="Texture2D" uid="uid://bx3qb5wirpr47" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_qd4js"]
-[ext_resource type="Texture2D" uid="uid://ks4ur8otb6m2" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_0s875"]
-[ext_resource type="Texture2D" uid="uid://csgdqgynwd7r1" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_ulmxh"]
-[ext_resource type="Texture2D" uid="uid://ce0dhfdqlskhb" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_ip8qu"]
+[ext_resource type="Texture2D" uid="uid://b3rh7vemb0hiu" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_qd4js"]
+[ext_resource type="Texture2D" uid="uid://dc8qgdbmqhy7n" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_0s875"]
+[ext_resource type="Texture2D" uid="uid://du6lsbseskegw" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_ulmxh"]
+[ext_resource type="Texture2D" uid="uid://dw3tlg3kf6gom" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_ip8qu"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="14_3iaib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
@@ -23394,7 +23394,7 @@ position = Vector2(5728.5, 499.5)
 shape = SubResource("RectangleShape2D_xl5wx")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="TileMap/StaticBody2D2"]
-position = Vector2(5584, 493)
+position = Vector2(5584.79, 502.021)
 shape = SubResource("RectangleShape2D_k0338")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="TileMap/StaticBody2D2"]
@@ -23438,7 +23438,7 @@ position = Vector2(7807, 501)
 shape = SubResource("RectangleShape2D_t8cin")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="TileMap/StaticBody2D2"]
-position = Vector2(7664.5, 494)
+position = Vector2(7664.32, 509.572)
 shape = SubResource("RectangleShape2D_syopj")
 
 [node name="CollisionShape2D33" type="CollisionShape2D" parent="TileMap/StaticBody2D2"]
@@ -23616,7 +23616,7 @@ position = Vector2(8918, 354)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
-position = Vector2(2795, 2)
+position = Vector2(2526, 40)
 shape = SubResource("RectangleShape2D_f4fwv")
 debug_color = Color(4.81308e-08, 0.639314, 0.366432, 0.42)
 

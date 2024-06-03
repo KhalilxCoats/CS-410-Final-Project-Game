@@ -29,7 +29,7 @@ func _process(_delta):
 #Moves boss
 #Checks bosses healthh and updates health. If health is less than 0 change to death state
 func _physics_process(delta):
-	velocity = direction.normalized()*100
+	velocity = direction.normalized()*50
 	update_health()
 	move_and_slide()
 	if current_health <= 0:
