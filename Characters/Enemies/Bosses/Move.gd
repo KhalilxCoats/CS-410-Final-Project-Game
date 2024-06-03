@@ -20,8 +20,9 @@ func exit():
 #If distance from player is above 160 units then the range attack will start
 func transition():
 	var distance = owner.direction.length()
+	print(distance)
 	
-	if distance < 75 && timer2.is_stopped():
+	if distance < 95 && timer2.is_stopped():
 		get_parent().change_state("Attack")
 	elif distance > 160 && timer.is_stopped():
 		get_parent().change_state("RangeAttack")
