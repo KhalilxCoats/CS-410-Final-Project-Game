@@ -1,18 +1,18 @@
-[gd_scene load_steps=79 format=3 uid="uid://crlolvr5ottdh"]
+[gd_scene load_steps=80 format=3 uid="uid://crlolvr5ottdh"]
 
 [ext_resource type="Script" path="res://Levels/Final_Level_2_PixelFantasyCave.gd" id="1_0s3hv"]
-[ext_resource type="Texture2D" uid="uid://di2cnweuvbw5d" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_8h3fx"]
-[ext_resource type="Texture2D" uid="uid://b2jo3crb7og3s" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="2_14h0u"]
-[ext_resource type="Texture2D" uid="uid://bt0ipiam5u0xi" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="3_wymex"]
-[ext_resource type="Texture2D" uid="uid://b112m2lan3at6" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_0wt5r"]
-[ext_resource type="Texture2D" uid="uid://couc0jo4tswmc" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_s1jjc"]
+[ext_resource type="Texture2D" uid="uid://byyxfmhb2sy78" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_8h3fx"]
+[ext_resource type="Texture2D" uid="uid://bphthblk0is61" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="2_14h0u"]
+[ext_resource type="Texture2D" uid="uid://cqsiowwhdas8k" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="3_wymex"]
+[ext_resource type="Texture2D" uid="uid://dgs28gbaebikx" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_0wt5r"]
+[ext_resource type="Texture2D" uid="uid://d26ue34ifc4w7" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_s1jjc"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="6_5kth0"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="7_msxsc"]
 [ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="8_cpc70"]
-[ext_resource type="Texture2D" uid="uid://bx3qb5wirpr47" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_qd4js"]
-[ext_resource type="Texture2D" uid="uid://ks4ur8otb6m2" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_0s875"]
-[ext_resource type="Texture2D" uid="uid://csgdqgynwd7r1" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_ulmxh"]
-[ext_resource type="Texture2D" uid="uid://ce0dhfdqlskhb" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_ip8qu"]
+[ext_resource type="Texture2D" uid="uid://b3rh7vemb0hiu" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_qd4js"]
+[ext_resource type="Texture2D" uid="uid://dc8qgdbmqhy7n" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_0s875"]
+[ext_resource type="Texture2D" uid="uid://du6lsbseskegw" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_ulmxh"]
+[ext_resource type="Texture2D" uid="uid://dw3tlg3kf6gom" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_ip8qu"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="14_3iaib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
@@ -23298,6 +23298,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4fwv"]
 size = Vector2(138.5, 132.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h60r4"]
+size = Vector2(9301, 189)
+
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0s3hv")
 
@@ -23538,7 +23541,7 @@ position = Vector2(11256, 704)
 shape = SubResource("RectangleShape2D_rdmiu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(155, 394)
+position = Vector2(150, 434)
 offset = Vector2(0, -60)
 process_callback = 0
 limit_left = 0
@@ -23550,7 +23553,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="playerCharacter" parent="." instance=ExtResource("7_msxsc")]
-position = Vector2(155, 394)
+position = Vector2(150, 434)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="playerCharacter"]
 remote_path = NodePath("../../Camera2D")
@@ -23561,7 +23564,7 @@ position = Vector2(1080, 389)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-29, 396)
+position = Vector2(-33, 431)
 shape = SubResource("RectangleShape2D_muew0")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -23624,5 +23627,13 @@ debug_color = Color(4.81308e-08, 0.639314, 0.366432, 0.42)
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("14_3iaib")]
 visible = false
+
+[node name="KillBox" type="Area2D" parent="." groups=["KillBox"]]
+position = Vector2(2277, 623)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillBox"]
+position = Vector2(4595.5, 104.5)
+shape = SubResource("RectangleShape2D_h60r4")
+debug_color = Color(0.968758, 0, 0.465794, 0.42)
 
 [connection signal="body_entered" from="NextLevel" to="." method="_on_next_level_body_entered"]

@@ -60,50 +60,60 @@ bus_name = "Master"
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Controls:"
+text = "Controls: Keyboard and Mouse on left, Controller on right"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Move_Right" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Move_right : D"
+text = "Move_right : D or Right on left Stick"
+horizontal_alignment = 1
+
+[node name="Move_Left" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Move_left: A or Left on left Stick"
+horizontal_alignment = 1
+
+[node name="Jump" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Jump: SpaceBar or A-button"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Move_left: A"
+text = "Dodge: Shift or B button"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Basic_Attack" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Jump: SpaceBar"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Basic_Attack: Left_Mouse_Button
+text = "Basic_Attack: Left_Mouse_Button or X button
 "
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Power_Attack" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Power_Attack: Right_Mouse_Button"
+text = "Power_Attack: Right_Mouse_Button or Y button"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Special_Attack" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Transform: Q"
+text = "Special Attack: Middle Mouse or right numper"
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Transform" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Defend: Ctrl"
+text = "Transform: Q or down on left stick"
 horizontal_alignment = 1
 
-[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Defend" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Pause: Esc"
+text = "Defend: Ctrl or leftbumper"
+horizontal_alignment = 1
+
+[node name="Pause" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Pause: Esc or start "
 horizontal_alignment = 1
 
 [node name="ReturnToMainMenu" type="Button" parent="MarginContainer/VBoxContainer"]
