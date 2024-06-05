@@ -83,8 +83,7 @@ func state_input(event : InputEvent):
 		if(event.is_action_pressed("transform right stick")):
 			elemental_timout.start()
 			transform()		
-		
-	print(elemental_timout.time_left)
+	
 	if is_elemental && elemental_timout.time_left == 0 && character.is_on_floor():
 		transform()
 
