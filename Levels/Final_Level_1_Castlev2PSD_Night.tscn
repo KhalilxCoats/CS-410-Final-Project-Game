@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bsx3pnh5sigak"]
+[gd_scene load_steps=39 format=3 uid="uid://bsx3pnh5sigak"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
 [ext_resource type="Texture2D" uid="uid://bj20p1c8bpppy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
@@ -157,10 +157,16 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gk6uf"]
 size = Vector2(5677, 133)
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_q6m8b"]
-vertices = PackedVector2Array(9365, 17, 9356, 405, -92, 406, -92, 10)
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_2ncps"]
+vertices = PackedVector2Array(2288, 6, 2281, 408, -92, 407, -84, 5)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-102, 417, -102, 0, 9376, 8, 9366, 415)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-94, -5, -103, 417, 2291, 419, 2299, -3)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4cdp7"]
+vertices = PackedVector2Array(3436, 393, 2450, 403, 2442, 9, 3418, 9)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(2441, 414, 2432, -1, 3428, 0, 3447, 403)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Level" instance=ExtResource("1_vxj2i")]
@@ -284,9 +290,6 @@ shape = SubResource("RectangleShape2D_euc8h")
 [node name="Camera2D" parent="." index="1"]
 limit_right = 9468
 
-[node name="playerCharacter" parent="." index="2"]
-collision_mask = 1
-
 [node name="ParallaxLayer" parent="ParallaxBackground" index="0"]
 motion_mirroring = Vector2(1024, 640)
 
@@ -350,6 +353,9 @@ shape = SubResource("RectangleShape2D_gk6uf")
 debug_color = Color(0.979367, 0, 0.388625, 0.42)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="11"]
-navigation_polygon = SubResource("NavigationPolygon_q6m8b")
+navigation_polygon = SubResource("NavigationPolygon_2ncps")
+
+[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="12"]
+navigation_polygon = SubResource("NavigationPolygon_4cdp7")
 
 [connection signal="body_entered" from="NextLevel" to="." method="_on_next_level_body_entered"]

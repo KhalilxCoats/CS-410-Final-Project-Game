@@ -8,16 +8,22 @@ extends State
 @export var speed = 100
 @onready var sprite : Sprite2D = get_parent().get_parent().get_node("Sprite2D")
 @onready var facing = 1
+@onready var spawnCoordinates : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	randomize()
+	spawnCoordinates = parentCharacter.get_global_position()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func state_process(delta):
 	nav.target_position = player.get_global_position()
-	nav.target_position.y -= 10 #makes the enemy aim slightly higher
-	var direction = nav.get_next_path_position() - parentCharacter.get_global_position() #get difference between current position and next position
+	var direction : Vector2
+	if(nav.is_target_reachable()):
+		nav.target_position.y -= 10 #makes the enemy aim slightly higher
+	else:
+		nav.target_position = spawnCoordinates
+	direction = nav.get_next_path_position() - parentCharacter.get_global_position() #get difference between current position and next position
 	direction = direction.normalized() #convert difference into normal vectors
 	parentCharacter.velocity = direction * speed
 	parentCharacter.move_and_slide()
