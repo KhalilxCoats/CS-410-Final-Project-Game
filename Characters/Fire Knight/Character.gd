@@ -39,10 +39,10 @@ func _physics_process(delta):
 		velocity.x = direction.x * human_speed
 	elif(!state_machine.current_state.is_elemental && state_machine.current_state.name == "Dodge"):
 		if facing == 1:
-			if state_machine.current_state.diferent_speed == true:
+			if state_machine.current_state.different_speed == true:
 				velocity.x = dodge_speed
 		elif facing == -1:
-			if state_machine.current_state.diferent_speed == true:
+			if state_machine.current_state.different_speed == true:
 				velocity.x = -dodge_speed
 	elif (direction.x != 0 && state_machine.get_can_move() && state_machine.current_state.is_elemental):
 		velocity.x = direction.x * elemental_speed
@@ -66,8 +66,6 @@ func update_facing():
 	elif direction.x < 0 && facing == 1:
 		scale.x = -1
 		facing = -1
-		
+
 func update_health():
 	healthChanged.emit()
-	
-	

@@ -13,7 +13,6 @@ extends StaticBody2D
 
 ## Your TileMap Node
 @export var tilemap_nodepath: NodePath
-
 ## The tilemap layer to bake collisions on.
 ## You can bake for multiple layers by disabling delete_children_on_run and running multiple times.
 @export var target_tiles_layer: int = 0

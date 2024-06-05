@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bsx3pnh5sigak"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
-[ext_resource type="Texture2D" uid="uid://cwkuac2mn11jx" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
-[ext_resource type="Texture2D" uid="uid://batyg7uc1ut2n" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
-[ext_resource type="Texture2D" uid="uid://ck6lrrif4gmqr" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
+[ext_resource type="Texture2D" uid="uid://cm45qp7naobae" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
+[ext_resource type="Texture2D" uid="uid://caihc14qnx3td" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
+[ext_resource type="Texture2D" uid="uid://be4viyg0lsn6o" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
 
 [node name="Level" instance=ExtResource("1_vxj2i")]
 
