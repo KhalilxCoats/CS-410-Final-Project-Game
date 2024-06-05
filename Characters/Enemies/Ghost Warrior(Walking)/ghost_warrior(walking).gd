@@ -18,8 +18,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	animation_tree.active = true
-	nav.path_desired_distance = 100.0
-	nav.target_desired_distance = 100.0
+	nav.path_desired_distance = 10.0
+	nav.target_desired_distance = 10.0
 	
 	call_deferred("actor_setup")
 
@@ -33,13 +33,14 @@ func _physics_process(delta):
 	var new_velocity : Vector2 =  next_path_position - current_agent_position
 	new_velocity = new_velocity.normalized()
 	new_velocity *= SPEED
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	
+	
 	var direction = to_local(nav.get_next_path_position())
 	if direction.x != 0 && state_machine.current_state.can_move:
 		velocity.x = new_velocity.x
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
 	move_and_slide()
 	change_animation()
 	
@@ -48,10 +49,17 @@ func _physics_process(delta):
 
 func actor_setup():
 	await get_tree().physics_frame
-	set_target()
+	nav.target_position = target.global_position
 
 func set_target():
-	nav.target_position = target.global_position
+	if(target.global_position.x - global_position.x < 0):
+		var target_calc : Vector2 = target.global_position
+		target_calc.x +=35
+		nav.target_position = target_calc
+	elif(target.global_position.x - global_position.x > 0):
+		var target_calc : Vector2 = target.global_position
+		target_calc.x -= 50
+		nav.target_position = target_calc
 
 func _on_nav_path_maker_timeout():
 	set_target()

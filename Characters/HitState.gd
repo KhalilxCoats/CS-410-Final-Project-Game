@@ -2,7 +2,7 @@ extends State
 
 class_name HitState
 
-@export var damageable: Damageable
+@export var damageable: Damageable_enemy
 @export var dead_state : State
 @export var return_state : State
 
@@ -15,7 +15,7 @@ func _ready():
 func on_enter():
 	timer.start()
 
-func on_damageable_hit(node:Node,damage_amount:int):
+func on_damageable_hit(node:Node,damage_amount:float):
 	if(damageable.health > 0):
 		emit_signal("interrupt_state", self)
 		playback.travel("take hit")

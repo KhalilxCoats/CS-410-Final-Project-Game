@@ -2,8 +2,6 @@ extends CharacterBody2D
 class_name Character
 
 signal healthChanged
-
-@export var maxHealth = 30
 @export var human_speed: float = 250.0
 @export var elemental_speed: float = 300.0
 @export var dodge_speed : float = 350
@@ -13,7 +11,6 @@ signal healthChanged
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation_tree : AnimationTree = $AnimationTree
 @onready var state_machine : CharacterStateMachine = $CharacterStateMachine
-@onready var currentHealth: int = maxHealth
 @onready var Elemental_timeout : Timer = $ElementalTimer
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

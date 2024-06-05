@@ -1,6 +1,6 @@
 extends Node
 
-class_name Damageable
+class_name Damageable_enemy
 
 signal on_hit(node: Node, damage_taken: float)
 @export var health : float = 20 :
@@ -9,7 +9,6 @@ signal on_hit(node: Node, damage_taken: float)
 	set(value):
 		SignalBus.emit_signal("on_health_changed",get_parent(), value - health)
 		health = value
-
 
 func hit(damage : float):
 	health -= damage
