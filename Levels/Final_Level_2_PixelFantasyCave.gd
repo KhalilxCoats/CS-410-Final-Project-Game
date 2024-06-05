@@ -10,3 +10,10 @@ func _on_next_level_body_entered(body):
 		animation_player.play("Transition_out")
 		await animation_player.animation_finished
 		get_tree().change_scene_to_file("res://Levels/boss_level.tscn")
+
+
+func _on_kill_box_body_entered(body):
+	if body.is_in_group("playerCharacter"):
+		animation_player.play("Transition_out")
+		await animation_player.animation_finished
+		get_tree().change_scene_to_file("res://Menus/death_screen.tscn") 
