@@ -1,22 +1,23 @@
-[gd_scene load_steps=31 format=3 uid="uid://38o2rss1q5wt"]
+[gd_scene load_steps=34 format=3 uid="uid://38o2rss1q5wt"]
 
 [ext_resource type="Script" path="res://Levels/boss_level.gd" id="1_k77wc"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight/Fire Knight.tscn" id="2_phvn3"]
 [ext_resource type="PackedScene" uid="uid://ciher7eh13t8x" path="res://Characters/Enemies/Bosses/boss_death.tscn" id="3_882yl"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="4_7xyq3"]
-[ext_resource type="Texture2D" uid="uid://c5u8uwceem0sy" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="4_qwdks"]
-[ext_resource type="Texture2D" uid="uid://drb3eyx47dx5q" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="5_xj7sa"]
-[ext_resource type="Texture2D" uid="uid://b4yvt6j2nfcqi" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="6_tfaa6"]
-[ext_resource type="Texture2D" uid="uid://ssl6edsu6cx7" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="7_fphk1"]
-[ext_resource type="Texture2D" uid="uid://bbq27l6ra7dk7" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="8_3rn1c"]
+[ext_resource type="Texture2D" uid="uid://byyxfmhb2sy78" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="4_qwdks"]
+[ext_resource type="Texture2D" uid="uid://bphthblk0is61" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="5_xj7sa"]
+[ext_resource type="Texture2D" uid="uid://cqsiowwhdas8k" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="6_tfaa6"]
+[ext_resource type="Texture2D" uid="uid://dgs28gbaebikx" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="7_fphk1"]
+[ext_resource type="Texture2D" uid="uid://d26ue34ifc4w7" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="8_3rn1c"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="9_v4us3"]
-[ext_resource type="Texture2D" uid="uid://c1vh4yd446kgw" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/main_background.png" id="10_k31vw"]
-[ext_resource type="Texture2D" uid="uid://yaqnwtyc1nyh" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree1.png" id="11_3hitu"]
-[ext_resource type="Texture2D" uid="uid://dmjistr17mi06" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree2.png" id="12_jde02"]
-[ext_resource type="Texture2D" uid="uid://brvymbqu45og4" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree3.png" id="13_od7wr"]
-[ext_resource type="Texture2D" uid="uid://bukqe2f0etjlo" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree4.png" id="14_f3luj"]
-[ext_resource type="Texture2D" uid="uid://bvm45w2r8flql" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree5.png" id="15_e05t4"]
-[ext_resource type="Texture2D" uid="uid://beg3bwm50nn1r" path="res://assets/Tiles/night.png" id="17_okyih"]
+[ext_resource type="Texture2D" uid="uid://j4vvc8t3vivq" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/main_background.png" id="10_k31vw"]
+[ext_resource type="Texture2D" uid="uid://cj0w35nab0845" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree1.png" id="11_3hitu"]
+[ext_resource type="Texture2D" uid="uid://c8o4wbdepj6qa" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree2.png" id="12_jde02"]
+[ext_resource type="Texture2D" uid="uid://cyntr05u6qdia" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree3.png" id="13_od7wr"]
+[ext_resource type="Texture2D" uid="uid://b60cprdo60kx4" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree4.png" id="14_f3luj"]
+[ext_resource type="Texture2D" uid="uid://bqw7mc14p41ww" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree5.png" id="15_e05t4"]
+[ext_resource type="Texture2D" uid="uid://dmmq6g0cc527p" path="res://assets/Tiles/night.png" id="17_okyih"]
+[ext_resource type="PackedScene" uid="uid://dc56sdw8crm4m" path="res://Characters/Enemies/BossV2/boss.tscn" id="18_fsglb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
 texture = ExtResource("4_qwdks")
@@ -24290,6 +24291,18 @@ _data = {
 "Transition_out": SubResource("Animation_s0eqx")
 }
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_v4s3m"]
+vertices = PackedVector2Array(2285, 410, 10, 413, 10, 375, 2285, 375)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 424, 0, 365, 2295, 365, 2295, 420)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1yibc"]
+vertices = PackedVector2Array(2217, 610, -45, 610, -45, 208, 2217, 208)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-56, 199, -55, 620, 2227, 621, 2227, 198)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
 [node name="bossLevel" type="Node2D"]
 script = ExtResource("1_k77wc")
 
@@ -24414,3 +24427,18 @@ self_modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 641.0
 color = Color(0, 0, 0, 1)
+
+[node name="Ground enemies nav area" type="NavigationRegion2D" parent="."]
+light_mask = 7
+visibility_layer = 7
+position = Vector2(-6, 13)
+navigation_polygon = SubResource("NavigationPolygon_v4s3m")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(51, -186)
+navigation_polygon = SubResource("NavigationPolygon_1yibc")
+navigation_layers = 2
+
+[node name="Ghost Warrior(Walking)" parent="." node_paths=PackedStringArray("target") instance=ExtResource("18_fsglb")]
+position = Vector2(605, 353)
+target = NodePath("../playerCharacter")

@@ -3,7 +3,7 @@ extends Node
 class_name Damageable_enemy
 
 signal on_hit(node: Node, damage_taken: float)
-@export var health : float = 100 :
+@export var health : float = 20 :
 	get:
 		return health
 	set(value):
@@ -18,5 +18,3 @@ func hit(damage : float):
 func _on_animation_tree_animation_finished(anim_name):
 	if(anim_name == "death"):
 		get_parent().queue_free()
-		get_tree().change_scene_to_file("res://Menus/end_screen.tscn")
-		
