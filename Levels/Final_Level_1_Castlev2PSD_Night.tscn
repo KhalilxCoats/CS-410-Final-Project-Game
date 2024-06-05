@@ -1,11 +1,11 @@
-[gd_scene load_steps=39 format=3 uid="uid://bsx3pnh5sigak"]
+[gd_scene load_steps=40 format=3 uid="uid://bsx3pnh5sigak"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
-[ext_resource type="Texture2D" uid="uid://b5oye2ihhkj0h" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
+[ext_resource type="Texture2D" uid="uid://bj20p1c8bpppy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="2_l4fsf"]
 [ext_resource type="Script" path="res://Levels/Final_Level_1_Castlev2PSD_Night.gd" id="2_v1rpr"]
-[ext_resource type="Texture2D" uid="uid://dghkk6ybgs2ka" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
-[ext_resource type="Texture2D" uid="uid://cdly6v75nitq" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
+[ext_resource type="Texture2D" uid="uid://bibhu1fpboi53" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
+[ext_resource type="Texture2D" uid="uid://brgev06qbb11i" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
 [ext_resource type="PackedScene" uid="uid://ciher7eh13t8x" path="res://Characters/Enemies/Bosses/boss_death.tscn" id="5_rotuk"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="8_rrhin"]
 
@@ -167,6 +167,12 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 vertices = PackedVector2Array(3436, 393, 2450, 403, 2442, 9, 3418, 9)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(2441, 414, 2432, -1, 3428, 0, 3447, 403)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_edp2r"]
+vertices = PackedVector2Array(7290, 306, 7293, 343, 7162, 335, 6041, 403, 6043, 424, 5945, 422, 5487, 410, 7164, 376, 7036, 371, 5945, 457, 5914, 455, 5867, 455, 5788, 486, 5747, 489, 5621, 489, 5624, 441, 5866, 538, 5843, 537, 5844, 487, 3854, 346, 3855, 378, 3727, 378, -106, 408, -112, 13, 9339, 0, 4110, 281, 7036, 407, 7418, 275, 7417, 310, 3727, 410, 5788, 537, 5747, 537, 4110, 313, 3982, 313, 3982, 346, 9331, 407, 7814, 406, 7563, 278, 5490, 441, 4427, 410, 4252, 281)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(2, 7, 8), PackedInt32Array(5, 9, 10), PackedInt32Array(11, 12, 13, 14, 15, 5), PackedInt32Array(11, 16, 17, 18), PackedInt32Array(19, 20, 21), PackedInt32Array(22, 23, 24, 25), PackedInt32Array(8, 26, 3), PackedInt32Array(27, 28, 0), PackedInt32Array(21, 29, 22), PackedInt32Array(12, 30, 31, 13), PackedInt32Array(25, 32, 33), PackedInt32Array(33, 34, 19), PackedInt32Array(24, 35, 36, 37), PackedInt32Array(15, 38, 6, 5), PackedInt32Array(11, 18, 12), PackedInt32Array(5, 10, 11), PackedInt32Array(3, 6, 39, 40, 24, 27), PackedInt32Array(2, 8, 3), PackedInt32Array(19, 21, 22, 33), PackedInt32Array(25, 33, 22), PackedInt32Array(40, 25, 24), PackedInt32Array(24, 37, 27), PackedInt32Array(2, 3, 27, 0)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-116, 418, 3737, 421, 3737, 388, 3865, 388, 3864, 356, 3992, 356, 3992, 323, 4120, 323, 4120, 291, 4249, 291, 4424, 420, 5478, 420, 5481, 451, 5613, 451, 5610, 499, 5737, 499, 5738, 547, 5798, 548, 5798, 496, 5834, 497, 5833, 547, 5876, 549, 5877, 465, 5913, 465, 5956, 468, 5955, 432, 6055, 435, 6052, 413, 7047, 418, 7046, 381, 7175, 387, 7173, 346, 7304, 354, 7301, 316, 7427, 321, 7428, 285, 7560, 288, 7811, 416, 9341, 418, 9350, -10, -123, 4)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Level" instance=ExtResource("1_vxj2i")]
@@ -359,6 +365,10 @@ navigation_polygon = SubResource("NavigationPolygon_2ncps")
 
 [node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="12"]
 navigation_polygon = SubResource("NavigationPolygon_4cdp7")
+
+[node name="NavigationRegionFlyers" type="NavigationRegion2D" parent="." index="13"]
+navigation_polygon = SubResource("NavigationPolygon_edp2r")
+navigation_layers = 2
 
 [connection signal="body_entered" from="NextLevel" to="." method="_on_next_level_body_entered"]
 [connection signal="body_entered" from="KillBox" to="." method="_on_kill_box_body_entered"]
