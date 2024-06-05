@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c3ko8h04d4s4g"]
+[gd_scene load_steps=41 format=3 uid="uid://c3ko8h04d4s4g"]
 
 [ext_resource type="Texture2D" uid="uid://dc3q7qifp5wma" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Idle.png" id="1_m3nop"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/ghost_warrior(walking).gd" id="1_q0d2n"]
@@ -105,168 +105,6 @@ tracks/6/keys = {
 "values": [-1]
 }
 
-[sub_resource type="Animation" id="Animation_q75ht"]
-resource_name = "death"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ghost warrior animation sprites:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_4rvxm")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [7]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ghost warrior animation sprites:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_dkbg6"]
-resource_name = "idle"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ghost warrior animation sprites:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_m3nop")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [8]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ghost warrior animation sprites:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_dhpgd"]
-resource_name = "walk"
-length = 0.8065
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ghost warrior animation sprites:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_x7qg8")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [8]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ghost warrior animation sprites:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_ft4ft"]
-resource_name = "take hit"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ghost warrior animation sprites:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_mfmot")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ghost warrior animation sprites:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
 [sub_resource type="Animation" id="Animation_og2jd"]
 resource_name = "attack"
 length = 0.825
@@ -356,6 +194,168 @@ tracks/6/keys = {
 "values": [-1, 1, -1]
 }
 
+[sub_resource type="Animation" id="Animation_q75ht"]
+resource_name = "death"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ghost warrior animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_4rvxm")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ghost warrior animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_dkbg6"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ghost warrior animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_m3nop")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ghost warrior animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_ft4ft"]
+resource_name = "take hit"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ghost warrior animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_mfmot")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ghost warrior animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_dhpgd"]
+resource_name = "walk"
+length = 0.8065
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ghost warrior animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_x7qg8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ghost warrior animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ghost warrior animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_03m7o"]
 _data = {
 "RESET": SubResource("Animation_nsrvf"),
@@ -406,6 +406,12 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b3guf"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sykae"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rsvwn"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_axk01"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ajdgk"]
 states/End/position = Vector2(1044, 183)
 states/Start/position = Vector2(344, 183)
@@ -417,7 +423,7 @@ states/move/node = SubResource("AnimationNodeBlendSpace1D_n75eo")
 states/move/position = Vector2(546, 183)
 "states/take hit/node" = SubResource("AnimationNodeAnimation_q4oud")
 "states/take hit/position" = Vector2(670, 289)
-transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_va6jk"), "move", "take hit", SubResource("AnimationNodeStateMachineTransition_q7u6g"), "take hit", "move", SubResource("AnimationNodeStateMachineTransition_r14fb"), "move", "death", SubResource("AnimationNodeStateMachineTransition_stsx4"), "move", "attack", SubResource("AnimationNodeStateMachineTransition_7wi7v"), "attack", "move", SubResource("AnimationNodeStateMachineTransition_b3guf")]
+transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_va6jk"), "move", "take hit", SubResource("AnimationNodeStateMachineTransition_q7u6g"), "take hit", "move", SubResource("AnimationNodeStateMachineTransition_r14fb"), "move", "death", SubResource("AnimationNodeStateMachineTransition_stsx4"), "move", "attack", SubResource("AnimationNodeStateMachineTransition_7wi7v"), "attack", "move", SubResource("AnimationNodeStateMachineTransition_b3guf"), "attack", "take hit", SubResource("AnimationNodeStateMachineTransition_sykae"), "take hit", "death", SubResource("AnimationNodeStateMachineTransition_rsvwn"), "attack", "death", SubResource("AnimationNodeStateMachineTransition_axk01")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axr86"]
 size = Vector2(50, 52)
@@ -460,15 +466,17 @@ current_state = NodePath("Walk")
 character = NodePath("..")
 animation_tree = NodePath("../AnimationTree")
 
-[node name="Walk" type="Node" parent="CharacterStateMachine"]
+[node name="Walk" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("attack_state")]
 script = ExtResource("6_uehsr")
+attack_state = NodePath("../Attack")
 
 [node name="Dead" type="Node" parent="CharacterStateMachine"]
 script = ExtResource("8_0er3o")
 can_move = false
 
-[node name="Hit" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("damageable", "dead_state", "return_state")]
+[node name="Hit" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("state_machine", "damageable", "dead_state", "return_state")]
 script = ExtResource("7_a34l3")
+state_machine = NodePath("..")
 damageable = NodePath("../../Damageable")
 dead_state = NodePath("../Dead")
 return_state = NodePath("../Walk")
@@ -479,10 +487,9 @@ can_fall = false
 wait_time = 0.25
 one_shot = true
 
-[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "attack_state", "attack_cooldown_timer", "state_machine")]
+[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "attack_cooldown_timer", "state_machine")]
 script = ExtResource("12_46eor")
 walk_state = NodePath("../Walk")
-attack_state = NodePath(".")
 attack_cooldown_timer = NodePath("../attack cooldown")
 state_machine = NodePath("..")
 can_move = false
@@ -495,6 +502,7 @@ one_shot = true
 path_desired_distance = 5.0
 target_desired_distance = 5.0
 path_postprocessing = 1
+debug_enabled = true
 
 [node name="Nav path maker" type="Timer" parent="."]
 wait_time = 0.5
@@ -512,7 +520,6 @@ position = Vector2(30, -3.32)
 shape = SubResource("RectangleShape2D_axr86")
 
 [node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-visible = false
 offset_left = -34.0
 offset_top = -47.0
 offset_right = 80.0
@@ -522,9 +529,10 @@ script = ExtResource("13_x5n6i")
 state_machine = NodePath("../CharacterStateMachine")
 
 [connection signal="animation_finished" from="AnimationTree" to="Damageable" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Hit" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
 [connection signal="timeout" from="CharacterStateMachine/Hit/Timer" to="CharacterStateMachine/Hit" method="_on_timer_timeout"]
 [connection signal="timeout" from="CharacterStateMachine/attack cooldown" to="CharacterStateMachine/Walk" method="_on_attack_cooldown_timeout"]
-[connection signal="navigation_finished" from="NavigationAgent2D" to="CharacterStateMachine/Attack" method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="navigation_finished" from="NavigationAgent2D" to="CharacterStateMachine/Walk" method="_on_navigation_agent_2d_navigation_finished"]
 [connection signal="timeout" from="Nav path maker" to="." method="_on_nav_path_maker_timeout"]
 [connection signal="body_entered" from="attack damage hitbox" to="attack damage hitbox" method="_on_body_entered"]

@@ -2,6 +2,7 @@ extends State
 
 class_name HitState
 
+@export var state_machine : CharacterStateMachine
 @export var damageable: Damageable_enemy
 @export var dead_state : State
 @export var return_state : State
@@ -24,6 +25,10 @@ func on_damageable_hit(node:Node,damage_amount:float):
 		playback.travel("death")
 
 
-func _on_timer_timeout():
-	next_state = return_state
-	playback.travel("move")
+
+
+
+func _on_animation_tree_animation_finished(anim_name):
+	if anim_name == "take hit":
+		next_state = return_state
+		playback.travel("move")

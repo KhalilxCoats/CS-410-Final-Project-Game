@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b8i2r82nr28fx"]
+[gd_scene load_steps=24 format=3 uid="uid://b8i2r82nr28fx"]
 
 [ext_resource type="Texture2D" uid="uid://dy4wmry5cqmbm" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight/Fire Knight.tscn" id="3_8j14c"]
@@ -23139,6 +23139,12 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, 424, 0, 365, 2295, 365, 2295, 420)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_f2t55"]
+vertices = PackedVector2Array(2217, 610, -45, 610, -45, 208, 2217, 208)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-56, 199, -55, 620, 2227, 621, 2227, 198)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
 [node name="Level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -23237,7 +23243,12 @@ target = NodePath("../playerCharacter")
 position = Vector2(1011, 401)
 target = NodePath("../playerCharacter")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+[node name="Ground enemies nav area" type="NavigationRegion2D" parent="."]
 light_mask = 7
 visibility_layer = 7
 navigation_polygon = SubResource("NavigationPolygon_oody6")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(57, -199)
+navigation_polygon = SubResource("NavigationPolygon_f2t55")
+navigation_layers = 2
