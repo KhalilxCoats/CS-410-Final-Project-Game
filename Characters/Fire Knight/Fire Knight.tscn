@@ -1,0 +1,4191 @@
+[gd_scene load_steps=193 format=3 uid="uid://cd6y218ysgqds"]
+
+[ext_resource type="Script" path="res://Characters/Fire Knight/Character.gd" id="1_lncs4"]
+[ext_resource type="Texture2D" uid="uid://pvutvr2au8ll" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
+[ext_resource type="Texture2D" uid="uid://ckkllm1cfyfq4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/air_atk/fire knight air attack sprite sheet.png" id="2_baoq7"]
+[ext_resource type="Texture2D" uid="uid://b63exsp4o0r2c" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/10_take_hit/fire knight take hit sprite sheet.png" id="2_f0qcp"]
+[ext_resource type="Texture2D" uid="uid://c7iey62r4eqvr" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/09_defend/fire knight defend sprite sheet.png" id="2_m3c10"]
+[ext_resource type="Texture2D" uid="uid://c65yc44gjvcvc" path="res://assets/SFX/Fire Effect 2/Fire Effect 2/Explosion 2 SpriteSheet.png" id="3_fqrqh"]
+[ext_resource type="Texture2D" uid="uid://d1u1e1e1ymrap" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
+[ext_resource type="Texture2D" uid="uid://c4buojcq7l4tp" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/13_e_idle/fire knight elemental idle sprite sheet.png" id="3_snsvd"]
+[ext_resource type="Texture2D" uid="uid://cd6pe4wcnplwx" path="res://assets/SFX/fire elemental fire slam/fire slam sheet.png" id="4_0ghjc"]
+[ext_resource type="Texture2D" uid="uid://cyekte6ge8r5s" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/14_e_run/fire knight elemental run sprite sheet.png" id="4_mbuxg"]
+[ext_resource type="Texture2D" uid="uid://cpgf1kjp4kpaj" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
+[ext_resource type="Texture2D" uid="uid://030jdy8di0j0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/spritesheets/fire slam sheet.png" id="5_0ok3q"]
+[ext_resource type="Texture2D" uid="uid://cnl8mi4pumfwn" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
+[ext_resource type="Texture2D" uid="uid://c3dk652j1nlai" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/17_e_1_atk/fire knight elemental attack 1 sprite sheet.png" id="5_5kkll"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/AirState.gd" id="5_sw0be"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/GroundState.gd" id="5_uyt4m"]
+[ext_resource type="Texture2D" uid="uid://brq2teiblw7k1" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
+[ext_resource type="Texture2D" uid="uid://oqejke7qnqvc" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/18_e_2_atk/fire knight elemental attack 2 sprite sheet.png" id="6_e1gjk"]
+[ext_resource type="Texture2D" uid="uid://b4ikhxljtlrjr" path="res://assets/SFX/Magic_Spell_Effects9_Creativekind/Spritesheet/Spell 4-Sheet.png" id="6_f0net"]
+[ext_resource type="Texture2D" uid="uid://dds4agdnuxuf2" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
+[ext_resource type="Texture2D" uid="uid://ckhu72jbg5imy" path="res://assets/SFX/Magic_Spell_Effects9_Creativekind/Spritesheet/Spell 1-Sheet.png" id="7_mplnk"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/stateLabel.gd" id="8_d7xao"]
+[ext_resource type="Texture2D" uid="uid://ckjmikws2f07o" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
+[ext_resource type="Texture2D" uid="uid://bd82qk2t7hf17" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/e_air_atk/fire knight elemental air attack sprite sheet.png" id="8_ja1vb"]
+[ext_resource type="Texture2D" uid="uid://cuttx0qelxwhe" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/04_roll/fire knight roll sprite sheet.png" id="9_5loqi"]
+[ext_resource type="Texture2D" uid="uid://burxr5k46evyl" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/15_e_jump/fire knight elemental jump sprite sheet.png" id="9_43p8d"]
+[ext_resource type="Texture2D" uid="uid://dr20fimp0p7ib" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/20_e_sp_atk/fire knight elemental special attack  sprite sheet.png" id="9_arjux"]
+[ext_resource type="Texture2D" uid="uid://dqnfmoxvujt0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/23_back2human/fire knight human transform sprite sheet.png" id="11_5mqqp"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/Attack.gd" id="11_md3ro"]
+[ext_resource type="Texture2D" uid="uid://t2emw78784t2" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/19_e_3_atk/fire elemental alternate attack 3--sheet.png" id="11_xff4m"]
+[ext_resource type="Texture2D" uid="uid://ctxwbbmn6ykfv" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/12_transform/fire knight elemental transform sprite sheet.png" id="13_lvrnh"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/DefendState.gd" id="17_70kdt"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/DodgeState.gd" id="18_0oabr"]
+[ext_resource type="Texture2D" uid="uid://bmm4fsm73xchc" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/11_death/fire knight death sprite sheet.png" id="18_clp7g"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/TransformState.gd" id="19_cj5fe"]
+[ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="27_tr5uk"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/Damageable.gd" id="29_t6mkg"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/human attack 1.gd" id="35_bgvbl"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/human attack 2 left.gd" id="36_25alx"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/HitState.gd" id="37_dc2ji"]
+[ext_resource type="Script" path="res://Characters/State.gd" id="37_e74l5"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/human attack 2 right.gd" id="37_gn6wt"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/human attack 3.gd" id="38_023n3"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/human special attack.gd" id="39_1pllc"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/human air attack 1.gd" id="40_nixcs"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/human air attack 2.gd" id="41_dr7wp"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/elemental attack 1 close.gd" id="43_7m17v"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/elemental attack 2.gd" id="44_o71ip"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/elemental attack 3 downswipe.gd" id="45_4ymoa"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/elemental special attack.gd" id="47_7uibr"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/elemental air attack 1.gd" id="48_wd51e"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/elemental air attack 2.gd" id="49_db6rv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53g3s"]
+radius = 9.11577
+height = 51.2821
+
+[sub_resource type="Animation" id="Animation_e4b6q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_lvrnh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [24]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.375, -6.178)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.002, 0.865)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("fireknight movement sprites:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -40)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("fireknight movement sprites:offset")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CollisionShape2D:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("human special attack fireball 1:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("human special attack fireball 2:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("human special attack fireball 2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("human special attack fireball 1:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("elemental special attack explosion detonation:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("elemental special attack explosion charge up:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("elemental special attack explosion charge up:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("elemental special attack explosion detonation:frame_coords")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("human attack 1:monitoring")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("human attack 2 left:monitoring")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("human attack 2 right:monitoring")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("human attack 3:monitoring")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("human special attack:monitoring")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("human air attack 1:monitoring")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("elemental attack 1:monitoring")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("elemental attack 2:monitoring")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("elemental attack 3:monitoring")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("elemental special attack:monitoring")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("elemental attack 3 charge up:texture")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_f0net")]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("elemental attack 3 charge up:hframes")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("elemental attack 3 charge up:frame")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("elemental attack 3 charge up:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15, -31)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("elemental attack 3 charge up:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("elemental attack 3 fire stream:visible")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("elemental attack 3 fire stream:frame")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("elemental attack 3 fire stream:hframes")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("elemental attack 3 fire stream:texture")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_mplnk")]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("elemental attack 3/CollisionShape2D:position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(89.545, -5)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("elemental attack 3/CollisionShape2D:scale")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.79, 1)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("elemental air attack 2:monitoring")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("elemental air attack 1:monitoring")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hjut0"]
+_data = {
+"RESET": SubResource("Animation_e4b6q")
+}
+
+[sub_resource type="Animation" id="Animation_5f3w0"]
+length = 0.665
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_ja1vb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("elemental air attack 1:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.166, 0.332),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_i77sv"]
+length = 0.723
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_e1gjk")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11, 12, 13]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("fireknight movement sprites:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.249, 0.415, 0.498),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(-21.4, 0), Vector2(-13.025, 0), Vector2(1.96, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("elemental air attack 2:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.249, 0.332),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_hn850"]
+length = 0.7155
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_5kkll")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 6]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.76, -6.153)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("elemental attack 1:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.415, 0.498),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_38u88"]
+length = 0.218
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_5kkll")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [7, 8]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.76, -6.153)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_odhvu"]
+length = 0.636
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_e1gjk")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12, 13]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.76, -6.153)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("elemental attack 2:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.166, 0.249),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_3c4kd"]
+length = 1.2525
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.83),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("11_xff4m"), ExtResource("3_snsvd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.83),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [11, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.76, -6.153)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("elemental attack 3:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.498, 0.83),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("elemental attack 3 charge up:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_f0net")]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("elemental attack 3 charge up:hframes")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("elemental attack 3 charge up:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 3, 2, 1, 0, 0, 2, 3, 4, 5, 6]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("elemental attack 3 charge up:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(15, -31), Vector2(-8, -33), Vector2(41, -10)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("elemental attack 3 charge up:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.913),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("elemental attack 3 fire stream:texture")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.581),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_mplnk")]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("elemental attack 3 fire stream:hframes")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.581),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("elemental attack 3 fire stream:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.498, 1.245),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("elemental attack 3 fire stream:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("elemental attack 3/CollisionShape2D:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.498, 0.581, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(89.545, -5), Vector2(115.97, -5), Vector2(124.015, -5)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("elemental attack 3/CollisionShape2D:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.498, 0.581, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.79, 1), Vector2(1.195, 1), Vector2(1.355, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5s47u"]
+length = 0.4985
+loop_mode = 1
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_43p8d")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14, 15]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.375, -6.178)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cw4k2"]
+length = 0.8445
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_snsvd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.375, -6.178)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ocjys"]
+length = 1.332
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_43p8d")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162, 1.245),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.375, -6.178)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qcoq8"]
+length = 0.2525
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_43p8d")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.375, -6.178)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("fireknight movement sprites:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [16, 17, 18]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5bklx"]
+length = 0.711
+loop_mode = 1
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_mbuxg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.76, -6.153)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rktbw"]
+length = 2.256
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.411),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("9_arjux"), ExtResource("3_snsvd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.411),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [16, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162, 1.245, 1.411, 1.494, 1.577, 1.66, 1.743, 1.826, 1.909, 1.992),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.328),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.375, -6.178)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.328),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.132, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("elemental special attack explosion detonation:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.747, 2.241),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("elemental special attack explosion charge up:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 2, 3, 4, 5]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("elemental special attack explosion charge up:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("elemental special attack explosion detonation:frame_coords")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.747, 0.83, 0.913, 0.996, 1.079, 1.162, 1.245, 1.328, 1.411, 1.494, 1.577, 1.66, 1.743, 1.826, 1.909, 1.992, 2.075, 2.158),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0), Vector2i(7, 0), Vector2i(8, 0), Vector2i(9, 0), Vector2i(10, 0), Vector2i(11, 0), Vector2i(12, 0), Vector2i(13, 0), Vector2i(14, 0), Vector2i(15, 0), Vector2i(16, 0), Vector2i(17, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("elemental special attack:monitoring")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.328, 1.909),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_5m6jj"]
+length = 1.406
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_5mqqp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [17]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162, 1.245, 1.328),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.406),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3.375, -6.178), Vector2(2.175, 1.942)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.406),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.132, 1.15), Vector2(1.002, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7tqpb"]
+_data = {
+"air attack 1": SubResource("Animation_5f3w0"),
+"air attack 2": SubResource("Animation_i77sv"),
+"attack 1": SubResource("Animation_hn850"),
+"attack 1 return": SubResource("Animation_38u88"),
+"attack 2": SubResource("Animation_odhvu"),
+"attack 3": SubResource("Animation_3c4kd"),
+"fall": SubResource("Animation_5s47u"),
+"idle": SubResource("Animation_cw4k2"),
+"jump": SubResource("Animation_ocjys"),
+"land": SubResource("Animation_qcoq8"),
+"run": SubResource("Animation_5bklx"),
+"special attack": SubResource("Animation_rktbw"),
+"transform": SubResource("Animation_5m6jj")
+}
+
+[sub_resource type="Animation" id="Animation_rny7l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.295, 2.21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.002, 0.82)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("fireknight movement sprites:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_f0qcp")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("fireknight movement sprites:hframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_pmut0"]
+resource_name = "air attack 1"
+length = 0.639
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_baoq7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.498, 0.581, 0.639),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(2.24, -4.925), Vector2(1.2, -6.935), Vector2(-0.315, -8.16), Vector2(11.67, -8.135), Vector2(12.325, -8.34), Vector2(5.275, -6.59), Vector2(0.565, -5.215), Vector2(1, -5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.498, 0.581, 0.639),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1.002, 0.865), Vector2(1.002, 0.815), Vector2(1.002, 0.815), Vector2(0.737, 0.84), Vector2(0.742, 0.835), Vector2(1.002, 0.82), Vector2(1.002, 0.86), Vector2(1.002, 0.86)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("human air attack 1:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.249, 0.332),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_m6eh1"]
+resource_name = "air attack 2"
+length = 0.749
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6iqrw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("fireknight movement sprites:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-4, -41), Vector2(-13, -43), Vector2(4, -40), Vector2(0, -40)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -1), Vector2(1, -2), Vector2(2, 1), Vector2(2, 2)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.002, 0.865), Vector2(0.937, 0.84), Vector2(0.872, 0.725), Vector2(0.872, 0.76), Vector2(0.902, 0.785)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CollisionShape2D:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("human air attack 1:monitoring")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ylxth"]
+resource_name = "attack 1"
+length = 0.541
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6iqrw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.46, 3.92), Vector2(-7.585, 1.825), Vector2(4.03, 0.265), Vector2(5.56, 0.29), Vector2(16.475, 4.94), Vector2(15.415, 5.005)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.977, 0.755), Vector2(0.807, 0.83), Vector2(0.942, 0.89), Vector2(0.792, 0.905), Vector2(0.947, 0.71), Vector2(0.997, 0.71)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("human attack 1:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.332, 0.541),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_wny5r"]
+resource_name = "attack 1 return"
+length = 0.304
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6iqrw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(15.52, 4.555), Vector2(-3.17, 2.67), Vector2(1.505, 1.995)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(1.057, 0.72), Vector2(1.057, 0.8), Vector2(1, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_y38of"]
+resource_name = "attack 2"
+length = 0.9755
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_7cn6q")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [19]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1.7, 3.215), Vector2(-3.55, 2.93), Vector2(6.15, 3.32), Vector2(11.605, 3.27), Vector2(5.89, 2.91), Vector2(10.315, 3.23), Vector2(7.18, 2.47), Vector2(3.715, 2.47), Vector2(6.003, 2.945), Vector2(3.45, 3.24), Vector2(-0.82, 2.665), Vector2(2.195, 2.035)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0.715, 0.78), Vector2(0.979, 0.8), Vector2(0.666, 0.783), Vector2(0.945, 0.782), Vector2(0.862, 0.79), Vector2(0.994, 0.78), Vector2(0.998, 0.799), Vector2(0.998, 0.799), Vector2(0.67, 0.8), Vector2(0.845, 0.78), Vector2(0.85, 0.8), Vector2(1.03, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("human attack 2 left:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.249, 0.332, 0.415, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("human attack 2 right:monitoring")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.332, 0.498, 0.581, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_5ye60"]
+resource_name = "attack 3"
+length = 0.9535
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_07tpi")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.7, 0.8, 0.9, 0.9535),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.565, 4.215), Vector2(1.27, 3.63), Vector2(4.415, 3.58), Vector2(5.595, 2.475), Vector2(-5.28, 0.745), Vector2(-0.31, 2.545), Vector2(1.22, 2.865), Vector2(2.33, 2.485), Vector2(2.55, 2.185)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.7, 0.8, 0.9, 0.9535),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.932, 0.75), Vector2(0.942, 0.755), Vector2(0.952, 0.76), Vector2(0.962, 0.8), Vector2(0.962, 0.87), Vector2(0.962, 0.8), Vector2(0.982, 0.8), Vector2(0.982, 0.8), Vector2(0.982, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("human attack 3:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ss6qd"]
+length = 1.054
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("18_clp7g")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.249, 0.581, 0.664, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(2.295, 2.21), Vector2(12.03, 4.52), Vector2(20.29, 8.555), Vector2(26.105, 11.85), Vector2(34.08, 18.155)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.249, 0.581, 0.664, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1.002, 0.82), Vector2(1.007, 0.725), Vector2(0.802, 0.62), Vector2(0.727, 0.67), Vector2(0.532, 0.67)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.249, 0.581, 0.664, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 0.0, 0.637045, 1.09258, 1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_s3gu5"]
+resource_name = "defend"
+length = 0.4955
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_m3c10")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.435, 2.62)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.917, 0.8)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gt0qe"]
+resource_name = "dodge"
+length = 0.581
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_5loqi")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(7.595, 3.88), Vector2(9.905, 2.745), Vector2(9.71, 5.09), Vector2(10.135, 5.565), Vector2(13.975, 4.65), Vector2(-0.91, 10.49), Vector2(-1.865, 2.98), Vector2(2.65, 1.9)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.987, 0.745), Vector2(1.057, 0.805), Vector2(1.132, 0.782), Vector2(0.977, 0.66), Vector2(1.287, 0.705), Vector2(0.847, 0.5), Vector2(1.047, 0.78), Vector2(0.992, 0.83)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0472, 2.0944, 2.72271, 3.87463, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_pw14u"]
+resource_name = "enter defend"
+length = 0.265
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_m3c10")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2.145, 1.98), Vector2(6.39, 2.99), Vector2(-0.5, 2.525)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.002, 0.82), Vector2(1.082, 0.78), Vector2(0.902, 0.8)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_s16lf"]
+resource_name = "exit defend"
+length = 0.299
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_m3c10")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [7, 8, 9]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-4.07, 1.93), Vector2(-2, 0.995)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.817, 0.79), Vector2(1.002, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1nb7y"]
+resource_name = "fall"
+length = 0.479
+loop_mode = 1
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_t0xla")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [20]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14, 15]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(1.225, -3.945)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.002, 0.84)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4lnnv"]
+resource_name = "idle"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("3_myvym")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.002, 0.82)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.295, 2.21)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xy24d"]
+resource_name = "jump"
+length = 1.3105
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162, 1.245),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [20]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("4_t0xla")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1.75, 3.85), Vector2(1.93, -6), Vector2(2.15, -6), Vector2(2.105, -6), Vector2(2.19, -6), Vector2(2.505, -6), Vector2(2.48, -6), Vector2(2.23, -5.86), Vector2(2.685, -5.86), Vector2(1.525, -6)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1.057, 0.75), Vector2(1.057, 0.78), Vector2(1.057, 0.78), Vector2(1.057, 0.78), Vector2(1.057, 0.78), Vector2(1.057, 0.78), Vector2(1.057, 0.78), Vector2(1.057, 0.78), Vector2(1.057, 0.78), Vector2(1.057, 0.78)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vdx70"]
+resource_name = "land"
+length = 0.401
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [16, 17, 18, 19]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [20]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("4_t0xla")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1.54, -2.47), Vector2(2.68, 3.85), Vector2(1.905, 2.97), Vector2(1.91, 2.15), Vector2(2.12, 2.01)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1.103, 0.85), Vector2(1.057, 0.75), Vector2(1.002, 0.78), Vector2(1.107, 0.82), Vector2(1.107, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_oe0ew"]
+resource_name = "run"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("5_1at5y")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.002, 0.83)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.05, 1.865)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_fy80v"]
+resource_name = "special attack"
+length = 2.016
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_il06f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [18]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162, 1.245, 1.328, 1.411),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.747, 0.83, 0.913, 0.996, 1.245, 1.328, 1.411),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0.84, 2.645), Vector2(5.405, 2.785), Vector2(15.855, 2.83), Vector2(30.195, 3.56), Vector2(38.785, 6.37), Vector2(7.22, 1.295), Vector2(3.255, 1.38), Vector2(2.215, 2.03)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.747, 0.83, 0.913, 0.996, 1.245, 1.328, 1.411),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0.92, 0.8), Vector2(0.795, 0.79), Vector2(0.88, 0.79), Vector2(0.755, 0.77), Vector2(0.92, 0.65), Vector2(0.92, 0.85), Vector2(0.92, 0.845), Vector2(1.025, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("human special attack fireball 1:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.079, 1.162, 1.245, 1.328, 1.411, 1.494, 1.577, 1.66, 1.743),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("human special attack fireball 2:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.079, 1.162, 1.245, 1.328, 1.411, 1.494, 1.577, 1.66, 1.743),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("human special attack fireball 2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.079, 1.909),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("human special attack fireball 1:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.079, 1.909),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("human special attack:monitoring")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.328, 1.411),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_0r5aq"]
+resource_name = "take hit"
+length = 0.53
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_f0qcp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(3.215, 2.765), Vector2(-2.385, 2.765), Vector2(-3.44, 2.765), Vector2(-4.435, 2.765), Vector2(-2.45, 2.765), Vector2(2.305, 1.96)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0.762, 0.8), Vector2(0.817, 0.8), Vector2(0.817, 0.8), Vector2(0.817, 0.8), Vector2(0.817, 0.8), Vector2(1.017, 0.82)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4avkw"]
+resource_name = "transform"
+length = 2.0
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fireknight movement sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("13_lvrnh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fireknight movement sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [24]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fireknight movement sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581, 0.664, 0.747, 0.83, 0.913, 0.996, 1.079, 1.162, 1.245, 1.328, 1.411, 1.494, 1.577, 1.66, 1.743, 1.826, 1.909),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.328, 1.411, 1.494, 1.577, 1.66, 1.743, 1.826),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2.3, 2.2), Vector2(0.1, -7.375), Vector2(1.46, -7.71), Vector2(12.29, -7.71), Vector2(13.755, -7.71), Vector2(8.15, -7.71), Vector2(4.575, -6.995), Vector2(3.405, -6.995)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.328, 1.411, 1.494, 1.577, 1.66, 1.743, 1.826),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0.82), Vector2(1.427, 1.2), Vector2(0.987, 1.22), Vector2(0.802, 1.22), Vector2(0.802, 1.22), Vector2(0.802, 1.22), Vector2(0.957, 1.15), Vector2(1.062, 1.15)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_syyae"]
+_data = {
+"RESET": SubResource("Animation_rny7l"),
+"air attack 1": SubResource("Animation_pmut0"),
+"air attack 2": SubResource("Animation_m6eh1"),
+"attack 1": SubResource("Animation_ylxth"),
+"attack 1 return": SubResource("Animation_wny5r"),
+"attack 2": SubResource("Animation_y38of"),
+"attack 3": SubResource("Animation_5ye60"),
+"death": SubResource("Animation_ss6qd"),
+"defend": SubResource("Animation_s3gu5"),
+"dodge": SubResource("Animation_gt0qe"),
+"enter defend": SubResource("Animation_pw14u"),
+"exit defend": SubResource("Animation_s16lf"),
+"fall": SubResource("Animation_1nb7y"),
+"idle": SubResource("Animation_4lnnv"),
+"jump": SubResource("Animation_xy24d"),
+"land": SubResource("Animation_vdx70"),
+"run": SubResource("Animation_oe0ew"),
+"special attack": SubResource("Animation_fy80v"),
+"take hit": SubResource("Animation_0r5aq"),
+"transform": SubResource("Animation_4avkw")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nqgtb"]
+animation = &"Elemental/air attack 1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yiua4"]
+animation = &"Elemental/air attack 2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r71ri"]
+animation = &"Elemental/attack 1 return"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mc3tg"]
+animation = &"Elemental/attack 1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k2ex0"]
+animation = &"Elemental/attack 2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x77lo"]
+animation = &"Elemental/attack 3"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_npp5d"]
+animation = &"Elemental/fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tqhla"]
+animation = &"Elemental/jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0a4fx"]
+animation = &"Elemental/special attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vjlqr"]
+animation = &"Human/death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jxox5"]
+animation = &"Human/take hit"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l3y23"]
+animation = &"Human/air attack 1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y4mym"]
+animation = &"Human/air attack 2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kyqn1"]
+animation = &"Human/attack 1 return"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2x1bc"]
+animation = &"Human/attack 1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ta65m"]
+animation = &"Human/attack 2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f0plu"]
+animation = &"Human/attack 3"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rslxa"]
+animation = &"Human/defend"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dvjcs"]
+animation = &"Human/dodge"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ipudm"]
+animation = &"Elemental/land"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a5h75"]
+animation = &"Elemental/idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3o0xm"]
+animation = &"Elemental/run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lv3v0"]
+animation = &"Elemental/run"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_lo3vw"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_a5h75")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_3o0xm")
+blend_point_1/pos = 0.1
+blend_point_2/node = SubResource("AnimationNodeAnimation_lv3v0")
+blend_point_2/pos = -0.1
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l1cdl"]
+animation = &"Human/transform"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_21jq5"]
+animation = &"Human/enter defend"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yq2jq"]
+animation = &"Human/exit defend"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sv33m"]
+animation = &"Human/fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5u1ue"]
+animation = &"Human/idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fu1b3"]
+animation = &"Human/run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3twsc"]
+animation = &"Human/run"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_p1gl1"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_5u1ue")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_fu1b3")
+blend_point_1/pos = -0.1
+blend_point_2/node = SubResource("AnimationNodeAnimation_3twsc")
+blend_point_2/pos = 0.1
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qe7m5"]
+animation = &"Elemental/transform"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j6bhb"]
+animation = &"Human/jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o3ux6"]
+animation = &"Human/land"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nro2l"]
+animation = &"Human/special attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2p227"]
+switch_mode = 1
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mydij"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ib7hj"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i51pn"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2w6pe"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gv8to"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bidtu"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6j34x"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dvcr2"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7nlck"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c4esg"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k1ck0"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3sqnx"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2mwt1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0qbyh"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bwfa1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f0ffd"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rskuo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lktmq"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8sldf"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rtn8m"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u5jwt"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d1mfq"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2x7km"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5jnfi"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mpbak"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qlbev"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8qkgw"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1dsg5"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_26fvs"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jblvc"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g23st"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n7iqs"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lo3bn"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dd5m7"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4q7t8"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uq1gi"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_268n6"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d0mx7"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_14ch2"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gjbwp"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c7jnt"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j7x1w"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jj1bw"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4k6sw"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e504j"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oifqo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jb3jc"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mdv4t"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1svrf"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yhekj"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ahcnm"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ursn6"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k674k"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xff2h"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_b4iqi"]
+"states/Elemental_air attack 1/node" = SubResource("AnimationNodeAnimation_nqgtb")
+"states/Elemental_air attack 1/position" = Vector2(1440.18, 1052.72)
+"states/Elemental_air attack 2/node" = SubResource("AnimationNodeAnimation_yiua4")
+"states/Elemental_air attack 2/position" = Vector2(1656.18, 1052.72)
+"states/Elemental_attack 1/node" = SubResource("AnimationNodeAnimation_mc3tg")
+"states/Elemental_attack 1/position" = Vector2(2057, 1689.18)
+"states/Elemental_attack 1 return/node" = SubResource("AnimationNodeAnimation_r71ri")
+"states/Elemental_attack 1 return/position" = Vector2(2049, 1759.11)
+"states/Elemental_attack 2/node" = SubResource("AnimationNodeAnimation_k2ex0")
+"states/Elemental_attack 2/position" = Vector2(2047, 1586.18)
+"states/Elemental_attack 3/node" = SubResource("AnimationNodeAnimation_x77lo")
+"states/Elemental_attack 3/position" = Vector2(2057, 1408.71)
+states/Elemental_fall/node = SubResource("AnimationNodeAnimation_npp5d")
+states/Elemental_fall/position = Vector2(1433, 1191.89)
+states/Elemental_jump/node = SubResource("AnimationNodeAnimation_tqhla")
+states/Elemental_jump/position = Vector2(1081.89, 1191.89)
+"states/Elemental_special attack/node" = SubResource("AnimationNodeAnimation_0a4fx")
+"states/Elemental_special attack/position" = Vector2(2051.32, 1227.71)
+states/End/position = Vector2(1673, 245)
+states/Human_death/node = SubResource("AnimationNodeAnimation_vjlqr")
+states/Human_death/position = Vector2(440.77, 159.125)
+"states/Human_take hit/node" = SubResource("AnimationNodeAnimation_jxox5")
+"states/Human_take hit/position" = Vector2(512.77, 42.1246)
+states/Start/position = Vector2(151, 285)
+"states/air attack 1/node" = SubResource("AnimationNodeAnimation_l3y23")
+"states/air attack 1/position" = Vector2(953, -296.66)
+"states/air attack 2/node" = SubResource("AnimationNodeAnimation_y4mym")
+"states/air attack 2/position" = Vector2(1090.87, -349.66)
+"states/attack 1/node" = SubResource("AnimationNodeAnimation_2x1bc")
+"states/attack 1/position" = Vector2(1372, 217.069)
+"states/attack 1 return/node" = SubResource("AnimationNodeAnimation_kyqn1")
+"states/attack 1 return/position" = Vector2(1345, 313.069)
+"states/attack 2/node" = SubResource("AnimationNodeAnimation_ta65m")
+"states/attack 2/position" = Vector2(1392, 129.069)
+"states/attack 3/node" = SubResource("AnimationNodeAnimation_f0plu")
+"states/attack 3/position" = Vector2(1333, -1)
+states/defend/node = SubResource("AnimationNodeAnimation_rslxa")
+states/defend/position = Vector2(575.831, 577.62)
+states/dodge/node = SubResource("AnimationNodeAnimation_dvjcs")
+states/dodge/position = Vector2(1024, 497.178)
+"states/elemental land/node" = SubResource("AnimationNodeAnimation_ipudm")
+"states/elemental land/position" = Vector2(1261.89, 1185.82)
+"states/elemental move/node" = SubResource("AnimationNodeBlendSpace1D_lo3vw")
+"states/elemental move/position" = Vector2(813.681, 1570.11)
+"states/elemental transform/node" = SubResource("AnimationNodeAnimation_l1cdl")
+"states/elemental transform/position" = Vector2(902, 678.707)
+"states/enter defend/node" = SubResource("AnimationNodeAnimation_21jq5")
+"states/enter defend/position" = Vector2(414.831, 577.62)
+"states/exit defend/node" = SubResource("AnimationNodeAnimation_yq2jq")
+"states/exit defend/position" = Vector2(715.831, 577.62)
+states/fall/node = SubResource("AnimationNodeAnimation_sv33m")
+states/fall/position = Vector2(955, -154)
+"states/human move/node" = SubResource("AnimationNodeBlendSpace1D_p1gl1")
+"states/human move/position" = Vector2(806, 285)
+"states/human transform/node" = SubResource("AnimationNodeAnimation_qe7m5")
+"states/human transform/position" = Vector2(730, 1323.71)
+states/jump/node = SubResource("AnimationNodeAnimation_j6bhb")
+states/jump/position = Vector2(625, -148)
+states/land/node = SubResource("AnimationNodeAnimation_o3ux6")
+states/land/position = Vector2(823, -154)
+"states/special attack/node" = SubResource("AnimationNodeAnimation_nro2l")
+"states/special attack/position" = Vector2(1249, -102)
+transitions = ["Start", "human move", SubResource("AnimationNodeStateMachineTransition_2p227"), "human move", "jump", SubResource("AnimationNodeStateMachineTransition_mydij"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_ib7hj"), "land", "human move", SubResource("AnimationNodeStateMachineTransition_i51pn"), "human move", "attack 1", SubResource("AnimationNodeStateMachineTransition_2w6pe"), "attack 1", "attack 2", SubResource("AnimationNodeStateMachineTransition_gv8to"), "attack 2", "human move", SubResource("AnimationNodeStateMachineTransition_bidtu"), "attack 1", "attack 1 return", SubResource("AnimationNodeStateMachineTransition_6j34x"), "attack 1 return", "human move", SubResource("AnimationNodeStateMachineTransition_dvcr2"), "human move", "attack 3", SubResource("AnimationNodeStateMachineTransition_7nlck"), "attack 3", "human move", SubResource("AnimationNodeStateMachineTransition_c4esg"), "human move", "special attack", SubResource("AnimationNodeStateMachineTransition_k1ck0"), "special attack", "human move", SubResource("AnimationNodeStateMachineTransition_3sqnx"), "human move", "dodge", SubResource("AnimationNodeStateMachineTransition_2mwt1"), "dodge", "human move", SubResource("AnimationNodeStateMachineTransition_0qbyh"), "human move", "fall", SubResource("AnimationNodeStateMachineTransition_bwfa1"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_f0ffd"), "air attack 1", "air attack 2", SubResource("AnimationNodeStateMachineTransition_rskuo"), "air attack 2", "fall", SubResource("AnimationNodeStateMachineTransition_lktmq"), "air attack 1", "fall", SubResource("AnimationNodeStateMachineTransition_8sldf"), "jump", "air attack 1", SubResource("AnimationNodeStateMachineTransition_rtn8m"), "exit defend", "human move", SubResource("AnimationNodeStateMachineTransition_u5jwt"), "human move", "enter defend", SubResource("AnimationNodeStateMachineTransition_d1mfq"), "enter defend", "defend", SubResource("AnimationNodeStateMachineTransition_2x7km"), "defend", "exit defend", SubResource("AnimationNodeStateMachineTransition_5jnfi"), "fall", "air attack 1", SubResource("AnimationNodeStateMachineTransition_mpbak"), "human move", "elemental transform", SubResource("AnimationNodeStateMachineTransition_qlbev"), "elemental transform", "elemental move", SubResource("AnimationNodeStateMachineTransition_8qkgw"), "elemental move", "human transform", SubResource("AnimationNodeStateMachineTransition_1dsg5"), "human transform", "human move", SubResource("AnimationNodeStateMachineTransition_26fvs"), "elemental move", "Elemental_jump", SubResource("AnimationNodeStateMachineTransition_jblvc"), "Elemental_jump", "elemental land", SubResource("AnimationNodeStateMachineTransition_g23st"), "elemental land", "elemental move", SubResource("AnimationNodeStateMachineTransition_n7iqs"), "elemental move", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_lo3bn"), "Elemental_fall", "elemental land", SubResource("AnimationNodeStateMachineTransition_dd5m7"), "Elemental_jump", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_4q7t8"), "Elemental_air attack 1", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_uq1gi"), "Elemental_air attack 1", "Elemental_air attack 2", SubResource("AnimationNodeStateMachineTransition_268n6"), "Elemental_air attack 2", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_d0mx7"), "Elemental_fall", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_14ch2"), "elemental move", "Elemental_attack 1", SubResource("AnimationNodeStateMachineTransition_gjbwp"), "Elemental_attack 1", "Elemental_attack 2", SubResource("AnimationNodeStateMachineTransition_c7jnt"), "Elemental_attack 2", "elemental move", SubResource("AnimationNodeStateMachineTransition_j7x1w"), "Elemental_attack 1", "Elemental_attack 1 return", SubResource("AnimationNodeStateMachineTransition_jj1bw"), "Elemental_attack 1 return", "elemental move", SubResource("AnimationNodeStateMachineTransition_4k6sw"), "elemental move", "Elemental_attack 3", SubResource("AnimationNodeStateMachineTransition_e504j"), "Elemental_attack 3", "elemental move", SubResource("AnimationNodeStateMachineTransition_oifqo"), "elemental move", "Elemental_special attack", SubResource("AnimationNodeStateMachineTransition_jb3jc"), "Elemental_special attack", "elemental move", SubResource("AnimationNodeStateMachineTransition_mdv4t"), "jump", "human move", SubResource("AnimationNodeStateMachineTransition_1svrf"), "fall", "human move", SubResource("AnimationNodeStateMachineTransition_yhekj"), "human move", "Human_death", SubResource("AnimationNodeStateMachineTransition_ahcnm"), "human move", "Human_take hit", SubResource("AnimationNodeStateMachineTransition_ursn6"), "Human_take hit", "human move", SubResource("AnimationNodeStateMachineTransition_k674k"), "Human_take hit", "fall", SubResource("AnimationNodeStateMachineTransition_xff2h")]
+graph_offset = Vector2(-55.2302, 214.026)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssopo"]
+size = Vector2(42.5, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3g2m"]
+size = Vector2(59, 59.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a62rq"]
+radius = 47.7606
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pey1"]
+size = Vector2(74, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0vi6"]
+size = Vector2(43, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq1g7"]
+size = Vector2(98, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pspy2"]
+size = Vector2(128.386, 74)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_58w77"]
+radius = 155.052
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3p2j0"]
+size = Vector2(90.5, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqqjo"]
+size = Vector2(34, 84)
+
+[node name="Fire Knight" type="CharacterBody2D" groups=["playerCharacter"]]
+position = Vector2(-2, 9)
+collision_layer = 2
+slide_on_ceiling = false
+floor_stop_on_slope = false
+floor_max_angle = 0.692896
+script = ExtResource("1_lncs4")
+
+[node name="fireknight movement sprites" type="Sprite2D" parent="."]
+position = Vector2(0, -40)
+texture = ExtResource("13_lvrnh")
+hframes = 24
+frame = 14
+
+[node name="elemental special attack explosion detonation" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(235.645, -109)
+scale = Vector2(7.62052, 7.33827)
+texture = ExtResource("3_fqrqh")
+hframes = 18
+
+[node name="human special attack fireball 1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(53.505, -58.26)
+scale = Vector2(1.28906, 1.28906)
+texture = ExtResource("4_0ghjc")
+hframes = 11
+frame = 2
+
+[node name="human special attack fireball 2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(122.26, -58.24)
+scale = Vector2(1.289, 1.289)
+texture = ExtResource("4_0ghjc")
+hframes = 11
+frame = 2
+
+[node name="elemental special attack explosion charge up" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(475, -186)
+scale = Vector2(3.27961, 3.27961)
+texture = ExtResource("5_0ok3q")
+hframes = 15
+
+[node name="elemental attack 3 charge up" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(15, -31)
+scale = Vector2(0.320313, 0.320313)
+texture = ExtResource("6_f0net")
+hframes = 8
+frame = 4
+
+[node name="elemental attack 3 fire stream" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(126, -10)
+scale = Vector2(1.54167, 1)
+texture = ExtResource("7_mplnk")
+hframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.375, -6.178)
+scale = Vector2(1.002, 0.865)
+shape = SubResource("CapsuleShape2D_53g3s")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hjut0"),
+"Elemental": SubResource("AnimationLibrary_7tqpb"),
+"Human": SubResource("AnimationLibrary_syyae")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_hjut0"),
+"Elemental": SubResource("AnimationLibrary_7tqpb"),
+"Human": SubResource("AnimationLibrary_syyae")
+}
+tree_root = SubResource("AnimationNodeStateMachine_b4iqi")
+anim_player = NodePath("../AnimationPlayer")
+"parameters/elemental move/blend_position" = 0
+"parameters/human move/blend_position" = -0.099664
+
+[node name="Damageable" type="Node" parent="." node_paths=PackedStringArray("state_machine")]
+script = ExtResource("29_t6mkg")
+state_machine = NodePath("../CharacterStateMachine")
+health = 100.0
+
+[node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
+script = ExtResource("27_tr5uk")
+current_state = NodePath("Ground")
+character = NodePath("..")
+animation_tree = NodePath("../AnimationTree")
+
+[node name="Ground" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("air_state", "attack_state", "transform_state", "dodge_state", "defend_state", "elemental_timout")]
+script = ExtResource("5_uyt4m")
+transform_node = "elemental transform"
+elemental_jump_node = "Elemental_jump"
+elemental_fall_node = "Elemental_fall"
+elemental_dodge_node = "Elemental_dodge"
+elemental_light_attack_node = "Elemental_attack 1"
+elemental_power_attack_node = "Elemental_attack 3"
+elemental_special_attack_node = "Elemental_special attack"
+elemental_transform_node = "human transform"
+air_state = NodePath("../Air")
+attack_state = NodePath("../Attack")
+transform_state = NodePath("../Transform")
+dodge_state = NodePath("../Dodge")
+defend_state = NodePath("../Defend")
+elemental_timout = NodePath("../ElementalTimer")
+
+[node name="TransformTimer" type="Timer" parent="CharacterStateMachine/Ground"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Air" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("attack_state", "ground_state")]
+script = ExtResource("5_sw0be")
+attack_state = NodePath("../Attack")
+ground_state = NodePath("../Ground")
+elemental_move_node = "elemental move"
+elemental_landing_node = "elemental land"
+elemental_air_attack_node = "Elemental_air attack 1"
+
+[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state", "air_state")]
+script = ExtResource("11_md3ro")
+ground_state = NodePath("../Ground")
+air_state = NodePath("../Air")
+attack1_name = "Human/attack 1"
+attack2_name = "Human/attack 2"
+attack3_name = "Human/attack 3"
+air_attack_name = "Human/air attack 1"
+air_attack2_name = "Human/air attack 2"
+special_attack_name = "Human/special attack"
+attack_return_name = "Human/attack 1 return"
+elemental_attack1_name = "Elemental/attack 1"
+elemental_attack2_name = "Elemental/attack 2"
+elemental_attack3_name = "Elemental/attack 3"
+elemental_air_attack_name = "Elemental/air attack 1"
+elemental_air_attack2_name = "Elemental/air attack 2"
+elemental_special_attack_name = "Elemental/special attack"
+elemental_attack_return_name = "Elemental/attack 1 return"
+return_to_move = "human move"
+elemental_return_node = "Elemental_attack 1 return"
+elemental_air_return_node = "Elemental_fall"
+elemental_return_to_move = "elemental move"
+elemental_attack2_node = "Elemental_attack 2"
+elemental_air_attack2_node = "Elemental_air attack 2"
+can_move = false
+can_fall = false
+can_flip = false
+
+[node name="AttackTimer" type="Timer" parent="CharacterStateMachine/Attack"]
+wait_time = 0.335
+one_shot = true
+
+[node name="Defend" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
+script = ExtResource("17_70kdt")
+return_to_move = "human move"
+exit_defend_animation = "Human/exit defend"
+ground_state = NodePath("../Ground")
+can_move = false
+
+[node name="Dodge" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("ground_state")]
+script = ExtResource("18_0oabr")
+return_to_move = "human move"
+dodge_animation = "Human/dodge"
+ground_state = NodePath("../Ground")
+can_flip = false
+
+[node name="Transform" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("elemental_timeout", "ground_state")]
+script = ExtResource("19_cj5fe")
+elemental_timeout = NodePath("../ElementalTimer")
+ground_state = NodePath("../Ground")
+elemental_move_node = "elemental move"
+human_move_node = "human move"
+can_move = false
+can_flip = false
+
+[node name="ElementalTimer" type="Timer" parent="CharacterStateMachine"]
+wait_time = 30.0
+one_shot = true
+
+[node name="Hit" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("damageable", "state_machine", "dead_state", "ground_state", "air_state")]
+script = ExtResource("37_dc2ji")
+damageable = NodePath("../../Damageable")
+state_machine = NodePath("..")
+dead_state = NodePath("../Dead")
+ground_state = NodePath("../Ground")
+air_state = NodePath("../Air")
+can_move = false
+can_flip = false
+
+[node name="Timer" type="Timer" parent="CharacterStateMachine/Hit"]
+wait_time = 0.25
+
+[node name="Dead" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("37_e74l5")
+can_move = false
+can_fall = false
+can_flip = false
+
+[node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+offset_left = -34.0
+offset_top = -47.0
+offset_right = 80.0
+offset_bottom = -24.0
+text = "state:"
+script = ExtResource("8_d7xao")
+state_machine = NodePath("../CharacterStateMachine")
+
+[node name="human attack 1" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("35_bgvbl")
+
+[node name="attack 1 hitbox" type="CollisionShape2D" parent="human attack 1"]
+position = Vector2(46.7, -12.395)
+shape = SubResource("RectangleShape2D_ssopo")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="human attack 2 left" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("36_25alx")
+
+[node name="attack 2 hitbox left swing" type="CollisionShape2D" parent="human attack 2 left"]
+position = Vector2(-31.5, -7)
+shape = SubResource("RectangleShape2D_t3g2m")
+debug_color = Color(1, 0.105882, 0.176471, 0.419608)
+
+[node name="human attack 2 right" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("37_gn6wt")
+damage = 2.5
+
+[node name="attack 2 hitbox right swing" type="CollisionShape2D" parent="human attack 2 right"]
+position = Vector2(44, -7.75)
+shape = SubResource("RectangleShape2D_t3g2m")
+debug_color = Color(1, 0.105882, 0.176471, 0.419608)
+
+[node name="human attack 3" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("38_023n3")
+damage = 10.0
+
+[node name="attack 3 hitbox" type="CollisionShape2D" parent="human attack 3"]
+position = Vector2(62, -12.5)
+shape = SubResource("RectangleShape2D_t3g2m")
+debug_color = Color(1, 0.266667, 0, 0.419608)
+
+[node name="human special attack" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("39_1pllc")
+damage = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="human special attack"]
+position = Vector2(143, -13)
+scale = Vector2(2.275, 1.14)
+shape = SubResource("CircleShape2D_a62rq")
+debug_color = Color(0, 1, 0, 0.419608)
+
+[node name="human air attack 1" type="Area2D" parent="."]
+visible = false
+z_index = 2
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("40_nixcs")
+
+[node name="air attack 1 hitbox" type="CollisionShape2D" parent="human air attack 1"]
+position = Vector2(55, -16.5)
+shape = SubResource("RectangleShape2D_8pey1")
+debug_color = Color(1, 0.729412, 0, 0.509804)
+
+[node name="human air attack 2" type="Area2D" parent="."]
+visible = false
+light_mask = 2
+visibility_layer = 4
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("41_dr7wp")
+
+[node name="air attack 2 hitbox" type="CollisionShape2D" parent="human air attack 2"]
+position = Vector2(33.58, -15.45)
+shape = SubResource("RectangleShape2D_a0vi6")
+debug_color = Color(0.690196, 0, 0.768627, 0.580392)
+
+[node name="elemental attack 1" type="Area2D" parent="."]
+visible = false
+position = Vector2(2, -9)
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("43_7m17v")
+damage = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elemental attack 1"]
+position = Vector2(53, 0)
+shape = SubResource("RectangleShape2D_lq1g7")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="elemental attack 2" type="Area2D" parent="."]
+visible = false
+position = Vector2(2, -9)
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("44_o71ip")
+damage = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elemental attack 2"]
+position = Vector2(56.5, -9.5)
+shape = SubResource("RectangleShape2D_pspy2")
+debug_color = Color(1, 0.105882, 0.176471, 0.419608)
+
+[node name="elemental attack 3" type="Area2D" parent="."]
+visible = false
+position = Vector2(2, -9)
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("45_4ymoa")
+damage = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elemental attack 3"]
+position = Vector2(89.545, -5)
+scale = Vector2(0.79, 1)
+shape = SubResource("RectangleShape2D_pspy2")
+debug_color = Color(1, 0.266667, 0, 0.419608)
+
+[node name="elemental special attack" type="Area2D" parent="."]
+visible = false
+position = Vector2(2, -9)
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("47_7uibr")
+damage = 20.0
+
+[node name="special attack hitbox" type="CollisionShape2D" parent="elemental special attack"]
+position = Vector2(238.055, -43)
+shape = SubResource("CircleShape2D_58w77")
+debug_color = Color(0, 1, 0, 0.419608)
+
+[node name="elemental air attack 1" type="Area2D" parent="."]
+visible = false
+light_mask = 2
+visibility_layer = 4
+position = Vector2(2, -9)
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("48_wd51e")
+damage = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elemental air attack 1"]
+position = Vector2(21.75, -15.5)
+shape = SubResource("RectangleShape2D_3p2j0")
+debug_color = Color(1, 0.729412, 0, 0.509804)
+
+[node name="elemental air attack 2" type="Area2D" parent="."]
+visible = false
+light_mask = 2
+visibility_layer = 4
+position = Vector2(2, -9)
+collision_layer = 2
+collision_mask = 4
+monitoring = false
+script = ExtResource("49_db6rv")
+damage = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elemental air attack 2"]
+position = Vector2(38, -10)
+shape = SubResource("RectangleShape2D_nqqjo")
+debug_color = Color(0.690196, 0, 0.768627, 0.580392)
+
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Defend" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Dodge" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Transform" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Hit" method="_on_animation_tree_animation_finished"]
+[connection signal="timeout" from="CharacterStateMachine/ElementalTimer" to="CharacterStateMachine/Ground" method="_on_elemental_timer_timeout"]
+[connection signal="timeout" from="CharacterStateMachine/Hit/Timer" to="CharacterStateMachine/Hit" method="_on_timer_timeout"]
+[connection signal="body_entered" from="human attack 1" to="human attack 1" method="_on_body_entered"]
+[connection signal="body_entered" from="human attack 2 left" to="human attack 2 left" method="_on_body_entered"]
+[connection signal="body_entered" from="human attack 2 right" to="human attack 2 right" method="_on_body_entered"]
+[connection signal="body_entered" from="human attack 3" to="human attack 3" method="_on_body_entered"]
+[connection signal="body_entered" from="human special attack" to="human special attack" method="_on_body_entered"]
+[connection signal="body_entered" from="human air attack 1" to="human air attack 1" method="_on_body_entered"]
+[connection signal="body_entered" from="human air attack 2" to="human air attack 2" method="_on_body_entered"]
+[connection signal="body_entered" from="elemental attack 1" to="elemental attack 1" method="_on_body_entered"]
+[connection signal="body_entered" from="elemental attack 2" to="elemental attack 2" method="_on_body_entered"]
+[connection signal="body_entered" from="elemental attack 3" to="elemental attack 3" method="_on_body_entered"]
+[connection signal="body_entered" from="elemental special attack" to="elemental special attack" method="_on_body_entered"]
+[connection signal="body_entered" from="elemental air attack 1" to="elemental air attack 1" method="_on_body_entered"]
+[connection signal="body_entered" from="elemental air attack 2" to="elemental air attack 2" method="_on_body_entered"]

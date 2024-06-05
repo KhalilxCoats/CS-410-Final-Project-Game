@@ -1,10 +1,10 @@
 [gd_scene load_steps=35 format=3 uid="uid://bylefo0jfw4n1"]
 
-[ext_resource type="Script" path="res://Characters/Character.gd" id="1_strtd"]
-[ext_resource type="Texture2D" uid="uid://b643rua6g1iu1" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Fall.png" id="2_a3xc4"]
-[ext_resource type="Texture2D" uid="uid://e17x6x5ndq5h" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Idle.png" id="3_uyg5e"]
-[ext_resource type="Texture2D" uid="uid://dcx3j4r7qwpr0" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Jump.png" id="4_j8m3j"]
-[ext_resource type="Texture2D" uid="uid://bmcy6hfkhmm4q" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Run.png" id="5_1jish"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/Character.gd" id="1_ac7x4"]
+[ext_resource type="Texture2D" uid="uid://ja0uo6jnmkf8" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Fall.png" id="2_a3xc4"]
+[ext_resource type="Texture2D" uid="uid://b04ncyyafir2q" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Idle.png" id="3_uyg5e"]
+[ext_resource type="Texture2D" uid="uid://bavgd4jxmiaul" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Jump.png" id="4_j8m3j"]
+[ext_resource type="Texture2D" uid="uid://byelqml2hhqq7" path="res://assets/characters/npc/Fantasy Warrior/Fantasy Warrior/Sprites/Run.png" id="5_1jish"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srcyf"]
 atlas = ExtResource("2_a3xc4")
@@ -230,12 +230,12 @@ height = 45.4685
 [node name="playerCharacter" type="CharacterBody2D"]
 position = Vector2(174, 183)
 safe_margin = 0.01
-script = ExtResource("1_strtd")
+script = ExtResource("1_ac7x4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(17, -68)
 sprite_frames = SubResource("SpriteFrames_nupfy")
-animation = &"fall_loop"
+animation = &"idle"
 autoplay = "idle"
 centered = false
 offset = Vector2(-143, -58)

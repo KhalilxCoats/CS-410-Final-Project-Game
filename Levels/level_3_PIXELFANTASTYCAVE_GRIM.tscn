@@ -1,17 +1,18 @@
 [gd_scene load_steps=21 format=3 uid="uid://cvtcepd08cleg"]
 
-[ext_resource type="Texture2D" uid="uid://bd3mnsvvcrgpe" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_n67bo"]
-[ext_resource type="Texture2D" uid="uid://wbnkeq1drirf" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="2_lmpg4"]
-[ext_resource type="Texture2D" uid="uid://bi62sefycuebl" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="3_00jhy"]
-[ext_resource type="Texture2D" uid="uid://cwhdk0on655s5" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_e1s2w"]
-[ext_resource type="Texture2D" uid="uid://qdcf5yna2amv" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_416fr"]
+[ext_resource type="Texture2D" uid="uid://dy4wmry5cqmbm" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_n67bo"]
+[ext_resource type="Texture2D" uid="uid://bi0k83vj1a0me" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="2_lmpg4"]
+[ext_resource type="Texture2D" uid="uid://5dmhgge7oh5d" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="3_00jhy"]
+[ext_resource type="Texture2D" uid="uid://cxf22n6r8kpsi" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_e1s2w"]
+[ext_resource type="Texture2D" uid="uid://douls7w10o0vg" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_416fr"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="6_agkne"]
-[ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="7_7mhiv"]
+[ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight/Fire Knight.tscn" id="7_7mhiv"]
 [ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="8_mxm46"]
-[ext_resource type="Texture2D" uid="uid://ww2vggd1usg8" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_towdf"]
-[ext_resource type="Texture2D" uid="uid://da34sc7qii3gw" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_lxqj0"]
-[ext_resource type="Texture2D" uid="uid://bt6cw4bayratq" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_2s7kl"]
-[ext_resource type="Texture2D" uid="uid://bd7a2tjsllsf4" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_w2orx"]
+[ext_resource type="Texture2D" uid="uid://c1avqjeye4itm" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_towdf"]
+[ext_resource type="Texture2D" uid="uid://cxhnrdnd8tav0" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_lxqj0"]
+[ext_resource type="Texture2D" uid="uid://crk1u1dua7cki" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_2s7kl"]
+[ext_resource type="Texture2D" uid="uid://d01ut7krvkbyq" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_w2orx"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
 texture = ExtResource("1_n67bo")

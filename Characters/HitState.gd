@@ -1,0 +1,34 @@
+extends State
+
+class_name HitState
+
+@export var state_machine : CharacterStateMachine
+@export var damageable: Damageable_enemy
+@export var dead_state : State
+@export var return_state : State
+
+
+@onready var timer :Timer = $Timer
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	damageable.connect("on_hit",on_damageable_hit)
+	
+func on_enter():
+	timer.start()
+
+func on_damageable_hit(node:Node,damage_amount:float):
+	if(damageable.health > 0):
+		emit_signal("interrupt_state", self)
+		playback.travel("take hit")
+	else:
+		emit_signal("interrupt_state", dead_state)
+		playback.travel("death")
+
+
+
+
+
+func _on_animation_tree_animation_finished(anim_name):
+	if anim_name == "take hit":
+		next_state = return_state
+		playback.travel("move")
