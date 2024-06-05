@@ -1,11 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://bsx3pnh5sigak"]
+[gd_scene load_steps=38 format=3 uid="uid://bsx3pnh5sigak"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
-[ext_resource type="Texture2D" uid="uid://b2ium8i3ca750" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
+[ext_resource type="Texture2D" uid="uid://bj20p1c8bpppy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="2_l4fsf"]
 [ext_resource type="Script" path="res://Levels/Final_Level_1_Castlev2PSD_Night.gd" id="2_v1rpr"]
-[ext_resource type="Texture2D" uid="uid://b2xhgq664tmt3" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
-[ext_resource type="Texture2D" uid="uid://d28cj44adlnpy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
+[ext_resource type="Texture2D" uid="uid://bibhu1fpboi53" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
+[ext_resource type="Texture2D" uid="uid://brgev06qbb11i" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
 [ext_resource type="PackedScene" uid="uid://ciher7eh13t8x" path="res://Characters/Enemies/Bosses/boss_death.tscn" id="5_rotuk"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="8_rrhin"]
 
@@ -156,6 +156,12 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gk6uf"]
 size = Vector2(5677, 133)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_q6m8b"]
+vertices = PackedVector2Array(9365, 17, 9356, 405, -92, 406, -92, 10)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-102, 417, -102, 0, 9376, 8, 9366, 415)])
+source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Level" instance=ExtResource("1_vxj2i")]
 script = ExtResource("2_v1rpr")
@@ -342,5 +348,8 @@ position = Vector2(2324, 508)
 position = Vector2(2747.5, 153)
 shape = SubResource("RectangleShape2D_gk6uf")
 debug_color = Color(0.979367, 0, 0.388625, 0.42)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="11"]
+navigation_polygon = SubResource("NavigationPolygon_q6m8b")
 
 [connection signal="body_entered" from="NextLevel" to="." method="_on_next_level_body_entered"]

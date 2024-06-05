@@ -1,11 +1,11 @@
 [gd_scene load_steps=30 format=3 uid="uid://dv2p0qj58phbj"]
 
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="1_5yt7g"]
-[ext_resource type="Texture2D" uid="uid://gegcj6mpk44c" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
+[ext_resource type="Texture2D" uid="uid://dsiarn1qlh8f" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_f6daw"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/testEnemy.gd" id="1_t5x2w"]
-[ext_resource type="Texture2D" uid="uid://b71m3sdlblxv7" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
-[ext_resource type="Texture2D" uid="uid://cspowwxwnohrr" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
-[ext_resource type="Texture2D" uid="uid://d0srxhv8mqya8" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
+[ext_resource type="Texture2D" uid="uid://cvwgjap3i2vov" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="2_rueq7"]
+[ext_resource type="Texture2D" uid="uid://bud5ps2ovypsm" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="3_bs04f"]
+[ext_resource type="Texture2D" uid="uid://62awigw5gvqn" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_yh3wn"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/DefaultState.gd" id="6_hscfx"]
 [ext_resource type="Script" path="res://Characters/Enemies/testEnemy/AttackState.gd" id="7_pv1si"]
 
@@ -265,6 +265,7 @@ transitions = ["Start", "Flight", SubResource("AnimationNodeStateMachineTransiti
 graph_offset = Vector2(84.4498, -33.3675)
 
 [node name="enemyCharacter" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 8
 motion_mode = 1
 script = ExtResource("1_t5x2w")
 
@@ -291,6 +292,9 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b2jp8")
+}
 tree_root = SubResource("AnimationNodeStateMachine_a2kq5")
 anim_player = NodePath("../AnimationPlayer")
 

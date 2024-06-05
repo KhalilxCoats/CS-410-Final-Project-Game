@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://xe6ddb2nxisp"]
 
 [ext_resource type="PackedScene" uid="uid://b8i2r82nr28fx" path="res://Levels/level.tscn" id="1_dsjwp"]
-[ext_resource type="Texture2D" uid="uid://cgyx3spnb0f3x" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/main_background.png" id="2_3y3yr"]
-[ext_resource type="Texture2D" uid="uid://pt6rs805jonr" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree1.png" id="3_aj7pk"]
-[ext_resource type="Texture2D" uid="uid://b7qc6s18h3o8u" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree2.png" id="4_amt6u"]
-[ext_resource type="Texture2D" uid="uid://domhqb1ye08oo" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree3.png" id="5_udie4"]
-[ext_resource type="Texture2D" uid="uid://cktgu4uyb8yl" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree4.png" id="6_152d3"]
-[ext_resource type="Texture2D" uid="uid://b5kptxfeclfkx" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree5.png" id="7_jgxbb"]
+[ext_resource type="Texture2D" uid="uid://cr6mufhsjsqm3" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/main_background.png" id="2_3y3yr"]
+[ext_resource type="Texture2D" uid="uid://bq8jsstp3qre" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree1.png" id="3_aj7pk"]
+[ext_resource type="Texture2D" uid="uid://u4w5r6lpy0yj" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree2.png" id="4_amt6u"]
+[ext_resource type="Texture2D" uid="uid://daqo7aqxxsb1e" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree3.png" id="5_udie4"]
+[ext_resource type="Texture2D" uid="uid://dhc8ec38e2bbj" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree4.png" id="6_152d3"]
+[ext_resource type="Texture2D" uid="uid://rh16b8kygceg" path="res://assets/Tiles/Szadi Tiles/DarkForest1.2/bgrd_tree5.png" id="7_jgxbb"]
 
 [node name="Level" instance=ExtResource("1_dsjwp")]
 
