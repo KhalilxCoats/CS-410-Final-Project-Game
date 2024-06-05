@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dgs28gbaebikx" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="4_0wt5r"]
 [ext_resource type="Texture2D" uid="uid://d26ue34ifc4w7" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props2.png" id="5_s1jjc"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="6_5kth0"]
-[ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight.tscn" id="7_msxsc"]
+[ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight/Fire Knight.tscn" id="7_msxsc"]
 [ext_resource type="PackedScene" uid="uid://dv2p0qj58phbj" path="res://Characters/Enemies/testEnemy/testEnemy.tscn" id="8_cpc70"]
 [ext_resource type="Texture2D" uid="uid://b3rh7vemb0hiu" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="9_qd4js"]
 [ext_resource type="Texture2D" uid="uid://dc8qgdbmqhy7n" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="10_0s875"]
@@ -23617,6 +23617,7 @@ color = Color(0, 0, 0, 1)
 [node name="NextLevel" type="Area2D" parent="."]
 position = Vector2(8918, 354)
 collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
 position = Vector2(2526, 40)
@@ -23630,6 +23631,8 @@ visible = false
 
 [node name="KillBox" type="Area2D" parent="." groups=["KillBox"]]
 position = Vector2(2277, 623)
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillBox"]
 position = Vector2(4595.5, 104.5)
@@ -23637,3 +23640,4 @@ shape = SubResource("RectangleShape2D_h60r4")
 debug_color = Color(0.968758, 0, 0.465794, 0.42)
 
 [connection signal="body_entered" from="NextLevel" to="." method="_on_next_level_body_entered"]
+[connection signal="body_entered" from="KillBox" to="." method="_on_kill_box_body_entered"]
