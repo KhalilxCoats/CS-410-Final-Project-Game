@@ -8,7 +8,7 @@ const SPEED = 30.0
 
 var direction : Vector2 = Vector2.ZERO
 
-@onready var state_machine : CharacterStateMachine = $CharacterStateMachine
+@onready var state_machine : CharacterStateMachine = $CharacterStateMachiner
 
 @export var target : Node2D
 @export var nav :NavigationAgent2D
@@ -18,7 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	animation_tree.active = true
-	nav.path_desired_distance = 10.0
+	nav.path_desired_distance = 50.0
 	nav.target_desired_distance = 10.0
 	
 	call_deferred("actor_setup")
