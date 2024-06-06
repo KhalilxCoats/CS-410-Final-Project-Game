@@ -1,13 +1,13 @@
 [gd_scene load_steps=49 format=3 uid="uid://dc56sdw8crm4m"]
 
-[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/ghost_warrior(walking).gd" id="1_e0m1o"]
+[ext_resource type="Script" path="res://Characters/Enemies/BossV2/ghost_warrior(walking).gd" id="1_qib87"]
 [ext_resource type="Texture2D" uid="uid://bgc3nmconp27t" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Idle.png" id="2_b5s0v"]
 [ext_resource type="Texture2D" uid="uid://joxqpedu56k2" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/attack.png" id="3_kyi2c"]
 [ext_resource type="Texture2D" uid="uid://bioqlgjhdu8b6" path="res://assets/characters/npc/enemies/Undead executioner/Undead executioner puppet/png/UndeadExec_SpriteSheet.png" id="3_sotov"]
 [ext_resource type="Texture2D" uid="uid://dhsb0yhe7kflr" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Death.png" id="4_puklv"]
 [ext_resource type="Texture2D" uid="uid://ci353i4nmhac1" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Take Hit.png" id="5_hupk7"]
 [ext_resource type="Texture2D" uid="uid://c48fyk2d8wxu1" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Walk.png" id="6_watae"]
-[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Damageable.gd" id="7_ffx80"]
+[ext_resource type="Script" path="res://Characters/Enemies/BossV2/Damageable.gd" id="8_5s2pm"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="8_d0gsf"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Walk.gd" id="9_amcts"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Dead.gd" id="10_p3ghl"]
@@ -563,7 +563,7 @@ size = Vector2(92, 122)
 [node name="Ghost Warrior(Walking)" type="CharacterBody2D" node_paths=PackedStringArray("nav")]
 z_index = -1
 collision_layer = 4
-script = ExtResource("1_e0m1o")
+script = ExtResource("1_qib87")
 nav = NodePath("NavigationAgent2D")
 
 [node name="ghost warrior animation sprites" type="Sprite2D" parent="."]
@@ -600,7 +600,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = 0.0
 
 [node name="Damageable" type="Node" parent="."]
-script = ExtResource("7_ffx80")
+script = ExtResource("8_5s2pm")
 
 [node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
 script = ExtResource("8_d0gsf")

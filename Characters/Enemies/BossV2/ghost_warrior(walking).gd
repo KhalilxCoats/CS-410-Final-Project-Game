@@ -18,7 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	animation_tree.active = true
-	nav.path_desired_distance = 10.0
+	nav.path_desired_distance = 50.0
 	nav.target_desired_distance = 10.0
 	
 	call_deferred("actor_setup")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://crlolvr5ottdh"]
+[gd_scene load_steps=81 format=3 uid="uid://crlolvr5ottdh"]
 
 [ext_resource type="Script" path="res://Levels/Final_Level_2_PixelFantasyCave.gd" id="1_0s3hv"]
 [ext_resource type="Texture2D" uid="uid://byyxfmhb2sy78" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="1_8h3fx"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://du6lsbseskegw" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="11_ulmxh"]
 [ext_resource type="Texture2D" uid="uid://dw3tlg3kf6gom" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="12_ip8qu"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="14_3iaib"]
+[ext_resource type="PackedScene" uid="uid://bxc4kmiipp8yb" path="res://Menus/death_menu.tscn" id="15_de6dj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
 texture = ExtResource("1_8h3fx")
@@ -23628,6 +23629,8 @@ debug_color = Color(4.81308e-08, 0.639314, 0.366432, 0.42)
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("14_3iaib")]
 visible = false
+
+[node name="DeathMenu" parent="CanvasLayer" instance=ExtResource("15_de6dj")]
 
 [node name="KillBox" type="Area2D" parent="." groups=["KillBox"]]
 position = Vector2(2277, 623)

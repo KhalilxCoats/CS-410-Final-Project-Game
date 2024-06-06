@@ -1,10 +1,11 @@
-[gd_scene load_steps=34 format=3 uid="uid://38o2rss1q5wt"]
+[gd_scene load_steps=35 format=3 uid="uid://38o2rss1q5wt"]
 
 [ext_resource type="Script" path="res://Levels/boss_level.gd" id="1_k77wc"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight/Fire Knight.tscn" id="2_phvn3"]
 [ext_resource type="PackedScene" uid="uid://ciher7eh13t8x" path="res://Characters/Enemies/Bosses/boss_death.tscn" id="3_882yl"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="4_7xyq3"]
 [ext_resource type="Texture2D" uid="uid://byyxfmhb2sy78" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="4_qwdks"]
+[ext_resource type="PackedScene" uid="uid://bxc4kmiipp8yb" path="res://Menus/death_menu.tscn" id="5_kcluw"]
 [ext_resource type="Texture2D" uid="uid://bphthblk0is61" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild1.png" id="5_xj7sa"]
 [ext_resource type="Texture2D" uid="uid://cqsiowwhdas8k" path="res://assets/Tiles/Szadi Tiles/PF_StrangeMountains_v1.0/mainlevbuild2.png" id="6_tfaa6"]
 [ext_resource type="Texture2D" uid="uid://dgs28gbaebikx" path="res://assets/Tiles/PixelFantasy_Caves_1.0/props1.png" id="7_fphk1"]
@@ -24331,6 +24332,8 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_7xyq3")]
 visible = false
+
+[node name="DeathMenu" parent="CanvasLayer" instance=ExtResource("5_kcluw")]
 
 [node name="Floor" type="TileMap" parent="."]
 position = Vector2(58, -194)
