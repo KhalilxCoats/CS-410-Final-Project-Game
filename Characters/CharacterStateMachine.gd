@@ -1,3 +1,5 @@
+#CharacterStateMachine
+
 extends Node
 
 class_name CharacterStateMachine
@@ -19,19 +21,20 @@ func _ready():
 			child.connect("interrupt_state", on_state_interrupt_state)
 		else:
 			push_warning("child " + child.name + "is not a  Character State")
-
+#Checking states every frame
 func _physics_process(delta):
 	if(current_state.next_state != null):
 		switch_states(current_state.next_state)
 		
 	current_state.state_process(delta)
 
+#If can move, changes state to move
 func get_can_move():
 	return current_state.can_move
-
+#If can fall changing state to fall
 func get_can_fall():
 	return current_state.can_fall
-
+#Function to swtich between states
 func switch_states(new_state : State):
 	if(current_state != null):
 		current_state.on_exit()
@@ -41,6 +44,7 @@ func switch_states(new_state : State):
 	
 	current_state.on_enter()
 	
+
 func _input(event : InputEvent):
 	current_state.state_input(event)
 

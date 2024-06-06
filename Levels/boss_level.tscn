@@ -1,8 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://38o2rss1q5wt"]
+[gd_scene load_steps=34 format=3 uid="uid://38o2rss1q5wt"]
 
 [ext_resource type="Script" path="res://Levels/boss_level.gd" id="1_k77wc"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight/Fire Knight.tscn" id="2_phvn3"]
-[ext_resource type="PackedScene" uid="uid://ciher7eh13t8x" path="res://Characters/Enemies/Bosses/boss_death.tscn" id="3_882yl"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="4_7xyq3"]
 [ext_resource type="Texture2D" uid="uid://byyxfmhb2sy78" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="4_qwdks"]
 [ext_resource type="PackedScene" uid="uid://bxc4kmiipp8yb" path="res://Menus/death_menu.tscn" id="5_kcluw"]
@@ -24306,9 +24305,6 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="bossLevel" type="Node2D"]
 script = ExtResource("1_k77wc")
-
-[node name="boss" parent="." instance=ExtResource("3_882yl")]
-position = Vector2(855, 311)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(154, 402)

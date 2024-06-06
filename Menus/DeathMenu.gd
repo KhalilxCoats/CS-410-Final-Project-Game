@@ -3,18 +3,18 @@ extends Control
 @onready var Level = $"../../"
 
 
-#When resume is pressed game engine is resumed
+#Hiding menu upon entering scene
 func _ready():
 	hide()
 
-#When quit game engine resumes and changes scene to main menu
+#Quitting game
 func _on_quit_pressed():
 	get_tree().quit()
 
-
+#Return to main menu
 func _on_returntomenu_pressed():
 	get_tree().change_scene_to_file("res://Menus/menu.tscn")
 
-
+#reload current scene 
 func _on_retry_pressed():
 	get_tree().reload_current_scene()

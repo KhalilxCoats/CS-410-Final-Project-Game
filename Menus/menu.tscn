@@ -1,31 +1,39 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpqieb0xluenk"]
+[gd_scene load_steps=8 format=3 uid="uid://cpqieb0xluenk"]
 
 [ext_resource type="Texture2D" uid="uid://cy6v3avddvkm3" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
-script/source = "extends Control
+script/source = "#Script for Main menu
+extends Control
+#Animation Player variable being declared on ready
 @onready var animation_player = $FadeLayer/AnimationPlayer
-
+#Upon entering this scene, music starts playing
 func _ready():
 	MenuMusic.play_music_menu()
 
-
+#Upon pressing play, transition animation plays, then scene is switched to level 1
 func _on_play_pressed():
 	animation_player.play(\"Transition_out\")
 	await animation_player.animation_finished
 	get_tree().change_scene_to_file(\"res://Levels/Final_Level_1_Castlev2PSD_Night.tscn\")
 
 
-
+#Upon pressing options, scene is swapped to options menu
 func _on_options_pressed():
 	get_tree().change_scene_to_file(\"res://Menus/options_menu.tscn\")
 
-
+#Upon pressing quit, exit program
 func _on_quit_pressed():
 	#get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 	get_tree().quit()
 
 "
+
+[sub_resource type="LabelSettings" id="LabelSettings_aelfk"]
+font_size = 45
+font_color = Color(0.0404996, 1, 0.202422, 1)
+outline_size = 8
+outline_color = Color(0.923747, 0.244292, 0.455041, 1)
 
 [sub_resource type="Animation" id="Animation_610l2"]
 length = 0.001
@@ -118,14 +126,19 @@ script = SubResource("GDScript_5cvnc")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 2
-offset_left = 326.0
-offset_top = 100.0
-offset_right = 826.0
-offset_bottom = 150.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 330.683
+offset_top = 104.906
+offset_right = 830.683
+offset_bottom = 233.906
+grow_horizontal = 2
 text = "Elementals
 
 "
+label_settings = SubResource("LabelSettings_aelfk")
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -180,5 +193,5 @@ color = Color(0, 0, 0, 1)
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
