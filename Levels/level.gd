@@ -3,11 +3,13 @@ extends Node2D
 class_name Level
 
 @onready var pause_menu = $CanvasLayer/PauseMenu
+@onready var death_menu = $CanvasLayer/DeathMenu
 var paused = false
 
 func _ready():
 	#MenuMusic.stop_music()
 	pause_menu.hide()
+	death_menu.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -22,3 +24,6 @@ func pauseMenu():
 		pause_menu.show()
 		Engine.time_scale = 0
 	paused = !paused
+
+func deathMenu():
+	death_menu.show()

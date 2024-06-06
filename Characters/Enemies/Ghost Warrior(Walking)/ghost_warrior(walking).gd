@@ -8,7 +8,7 @@ const SPEED = 30.0
 
 var direction : Vector2 = Vector2.ZERO
 
-@onready var state_machine : CharacterStateMachine = $CharacterStateMachiner
+@onready var state_machine : CharacterStateMachine = $CharacterStateMachine
 
 @export var target : Node2D
 @export var nav :NavigationAgent2D
