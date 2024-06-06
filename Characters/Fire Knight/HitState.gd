@@ -26,6 +26,7 @@ func on_damageable_hit(node:Node,damage_amount:float):
 	else:
 		emit_signal("interrupt_state", dead_state)
 		playback.travel("Human_death")
+		get_parent().get_parent().get_parent().level.deathMenu()
 
 func _on_animation_tree_animation_finished(anim_name):
 	if(anim_name == "Human/take hit"):

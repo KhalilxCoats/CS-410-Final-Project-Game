@@ -4,6 +4,7 @@
 
 extends Level
 @onready var animation_player = $CanvasLayer2/AnimationPlayer
+@onready var level = $"."
 
 func _ready():
 	pause_menu.hide()

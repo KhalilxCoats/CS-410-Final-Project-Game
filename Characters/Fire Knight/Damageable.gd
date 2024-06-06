@@ -24,5 +24,5 @@ func hit(damage : float):
 
 
 func _on_animation_tree_animation_finished(anim_name):
-	if(anim_name == "death"):
+	if(anim_name == "Human_death"):
 		get_parent().queue_free()

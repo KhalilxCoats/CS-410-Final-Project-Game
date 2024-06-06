@@ -18,6 +18,7 @@ script = ExtResource("1_udlsg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_fpfvc")
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(28.8, 16.56)
