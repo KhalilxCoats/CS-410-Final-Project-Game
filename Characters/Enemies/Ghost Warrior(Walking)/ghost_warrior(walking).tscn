@@ -487,10 +487,9 @@ can_fall = false
 wait_time = 0.25
 one_shot = true
 
-[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "attack_cooldown_timer", "state_machine")]
+[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "state_machine")]
 script = ExtResource("12_46eor")
 walk_state = NodePath("../Walk")
-attack_cooldown_timer = NodePath("../attack cooldown")
 state_machine = NodePath("..")
 can_move = false
 

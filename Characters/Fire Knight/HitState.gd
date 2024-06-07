@@ -18,10 +18,10 @@ func on_enter():
 	timer.start()
 
 func on_damageable_hit(node:Node,damage_amount:float):
-	if(damageable.health > 0 && state_machine.current_state.name != "Defend"):
+	if(damageable.health > 0 && state_machine.current_state.name != "Defend" && state_machine.current_state.name != "Transform"):
 		emit_signal("interrupt_state", self)
 		playback.travel("Human_take hit")
-	elif(damageable.health > 0 && state_machine.current_state.name == "Defend"):
+	elif(damageable.health > 0 && (state_machine.current_state.name == "Defend" || state_machine.current_state.name == "Transform")):
 		pass
 	else:
 		emit_signal("interrupt_state", dead_state)

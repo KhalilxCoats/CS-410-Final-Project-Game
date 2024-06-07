@@ -1,7 +1,6 @@
 extends State
 
 @export var walk_state :State
-@export var attack_cooldown_timer : Timer
 @export var state_machine : CharacterStateMachine
 
 #After finishing attack move to walk state

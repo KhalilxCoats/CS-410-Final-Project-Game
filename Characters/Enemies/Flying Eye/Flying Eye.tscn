@@ -610,10 +610,9 @@ can_fall = false
 wait_time = 0.25
 one_shot = true
 
-[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "attack_cooldown_timer", "state_machine")]
+[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "state_machine")]
 script = ExtResource("11_w4tpe")
 walk_state = NodePath("../Walk")
-attack_cooldown_timer = NodePath("../attack cooldown")
 state_machine = NodePath("..")
 can_move = false
 
@@ -642,7 +641,6 @@ position = Vector2(18, 9)
 shape = SubResource("CircleShape2D_14qim")
 
 [node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-visible = false
 offset_left = -34.0
 offset_top = -47.0
 offset_right = 80.0
