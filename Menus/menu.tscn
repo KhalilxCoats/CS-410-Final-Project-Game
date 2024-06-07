@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cpqieb0xluenk"]
 
-[ext_resource type="Texture2D" uid="uid://cy6v3avddvkm3" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+[ext_resource type="Texture2D" uid="uid://cvoqcrslfxl6d" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
 script/source = "#Script for Main menu

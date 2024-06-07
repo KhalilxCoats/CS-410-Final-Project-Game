@@ -1,11 +1,11 @@
 [gd_scene load_steps=42 format=3 uid="uid://bsx3pnh5sigak"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
-[ext_resource type="Texture2D" uid="uid://b2ium8i3ca750" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
+[ext_resource type="Texture2D" uid="uid://bj20p1c8bpppy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="2_l4fsf"]
 [ext_resource type="Script" path="res://Levels/Final_Level_1_Castlev2PSD_Night.gd" id="2_v1rpr"]
-[ext_resource type="Texture2D" uid="uid://b2xhgq664tmt3" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
-[ext_resource type="Texture2D" uid="uid://d28cj44adlnpy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
+[ext_resource type="Texture2D" uid="uid://bibhu1fpboi53" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="3_34sqd"]
+[ext_resource type="Texture2D" uid="uid://brgev06qbb11i" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="8_rrhin"]
 [ext_resource type="PackedScene" uid="uid://bxc4kmiipp8yb" path="res://Menus/death_menu.tscn" id="9_4gvbq"]
 [ext_resource type="PackedScene" uid="uid://dqbkyiqfhsl2v" path="res://Characters/Enemies/Flying Eye/Flying Eye.tscn" id="9_berkr"]
@@ -322,7 +322,7 @@ motion_mirroring = Vector2(1024, 640)
 [node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" index="0"]
 texture = null
 
-[node name="NextLevel" type="Area2D" parent="." index="6"]
+[node name="NextLevel" type="Area2D" parent="." index="5"]
 position = Vector2(8920, 354)
 collision_layer = 0
 collision_mask = 2
@@ -332,7 +332,7 @@ position = Vector2(-1, -3)
 shape = SubResource("RectangleShape2D_q1c0i")
 debug_color = Color(4.81308e-08, 0.639314, 0.366432, 0.42)
 
-[node name="FadeLayer" type="CanvasLayer" parent="." index="7"]
+[node name="FadeLayer" type="CanvasLayer" parent="." index="6"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FadeLayer" index="0"]
 root_node = NodePath("../..")
@@ -346,7 +346,7 @@ offset_right = 1152.0
 offset_bottom = 641.0
 color = Color(0, 0, 0, 1)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
 
 [node name="PauseMenu" parent="CanvasLayer" index="0" instance=ExtResource("8_rrhin")]
 visible = false
@@ -375,7 +375,7 @@ offset_right = 107.0
 offset_bottom = -5.0
 text = "Player Health:"
 
-[node name="KillBox" type="Area2D" parent="." index="9" groups=["KillBox"]]
+[node name="KillBox" type="Area2D" parent="." index="8" groups=["KillBox"]]
 position = Vector2(2324, 508)
 collision_mask = 6
 
@@ -384,21 +384,21 @@ position = Vector2(2747.5, 153)
 shape = SubResource("RectangleShape2D_gk6uf")
 debug_color = Color(0.979367, 0, 0.388625, 0.42)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="10"]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="9"]
 navigation_polygon = SubResource("NavigationPolygon_2ncps")
 
-[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="11"]
+[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="10"]
 navigation_polygon = SubResource("NavigationPolygon_4cdp7")
 
-[node name="NavigationRegionFlyers" type="NavigationRegion2D" parent="." index="12"]
+[node name="NavigationRegionFlyers" type="NavigationRegion2D" parent="." index="11"]
 navigation_polygon = SubResource("NavigationPolygon_edp2r")
 navigation_layers = 2
 
-[node name="Flying Eye" parent="." index="13" node_paths=PackedStringArray("target") instance=ExtResource("9_berkr")]
+[node name="Flying Eye" parent="." index="12" node_paths=PackedStringArray("target") instance=ExtResource("9_berkr")]
 position = Vector2(554, 262)
 target = NodePath("../playerCharacter")
 
-[node name="Ghost Warrior(Walking)" parent="." index="14" node_paths=PackedStringArray("target") instance=ExtResource("10_kdrxc")]
+[node name="Ghost Warrior(Walking)" parent="." index="13" node_paths=PackedStringArray("target") instance=ExtResource("10_kdrxc")]
 position = Vector2(347, 385)
 target = NodePath("../playerCharacter")
 

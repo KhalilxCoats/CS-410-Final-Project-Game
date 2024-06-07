@@ -1,16 +1,16 @@
 [gd_scene load_steps=40 format=3 uid="uid://dqbkyiqfhsl2v"]
 
 [ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/Flying Eye.gd" id="1_b8uqd"]
-[ext_resource type="Texture2D" uid="uid://gegcj6mpk44c" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="2_r5c6s"]
-[ext_resource type="Texture2D" uid="uid://b71m3sdlblxv7" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="3_lpmu0"]
-[ext_resource type="Texture2D" uid="uid://d0srxhv8mqya8" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_vfjln"]
-[ext_resource type="Texture2D" uid="uid://cspowwxwnohrr" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="5_871ox"]
+[ext_resource type="Texture2D" uid="uid://dsiarn1qlh8f" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="2_r5c6s"]
+[ext_resource type="Texture2D" uid="uid://cvwgjap3i2vov" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="3_lpmu0"]
+[ext_resource type="Texture2D" uid="uid://62awigw5gvqn" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_vfjln"]
+[ext_resource type="Texture2D" uid="uid://bud5ps2ovypsm" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="5_871ox"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Damageable.gd" id="6_ifpj6"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="7_ykp1n"]
-[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Walk.gd" id="8_54o7o"]
-[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Dead.gd" id="9_ee0om"]
+[ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/Walk.gd" id="8_alflt"]
+[ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/Dead.gd" id="9_pt02y"]
 [ext_resource type="Script" path="res://Characters/HitState.gd" id="10_m8nip"]
-[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Attack.gd" id="11_w4tpe"]
+[ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/Attack.gd" id="11_gi4mr"]
 [ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/attack damage hitbox.gd" id="12_nt5xm"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/stateLabel.gd" id="13_uf6yg"]
 
@@ -573,6 +573,9 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
+libraries = {
+"": SubResource("AnimationLibrary_03m7o")
+}
 tree_root = SubResource("AnimationNodeStateMachine_ajdgk")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = 0.0
@@ -587,11 +590,11 @@ character = NodePath("..")
 animation_tree = NodePath("../AnimationTree")
 
 [node name="Walk" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("attack_state")]
-script = ExtResource("8_54o7o")
+script = ExtResource("8_alflt")
 attack_state = NodePath("../Attack")
 
 [node name="Dead" type="Node" parent="CharacterStateMachine"]
-script = ExtResource("9_ee0om")
+script = ExtResource("9_pt02y")
 can_move = false
 
 [node name="Hit" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("state_machine", "damageable", "dead_state", "return_state")]
@@ -607,16 +610,17 @@ can_fall = false
 wait_time = 0.25
 one_shot = true
 
-[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "attack_cooldown_timer", "state_machine")]
-script = ExtResource("11_w4tpe")
-walk_state = NodePath("../Walk")
-attack_cooldown_timer = NodePath("../attack cooldown")
-state_machine = NodePath("..")
-can_move = false
+[node name="Attack" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("11_gi4mr")
+
+[node name="WindupTimer" type="Timer" parent="CharacterStateMachine/Attack"]
+wait_time = 0.75
+one_shot = true
 
 [node name="attack cooldown" type="Timer" parent="CharacterStateMachine"]
-wait_time = 1.5
+wait_time = 5.201
 one_shot = true
+autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 5.0
@@ -646,10 +650,14 @@ text = "state:"
 script = ExtResource("13_uf6yg")
 state_machine = NodePath("../CharacterStateMachine")
 
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="Damageable" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Hit" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_tree_animation_started"]
+[connection signal="animation_started" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_started"]
 [connection signal="timeout" from="CharacterStateMachine/Hit/Timer" to="CharacterStateMachine/Hit" method="_on_timer_timeout"]
+[connection signal="timeout" from="CharacterStateMachine/Attack/WindupTimer" to="." method="_on_windup_timer_timeout"]
 [connection signal="timeout" from="CharacterStateMachine/attack cooldown" to="CharacterStateMachine/Walk" method="_on_attack_cooldown_timeout"]
 [connection signal="navigation_finished" from="NavigationAgent2D" to="CharacterStateMachine/Walk" method="_on_navigation_agent_2d_navigation_finished"]
 [connection signal="timeout" from="Nav path maker" to="." method="_on_nav_path_maker_timeout"]

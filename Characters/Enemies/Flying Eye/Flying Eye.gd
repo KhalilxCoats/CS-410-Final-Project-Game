@@ -14,7 +14,7 @@ var direction : Vector2 = Vector2.ZERO
 @export var nav :NavigationAgent2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+#var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	animation_tree.active = true
@@ -25,8 +25,8 @@ func _ready():
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
+	#if not is_on_floor():
+	#	velocity.y += gravity * delta
 	
 	var current_agent_position: Vector2 = global_position
 	var next_path_position = nav.get_next_path_position()
@@ -44,26 +44,27 @@ func _physics_process(delta):
 	move_and_slide()
 	change_animation()
 	
-	if(state_machine.current_state.can_flip == true):
-		update_facing()
+	
 
 func actor_setup():
 	await get_tree().physics_frame
 	nav.target_position = target.global_position
 
 func set_target():
-	if(target.global_position.x - global_position.x < 0):
+	if(target.global_position.x - global_position.x < 10):
 		var target_calc : Vector2 = target.global_position
-		target_calc.x +=20
+		target_calc.x +=40
 		nav.target_position = target_calc
-	elif(target.global_position.x - global_position.x > 0):
+	elif(target.global_position.x - global_position.x > 10):
 		var target_calc : Vector2 = target.global_position
-		target_calc.x -= 20
+		target_calc.x -= 40
 		nav.target_position = target_calc
+	nav.target_position.y -= 40
 
 func _on_nav_path_maker_timeout():
 	set_target()
-	
+	if(state_machine.current_state.can_flip == true):
+		update_facing()
 
 func change_animation():
 	animation_tree.set("parameters/move/blend_position",velocity.x)
@@ -75,3 +76,32 @@ func update_facing():
 	elif velocity.x < 0 && facing == 1:
 		scale.x = -1
 		facing = -1
+
+# Handles movement during the attack
+func _on_windup_timer_timeout():
+	print("target set")
+	if(target.global_position.x - global_position.x < 10):
+		var target_calc : Vector2 = target.global_position
+		target_calc.x +=20
+		nav.target_position = target_calc
+	elif(target.global_position.x - global_position.x > 10):
+		var target_calc : Vector2 = target.global_position
+		target_calc.x -= 20
+		nav.target_position = target_calc
+	nav.target_position.y -= 20
+	var current_agent_position: Vector2 = global_position
+	var next_path_position = nav.get_next_path_position()
+	var new_velocity : Vector2 =  next_path_position - current_agent_position
+	new_velocity = new_velocity.normalized()
+	new_velocity *= SPEED
+	if(state_machine.current_state.can_flip == true):
+		update_facing()
+
+func _on_animation_tree_animation_started(anim_name):
+	if(anim_name == "attack"):
+		print("nav paused")
+		$"Nav path maker".paused = true
+
+func _on_animation_tree_animation_finished(anim_name):
+	if(anim_name == "attack"):
+		$"Nav path maker".paused = false
