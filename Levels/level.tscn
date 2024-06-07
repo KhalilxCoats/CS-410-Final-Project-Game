@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b8i2r82nr28fx"]
+[gd_scene load_steps=25 format=3 uid="uid://b8i2r82nr28fx"]
 
 [ext_resource type="Texture2D" uid="uid://dy4wmry5cqmbm" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/mainlev_build.png" id="2_r1wy4"]
 [ext_resource type="PackedScene" uid="uid://cd6y218ysgqds" path="res://Characters/Fire Knight/Fire Knight.tscn" id="3_8j14c"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d01ut7krvkbyq" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="9_x1t7p"]
 [ext_resource type="PackedScene" uid="uid://c3ko8h04d4s4g" path="res://Characters/Enemies/Ghost Warrior(Walking)/ghost_warrior(walking).tscn" id="12_3734d"]
 [ext_resource type="Script" path="res://Levels/TilemapCollisionBaker.gd" id="13_tetqv"]
+[ext_resource type="PackedScene" uid="uid://dqbkyiqfhsl2v" path="res://Characters/Enemies/Flying Eye/Flying Eye.tscn" id="13_vqxkv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivib1"]
 texture = ExtResource("2_r1wy4")
@@ -23252,3 +23253,11 @@ navigation_polygon = SubResource("NavigationPolygon_oody6")
 position = Vector2(57, -199)
 navigation_polygon = SubResource("NavigationPolygon_f2t55")
 navigation_layers = 2
+
+[node name="Flying Eye" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_vqxkv")]
+position = Vector2(497, 180)
+target = NodePath("../playerCharacter")
+
+[node name="Flying Eye2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_vqxkv")]
+position = Vector2(396, 237)
+target = NodePath("../playerCharacter")

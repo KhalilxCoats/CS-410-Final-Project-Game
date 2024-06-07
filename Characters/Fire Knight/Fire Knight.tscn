@@ -1,39 +1,39 @@
 [gd_scene load_steps=193 format=3 uid="uid://cd6y218ysgqds"]
 
 [ext_resource type="Script" path="res://Characters/Fire Knight/Character.gd" id="1_lncs4"]
-[ext_resource type="Texture2D" uid="uid://dfngiwdb5w5hs" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
-[ext_resource type="Texture2D" uid="uid://d1klpan5f3hak" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/air_atk/fire knight air attack sprite sheet.png" id="2_baoq7"]
-[ext_resource type="Texture2D" uid="uid://c5idr6718us0f" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/10_take_hit/fire knight take hit sprite sheet.png" id="2_f0qcp"]
-[ext_resource type="Texture2D" uid="uid://btdlxgudt83jq" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/09_defend/fire knight defend sprite sheet.png" id="2_m3c10"]
-[ext_resource type="Texture2D" uid="uid://bij27ph4gy2lw" path="res://assets/SFX/Fire Effect 2/Fire Effect 2/Explosion 2 SpriteSheet.png" id="3_fqrqh"]
-[ext_resource type="Texture2D" uid="uid://dk360kaokwih3" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
-[ext_resource type="Texture2D" uid="uid://chjqtja5jhmw1" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/13_e_idle/fire knight elemental idle sprite sheet.png" id="3_snsvd"]
-[ext_resource type="Texture2D" uid="uid://cialfc5cqy0a8" path="res://assets/SFX/fire elemental fire slam/fire slam sheet.png" id="4_0ghjc"]
-[ext_resource type="Texture2D" uid="uid://bxos3je1f2c2l" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/14_e_run/fire knight elemental run sprite sheet.png" id="4_mbuxg"]
-[ext_resource type="Texture2D" uid="uid://ct45v4o03y732" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
-[ext_resource type="Texture2D" uid="uid://guwg2h4ly6t7" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/spritesheets/fire slam sheet.png" id="5_0ok3q"]
-[ext_resource type="Texture2D" uid="uid://cbxye8xgo48r1" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
-[ext_resource type="Texture2D" uid="uid://dmf3mggg1tptn" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/17_e_1_atk/fire knight elemental attack 1 sprite sheet.png" id="5_5kkll"]
+[ext_resource type="Texture2D" uid="uid://pvutvr2au8ll" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/05_1_atk/fire knight attack 1 sprite sheet.png" id="2_6iqrw"]
+[ext_resource type="Texture2D" uid="uid://ckkllm1cfyfq4" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/air_atk/fire knight air attack sprite sheet.png" id="2_baoq7"]
+[ext_resource type="Texture2D" uid="uid://b63exsp4o0r2c" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/10_take_hit/fire knight take hit sprite sheet.png" id="2_f0qcp"]
+[ext_resource type="Texture2D" uid="uid://c7iey62r4eqvr" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/09_defend/fire knight defend sprite sheet.png" id="2_m3c10"]
+[ext_resource type="Texture2D" uid="uid://c65yc44gjvcvc" path="res://assets/SFX/Fire Effect 2/Fire Effect 2/Explosion 2 SpriteSheet.png" id="3_fqrqh"]
+[ext_resource type="Texture2D" uid="uid://d1u1e1e1ymrap" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/01_idle/fire knight idle spritesheet.png" id="3_myvym"]
+[ext_resource type="Texture2D" uid="uid://c4buojcq7l4tp" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/13_e_idle/fire knight elemental idle sprite sheet.png" id="3_snsvd"]
+[ext_resource type="Texture2D" uid="uid://cd6pe4wcnplwx" path="res://assets/SFX/fire elemental fire slam/fire slam sheet.png" id="4_0ghjc"]
+[ext_resource type="Texture2D" uid="uid://cyekte6ge8r5s" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/14_e_run/fire knight elemental run sprite sheet.png" id="4_mbuxg"]
+[ext_resource type="Texture2D" uid="uid://cpgf1kjp4kpaj" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/03_jump/fire knight jump spritesheet.png" id="4_t0xla"]
+[ext_resource type="Texture2D" uid="uid://030jdy8di0j0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/spritesheets/fire slam sheet.png" id="5_0ok3q"]
+[ext_resource type="Texture2D" uid="uid://cnl8mi4pumfwn" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/02_run/fire knight run spritesheet.png" id="5_1at5y"]
+[ext_resource type="Texture2D" uid="uid://c3dk652j1nlai" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/17_e_1_atk/fire knight elemental attack 1 sprite sheet.png" id="5_5kkll"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/AirState.gd" id="5_sw0be"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/GroundState.gd" id="5_uyt4m"]
-[ext_resource type="Texture2D" uid="uid://b11x7nont5dif" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
-[ext_resource type="Texture2D" uid="uid://dnhqb5vyomp07" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/18_e_2_atk/fire knight elemental attack 2 sprite sheet.png" id="6_e1gjk"]
-[ext_resource type="Texture2D" uid="uid://b4h8kdmclgw2u" path="res://assets/SFX/Magic_Spell_Effects9_Creativekind/Spritesheet/Spell 4-Sheet.png" id="6_f0net"]
-[ext_resource type="Texture2D" uid="uid://bt012tlotqprd" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
-[ext_resource type="Texture2D" uid="uid://lh2qdv02iaya" path="res://assets/SFX/Magic_Spell_Effects9_Creativekind/Spritesheet/Spell 1-Sheet.png" id="7_mplnk"]
+[ext_resource type="Texture2D" uid="uid://brq2teiblw7k1" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/06_2_atk/fire knight attack 2 sprite sheet.png" id="6_7cn6q"]
+[ext_resource type="Texture2D" uid="uid://oqejke7qnqvc" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/18_e_2_atk/fire knight elemental attack 2 sprite sheet.png" id="6_e1gjk"]
+[ext_resource type="Texture2D" uid="uid://b4ikhxljtlrjr" path="res://assets/SFX/Magic_Spell_Effects9_Creativekind/Spritesheet/Spell 4-Sheet.png" id="6_f0net"]
+[ext_resource type="Texture2D" uid="uid://dds4agdnuxuf2" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/07_3_atk/fire knight attack 3 sprite sheet.png" id="7_07tpi"]
+[ext_resource type="Texture2D" uid="uid://ckhu72jbg5imy" path="res://assets/SFX/Magic_Spell_Effects9_Creativekind/Spritesheet/Spell 1-Sheet.png" id="7_mplnk"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/stateLabel.gd" id="8_d7xao"]
-[ext_resource type="Texture2D" uid="uid://demfq5du5uat6" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
-[ext_resource type="Texture2D" uid="uid://xxq4336nmjex" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/e_air_atk/fire knight elemental air attack sprite sheet.png" id="8_ja1vb"]
-[ext_resource type="Texture2D" uid="uid://kct7afay4jh3" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/04_roll/fire knight roll sprite sheet.png" id="9_5loqi"]
-[ext_resource type="Texture2D" uid="uid://djxafmi0ju1wd" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/15_e_jump/fire knight elemental jump sprite sheet.png" id="9_43p8d"]
-[ext_resource type="Texture2D" uid="uid://r8djao08jbpl" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/20_e_sp_atk/fire knight elemental special attack  sprite sheet.png" id="9_arjux"]
-[ext_resource type="Texture2D" uid="uid://ba8ngukhk8m2j" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/23_back2human/fire knight human transform sprite sheet.png" id="11_5mqqp"]
+[ext_resource type="Texture2D" uid="uid://ckjmikws2f07o" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/08_sp_atk/fire knight special attack sprite sheet.png" id="8_il06f"]
+[ext_resource type="Texture2D" uid="uid://bd82qk2t7hf17" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/e_air_atk/fire knight elemental air attack sprite sheet.png" id="8_ja1vb"]
+[ext_resource type="Texture2D" uid="uid://cuttx0qelxwhe" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/04_roll/fire knight roll sprite sheet.png" id="9_5loqi"]
+[ext_resource type="Texture2D" uid="uid://burxr5k46evyl" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/15_e_jump/fire knight elemental jump sprite sheet.png" id="9_43p8d"]
+[ext_resource type="Texture2D" uid="uid://dr20fimp0p7ib" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/20_e_sp_atk/fire knight elemental special attack  sprite sheet.png" id="9_arjux"]
+[ext_resource type="Texture2D" uid="uid://dqnfmoxvujt0" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/23_back2human/fire knight human transform sprite sheet.png" id="11_5mqqp"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/Attack.gd" id="11_md3ro"]
-[ext_resource type="Texture2D" uid="uid://cls68lcxyyems" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/19_e_3_atk/fire elemental alternate attack 3--sheet.png" id="11_xff4m"]
-[ext_resource type="Texture2D" uid="uid://cdnr3qbugiwrk" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/12_transform/fire knight elemental transform sprite sheet.png" id="13_lvrnh"]
+[ext_resource type="Texture2D" uid="uid://t2emw78784t2" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/19_e_3_atk/fire elemental alternate attack 3--sheet.png" id="11_xff4m"]
+[ext_resource type="Texture2D" uid="uid://ctxwbbmn6ykfv" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/12_transform/fire knight elemental transform sprite sheet.png" id="13_lvrnh"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/DefendState.gd" id="17_70kdt"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/DodgeState.gd" id="18_0oabr"]
-[ext_resource type="Texture2D" uid="uid://cu2ts6nnds5cu" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/11_death/fire knight death sprite sheet.png" id="18_clp7g"]
+[ext_resource type="Texture2D" uid="uid://bmm4fsm73xchc" path="res://assets/characters/playable/Elementals_fire_knight_FULL_v1.1/png/fire_knight/11_death/fire knight death sprite sheet.png" id="18_clp7g"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/TransformState.gd" id="19_cj5fe"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="27_tr5uk"]
 [ext_resource type="Script" path="res://Characters/Fire Knight/Damageable.gd" id="29_t6mkg"]
@@ -3672,13 +3672,13 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yhekj"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ahcnm"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ursn6"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k674k"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xff2h"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ahcnm"]
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_b4iqi"]
 "states/Elemental_air attack 1/node" = SubResource("AnimationNodeAnimation_nqgtb")
@@ -3699,28 +3699,28 @@ states/Elemental_jump/node = SubResource("AnimationNodeAnimation_tqhla")
 states/Elemental_jump/position = Vector2(1081.89, 1191.89)
 "states/Elemental_special attack/node" = SubResource("AnimationNodeAnimation_0a4fx")
 "states/Elemental_special attack/position" = Vector2(2051.32, 1227.71)
-states/End/position = Vector2(1673, 245)
+states/End/position = Vector2(1561, 236.069)
 states/Human_death/node = SubResource("AnimationNodeAnimation_vjlqr")
-states/Human_death/position = Vector2(440.77, 159.125)
+states/Human_death/position = Vector2(464, 220.125)
 "states/Human_take hit/node" = SubResource("AnimationNodeAnimation_jxox5")
-"states/Human_take hit/position" = Vector2(512.77, 42.1246)
+"states/Human_take hit/position" = Vector2(464, 84)
 states/Start/position = Vector2(151, 285)
 "states/air attack 1/node" = SubResource("AnimationNodeAnimation_l3y23")
-"states/air attack 1/position" = Vector2(953, -296.66)
+"states/air attack 1/position" = Vector2(931, -165.66)
 "states/air attack 2/node" = SubResource("AnimationNodeAnimation_y4mym")
-"states/air attack 2/position" = Vector2(1090.87, -349.66)
+"states/air attack 2/position" = Vector2(1068.87, -218.66)
 "states/attack 1/node" = SubResource("AnimationNodeAnimation_2x1bc")
-"states/attack 1/position" = Vector2(1372, 217.069)
+"states/attack 1/position" = Vector2(1284, 236.069)
 "states/attack 1 return/node" = SubResource("AnimationNodeAnimation_kyqn1")
-"states/attack 1 return/position" = Vector2(1345, 313.069)
+"states/attack 1 return/position" = Vector2(1257, 332.069)
 "states/attack 2/node" = SubResource("AnimationNodeAnimation_ta65m")
-"states/attack 2/position" = Vector2(1392, 129.069)
+"states/attack 2/position" = Vector2(1304, 148.069)
 "states/attack 3/node" = SubResource("AnimationNodeAnimation_f0plu")
-"states/attack 3/position" = Vector2(1333, -1)
+"states/attack 3/position" = Vector2(1212, 84)
 states/defend/node = SubResource("AnimationNodeAnimation_rslxa")
-states/defend/position = Vector2(575.831, 577.62)
+states/defend/position = Vector2(565.831, 475.62)
 states/dodge/node = SubResource("AnimationNodeAnimation_dvjcs")
-states/dodge/position = Vector2(1024, 497.178)
+states/dodge/position = Vector2(1024, 444.178)
 "states/elemental land/node" = SubResource("AnimationNodeAnimation_ipudm")
 "states/elemental land/position" = Vector2(1261.89, 1185.82)
 "states/elemental move/node" = SubResource("AnimationNodeBlendSpace1D_lo3vw")
@@ -3728,23 +3728,23 @@ states/dodge/position = Vector2(1024, 497.178)
 "states/elemental transform/node" = SubResource("AnimationNodeAnimation_l1cdl")
 "states/elemental transform/position" = Vector2(902, 678.707)
 "states/enter defend/node" = SubResource("AnimationNodeAnimation_21jq5")
-"states/enter defend/position" = Vector2(414.831, 577.62)
+"states/enter defend/position" = Vector2(404.831, 475.62)
 "states/exit defend/node" = SubResource("AnimationNodeAnimation_yq2jq")
-"states/exit defend/position" = Vector2(715.831, 577.62)
+"states/exit defend/position" = Vector2(705.831, 475.62)
 states/fall/node = SubResource("AnimationNodeAnimation_sv33m")
-states/fall/position = Vector2(955, -154)
+states/fall/position = Vector2(933, -23)
 "states/human move/node" = SubResource("AnimationNodeBlendSpace1D_p1gl1")
 "states/human move/position" = Vector2(806, 285)
 "states/human transform/node" = SubResource("AnimationNodeAnimation_qe7m5")
 "states/human transform/position" = Vector2(730, 1323.71)
 states/jump/node = SubResource("AnimationNodeAnimation_j6bhb")
-states/jump/position = Vector2(625, -148)
+states/jump/position = Vector2(603, -17)
 states/land/node = SubResource("AnimationNodeAnimation_o3ux6")
-states/land/position = Vector2(823, -154)
+states/land/position = Vector2(801, -23)
 "states/special attack/node" = SubResource("AnimationNodeAnimation_nro2l")
-"states/special attack/position" = Vector2(1249, -102)
-transitions = ["Start", "human move", SubResource("AnimationNodeStateMachineTransition_2p227"), "human move", "jump", SubResource("AnimationNodeStateMachineTransition_mydij"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_ib7hj"), "land", "human move", SubResource("AnimationNodeStateMachineTransition_i51pn"), "human move", "attack 1", SubResource("AnimationNodeStateMachineTransition_2w6pe"), "attack 1", "attack 2", SubResource("AnimationNodeStateMachineTransition_gv8to"), "attack 2", "human move", SubResource("AnimationNodeStateMachineTransition_bidtu"), "attack 1", "attack 1 return", SubResource("AnimationNodeStateMachineTransition_6j34x"), "attack 1 return", "human move", SubResource("AnimationNodeStateMachineTransition_dvcr2"), "human move", "attack 3", SubResource("AnimationNodeStateMachineTransition_7nlck"), "attack 3", "human move", SubResource("AnimationNodeStateMachineTransition_c4esg"), "human move", "special attack", SubResource("AnimationNodeStateMachineTransition_k1ck0"), "special attack", "human move", SubResource("AnimationNodeStateMachineTransition_3sqnx"), "human move", "dodge", SubResource("AnimationNodeStateMachineTransition_2mwt1"), "dodge", "human move", SubResource("AnimationNodeStateMachineTransition_0qbyh"), "human move", "fall", SubResource("AnimationNodeStateMachineTransition_bwfa1"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_f0ffd"), "air attack 1", "air attack 2", SubResource("AnimationNodeStateMachineTransition_rskuo"), "air attack 2", "fall", SubResource("AnimationNodeStateMachineTransition_lktmq"), "air attack 1", "fall", SubResource("AnimationNodeStateMachineTransition_8sldf"), "jump", "air attack 1", SubResource("AnimationNodeStateMachineTransition_rtn8m"), "exit defend", "human move", SubResource("AnimationNodeStateMachineTransition_u5jwt"), "human move", "enter defend", SubResource("AnimationNodeStateMachineTransition_d1mfq"), "enter defend", "defend", SubResource("AnimationNodeStateMachineTransition_2x7km"), "defend", "exit defend", SubResource("AnimationNodeStateMachineTransition_5jnfi"), "fall", "air attack 1", SubResource("AnimationNodeStateMachineTransition_mpbak"), "human move", "elemental transform", SubResource("AnimationNodeStateMachineTransition_qlbev"), "elemental transform", "elemental move", SubResource("AnimationNodeStateMachineTransition_8qkgw"), "elemental move", "human transform", SubResource("AnimationNodeStateMachineTransition_1dsg5"), "human transform", "human move", SubResource("AnimationNodeStateMachineTransition_26fvs"), "elemental move", "Elemental_jump", SubResource("AnimationNodeStateMachineTransition_jblvc"), "Elemental_jump", "elemental land", SubResource("AnimationNodeStateMachineTransition_g23st"), "elemental land", "elemental move", SubResource("AnimationNodeStateMachineTransition_n7iqs"), "elemental move", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_lo3bn"), "Elemental_fall", "elemental land", SubResource("AnimationNodeStateMachineTransition_dd5m7"), "Elemental_jump", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_4q7t8"), "Elemental_air attack 1", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_uq1gi"), "Elemental_air attack 1", "Elemental_air attack 2", SubResource("AnimationNodeStateMachineTransition_268n6"), "Elemental_air attack 2", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_d0mx7"), "Elemental_fall", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_14ch2"), "elemental move", "Elemental_attack 1", SubResource("AnimationNodeStateMachineTransition_gjbwp"), "Elemental_attack 1", "Elemental_attack 2", SubResource("AnimationNodeStateMachineTransition_c7jnt"), "Elemental_attack 2", "elemental move", SubResource("AnimationNodeStateMachineTransition_j7x1w"), "Elemental_attack 1", "Elemental_attack 1 return", SubResource("AnimationNodeStateMachineTransition_jj1bw"), "Elemental_attack 1 return", "elemental move", SubResource("AnimationNodeStateMachineTransition_4k6sw"), "elemental move", "Elemental_attack 3", SubResource("AnimationNodeStateMachineTransition_e504j"), "Elemental_attack 3", "elemental move", SubResource("AnimationNodeStateMachineTransition_oifqo"), "elemental move", "Elemental_special attack", SubResource("AnimationNodeStateMachineTransition_jb3jc"), "Elemental_special attack", "elemental move", SubResource("AnimationNodeStateMachineTransition_mdv4t"), "jump", "human move", SubResource("AnimationNodeStateMachineTransition_1svrf"), "fall", "human move", SubResource("AnimationNodeStateMachineTransition_yhekj"), "human move", "Human_death", SubResource("AnimationNodeStateMachineTransition_ahcnm"), "human move", "Human_take hit", SubResource("AnimationNodeStateMachineTransition_ursn6"), "Human_take hit", "human move", SubResource("AnimationNodeStateMachineTransition_k674k"), "Human_take hit", "fall", SubResource("AnimationNodeStateMachineTransition_xff2h")]
-graph_offset = Vector2(309.735, 103.626)
+"states/special attack/position" = Vector2(1096, 13)
+transitions = ["Start", "human move", SubResource("AnimationNodeStateMachineTransition_2p227"), "human move", "jump", SubResource("AnimationNodeStateMachineTransition_mydij"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_ib7hj"), "land", "human move", SubResource("AnimationNodeStateMachineTransition_i51pn"), "human move", "attack 1", SubResource("AnimationNodeStateMachineTransition_2w6pe"), "attack 1", "attack 2", SubResource("AnimationNodeStateMachineTransition_gv8to"), "attack 2", "human move", SubResource("AnimationNodeStateMachineTransition_bidtu"), "attack 1", "attack 1 return", SubResource("AnimationNodeStateMachineTransition_6j34x"), "attack 1 return", "human move", SubResource("AnimationNodeStateMachineTransition_dvcr2"), "human move", "attack 3", SubResource("AnimationNodeStateMachineTransition_7nlck"), "attack 3", "human move", SubResource("AnimationNodeStateMachineTransition_c4esg"), "human move", "special attack", SubResource("AnimationNodeStateMachineTransition_k1ck0"), "special attack", "human move", SubResource("AnimationNodeStateMachineTransition_3sqnx"), "human move", "dodge", SubResource("AnimationNodeStateMachineTransition_2mwt1"), "dodge", "human move", SubResource("AnimationNodeStateMachineTransition_0qbyh"), "human move", "fall", SubResource("AnimationNodeStateMachineTransition_bwfa1"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_f0ffd"), "air attack 1", "air attack 2", SubResource("AnimationNodeStateMachineTransition_rskuo"), "air attack 2", "fall", SubResource("AnimationNodeStateMachineTransition_lktmq"), "air attack 1", "fall", SubResource("AnimationNodeStateMachineTransition_8sldf"), "jump", "air attack 1", SubResource("AnimationNodeStateMachineTransition_rtn8m"), "exit defend", "human move", SubResource("AnimationNodeStateMachineTransition_u5jwt"), "human move", "enter defend", SubResource("AnimationNodeStateMachineTransition_d1mfq"), "enter defend", "defend", SubResource("AnimationNodeStateMachineTransition_2x7km"), "defend", "exit defend", SubResource("AnimationNodeStateMachineTransition_5jnfi"), "fall", "air attack 1", SubResource("AnimationNodeStateMachineTransition_mpbak"), "human move", "elemental transform", SubResource("AnimationNodeStateMachineTransition_qlbev"), "elemental transform", "elemental move", SubResource("AnimationNodeStateMachineTransition_8qkgw"), "elemental move", "human transform", SubResource("AnimationNodeStateMachineTransition_1dsg5"), "human transform", "human move", SubResource("AnimationNodeStateMachineTransition_26fvs"), "elemental move", "Elemental_jump", SubResource("AnimationNodeStateMachineTransition_jblvc"), "Elemental_jump", "elemental land", SubResource("AnimationNodeStateMachineTransition_g23st"), "elemental land", "elemental move", SubResource("AnimationNodeStateMachineTransition_n7iqs"), "elemental move", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_lo3bn"), "Elemental_fall", "elemental land", SubResource("AnimationNodeStateMachineTransition_dd5m7"), "Elemental_jump", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_4q7t8"), "Elemental_air attack 1", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_uq1gi"), "Elemental_air attack 1", "Elemental_air attack 2", SubResource("AnimationNodeStateMachineTransition_268n6"), "Elemental_air attack 2", "Elemental_fall", SubResource("AnimationNodeStateMachineTransition_d0mx7"), "Elemental_fall", "Elemental_air attack 1", SubResource("AnimationNodeStateMachineTransition_14ch2"), "elemental move", "Elemental_attack 1", SubResource("AnimationNodeStateMachineTransition_gjbwp"), "Elemental_attack 1", "Elemental_attack 2", SubResource("AnimationNodeStateMachineTransition_c7jnt"), "Elemental_attack 2", "elemental move", SubResource("AnimationNodeStateMachineTransition_j7x1w"), "Elemental_attack 1", "Elemental_attack 1 return", SubResource("AnimationNodeStateMachineTransition_jj1bw"), "Elemental_attack 1 return", "elemental move", SubResource("AnimationNodeStateMachineTransition_4k6sw"), "elemental move", "Elemental_attack 3", SubResource("AnimationNodeStateMachineTransition_e504j"), "Elemental_attack 3", "elemental move", SubResource("AnimationNodeStateMachineTransition_oifqo"), "elemental move", "Elemental_special attack", SubResource("AnimationNodeStateMachineTransition_jb3jc"), "Elemental_special attack", "elemental move", SubResource("AnimationNodeStateMachineTransition_mdv4t"), "jump", "human move", SubResource("AnimationNodeStateMachineTransition_1svrf"), "fall", "human move", SubResource("AnimationNodeStateMachineTransition_yhekj"), "human move", "Human_take hit", SubResource("AnimationNodeStateMachineTransition_ursn6"), "Human_take hit", "human move", SubResource("AnimationNodeStateMachineTransition_k674k"), "Human_take hit", "fall", SubResource("AnimationNodeStateMachineTransition_xff2h"), "human move", "Human_death", SubResource("AnimationNodeStateMachineTransition_ahcnm")]
+graph_offset = Vector2(209.854, -266.311)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssopo"]
 size = Vector2(42.5, 71)
@@ -3852,6 +3852,11 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
+libraries = {
+"": SubResource("AnimationLibrary_hjut0"),
+"Elemental": SubResource("AnimationLibrary_7tqpb"),
+"Human": SubResource("AnimationLibrary_syyae")
+}
 tree_root = SubResource("AnimationNodeStateMachine_b4iqi")
 anim_player = NodePath("../AnimationPlayer")
 "parameters/elemental move/blend_position" = 0
@@ -3952,10 +3957,6 @@ human_move_node = "human move"
 can_move = false
 can_flip = false
 
-[node name="ElementalTimer" type="Timer" parent="CharacterStateMachine"]
-wait_time = 30.0
-one_shot = true
-
 [node name="Hit" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("damageable", "state_machine", "dead_state", "ground_state", "air_state")]
 script = ExtResource("37_dc2ji")
 damageable = NodePath("../../Damageable")
@@ -3975,7 +3976,12 @@ can_move = false
 can_fall = false
 can_flip = false
 
+[node name="ElementalTimer" type="Timer" parent="CharacterStateMachine"]
+wait_time = 30.0
+one_shot = true
+
 [node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+visible = false
 offset_left = -34.0
 offset_top = -47.0
 offset_right = 80.0
@@ -4169,8 +4175,8 @@ debug_color = Color(0.690196, 0, 0.768627, 0.580392)
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Dodge" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Transform" method="_on_animation_tree_animation_finished"]
 [connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Hit" method="_on_animation_tree_animation_finished"]
-[connection signal="timeout" from="CharacterStateMachine/ElementalTimer" to="CharacterStateMachine/Ground" method="_on_elemental_timer_timeout"]
 [connection signal="timeout" from="CharacterStateMachine/Hit/Timer" to="CharacterStateMachine/Hit" method="_on_timer_timeout"]
+[connection signal="timeout" from="CharacterStateMachine/ElementalTimer" to="CharacterStateMachine/Ground" method="_on_elemental_timer_timeout"]
 [connection signal="body_entered" from="human attack 1" to="human attack 1" method="_on_body_entered"]
 [connection signal="body_entered" from="human attack 2 left" to="human attack 2 left" method="_on_body_entered"]
 [connection signal="body_entered" from="human attack 2 right" to="human attack 2 right" method="_on_body_entered"]
