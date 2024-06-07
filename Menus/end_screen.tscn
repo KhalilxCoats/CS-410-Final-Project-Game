@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dltoroh0d3g2d"]
+[gd_scene load_steps=7 format=3 uid="uid://dltoroh0d3g2d"]
 
 [ext_resource type="Script" path="res://Menus/end_screen.gd" id="1_ixleq"]
-[ext_resource type="FontFile" uid="uid://d12kh0rgf53tv" path="res://assets/joystix monospace.otf" id="2_8njw2"]
+[ext_resource type="FontFile" uid="uid://y77fwrdavu6t" path="res://assets/joystix monospace.otf" id="2_8njw2"]
+[ext_resource type="Texture2D" uid="uid://b2ium8i3ca750" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="3_clyj0"]
+[ext_resource type="Texture2D" uid="uid://b2xhgq664tmt3" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="4_yukfg"]
+[ext_resource type="Texture2D" uid="uid://d28cj44adlnpy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="5_gjxff"]
 
 [sub_resource type="Theme" id="Theme_2ptr4"]
 default_font = ExtResource("2_8njw2")
@@ -37,12 +40,45 @@ layout_mode = 2
 layout_mode = 2
 text = "Congratulations you defeated the undead nemesis!
 Thanks for Playing!
-Game was made by: Christian Paradis, Ajay Deva, Khalil Coats, and Xiao Xu"
+Game was made by: 
+Christian Paradis, Ajay Deva, Khalil Coats, and Xiao Xu"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Quit"
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+texture = ExtResource("3_clyj0")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer2"]
+texture = ExtResource("4_yukfg")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer3"]
+texture = ExtResource("5_gjxff")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2(1024, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer4"]
+centered = false
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

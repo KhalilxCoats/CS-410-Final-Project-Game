@@ -10,4 +10,4 @@ func _ready():
 
 #Function to quit game after game finished
 func _on_button_pressed():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Menus/menu.tscn")
