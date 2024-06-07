@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://1oqeub0ntxpo"]
+[gd_scene load_steps=4 format=3 uid="uid://1oqeub0ntxpo"]
 
 [ext_resource type="Script" path="res://death_screen_3.gd" id="1_brp0h"]
+[ext_resource type="FontFile" uid="uid://d12kh0rgf53tv" path="res://assets/joystix monospace.otf" id="2_fiviw"]
+
+[sub_resource type="Theme" id="Theme_4ckqf"]
+default_font = ExtResource("2_fiviw")
 
 [node name="death_screen_3" type="Control"]
 layout_mode = 3
@@ -27,6 +31,7 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme = SubResource("Theme_4ckqf")
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -36,14 +41,17 @@ horizontal_alignment = 1
 
 [node name="Restart" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Retry"
 
 [node name="BackToMenu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Back to Main Menu"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]

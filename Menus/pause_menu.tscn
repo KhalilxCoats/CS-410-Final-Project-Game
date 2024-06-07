@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://ca46g8lg5wftk"]
+[gd_scene load_steps=6 format=3 uid="uid://ca46g8lg5wftk"]
 
 [ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_sqh34"]
 [ext_resource type="Shader" path="res://Menus/pause_menu.gdshader" id="2_ymvoa"]
+[ext_resource type="FontFile" uid="uid://d12kh0rgf53tv" path="res://assets/joystix monospace.otf" id="3_2v87c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nmnoj"]
 shader = ExtResource("2_ymvoa")
 shader_parameter/amount = 3.0
+
+[sub_resource type="Theme" id="Theme_2xmmh"]
+default_font = ExtResource("3_2v87c")
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -36,16 +40,19 @@ offset_right = 80.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_2xmmh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Resume"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

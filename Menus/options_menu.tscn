@@ -1,7 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmukigmubv50o"]
+[gd_scene load_steps=8 format=3 uid="uid://dmukigmubv50o"]
 
+[ext_resource type="FontFile" uid="uid://d12kh0rgf53tv" path="res://assets/joystix monospace.otf" id="1_6san2"]
 [ext_resource type="Script" path="res://Menus/options_menu.gd" id="1_btul3"]
-[ext_resource type="Texture2D" uid="uid://cy6v3avddvkm3" path="res://assets/Tiles/Background Cave/03 water.png" id="2_s25gr"]
+[ext_resource type="Texture2D" uid="uid://cm45qp7naobae" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="3_veg6g"]
+[ext_resource type="Texture2D" uid="uid://caihc14qnx3td" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="4_nxm7u"]
+[ext_resource type="Texture2D" uid="uid://be4viyg0lsn6o" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="5_vv026"]
+
+[sub_resource type="Theme" id="Theme_5jvyb"]
+default_font = ExtResource("1_6san2")
 
 [sub_resource type="GDScript" id="GDScript_rb6ny"]
 script/source = "extends HSlider
@@ -35,14 +41,16 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = SubResource("Theme_5jvyb")
 script = ExtResource("1_btul3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 150.0
-offset_right = 800.0
-offset_bottom = 471.0
+offset_left = 236.0
+offset_top = 152.0
+offset_right = 989.0
+offset_bottom = 488.0
+scale = Vector2(0.831249, 0.831249)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -118,17 +126,39 @@ horizontal_alignment = 1
 
 [node name="ReturnToMainMenu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Return To Main Menu"
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(576, 2.08165e-12)
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1024, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-z_index = -1
-scale = Vector2(4.5, 4.5)
-texture = ExtResource("2_s25gr")
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+texture = ExtResource("3_veg6g")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer2"]
+texture = ExtResource("4_nxm7u")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer3"]
+texture = ExtResource("5_vv026")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2(1024, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer4"]
 centered = false
 
 [connection signal="changed" from="MarginContainer/VBoxContainer/VolumeSlider" to="." method="_on_volume_slider_changed"]

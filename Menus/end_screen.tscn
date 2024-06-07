@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dltoroh0d3g2d"]
+[gd_scene load_steps=4 format=3 uid="uid://dltoroh0d3g2d"]
 
 [ext_resource type="Script" path="res://Menus/end_screen.gd" id="1_ixleq"]
+[ext_resource type="FontFile" uid="uid://d12kh0rgf53tv" path="res://assets/joystix monospace.otf" id="2_8njw2"]
+
+[sub_resource type="Theme" id="Theme_2ptr4"]
+default_font = ExtResource("2_8njw2")
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -24,6 +28,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_2ptr4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -37,6 +42,7 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
