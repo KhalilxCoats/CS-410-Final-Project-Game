@@ -1,7 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpqieb0xluenk"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://nq6d1q8tda4b" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
 [ext_resource type="AudioStream" uid="uid://yusd1f4jxy8d" path="res://Music/2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3" id="2_aachl"]
+=======
+[ext_resource type="Texture2D" uid="uid://cvoqcrslfxl6d" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+>>>>>>> Stashed changes
 
 [sub_resource type="GDScript" id="GDScript_5cvnc"]
 script/source = "extends Control
@@ -83,5 +87,5 @@ autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_options_pressed"]

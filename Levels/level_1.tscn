@@ -1,11 +1,19 @@
 [gd_scene load_steps=9 format=3 uid="uid://b23k44mgwravy"]
 
 [ext_resource type="PackedScene" uid="uid://b8i2r82nr28fx" path="res://Levels/level.tscn" id="1_hrqlx"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://c52qpqc55e8gc" path="res://assets/Tiles/4maps/1) Tilemaps/tiles-skulls.png" id="2_cuc60"]
 [ext_resource type="Texture2D" uid="uid://cr460nlg46sjn" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="3_ojp20"]
 [ext_resource type="Texture2D" uid="uid://sxb4etw8nb6i" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="4_4csew"]
 [ext_resource type="Texture2D" uid="uid://c40mcxhy4klda" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="5_xqr0f"]
 [ext_resource type="Texture2D" uid="uid://cy3xsbcipv0j3" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="6_8aus4"]
+=======
+[ext_resource type="Texture2D" uid="uid://cykcosm61rcjg" path="res://assets/Tiles/4maps/1) Tilemaps/tiles-skulls.png" id="2_cuc60"]
+[ext_resource type="Texture2D" uid="uid://5683gqckos2q" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background1.png" id="3_ojp20"]
+[ext_resource type="Texture2D" uid="uid://bkgene7wnfh3s" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background2.png" id="4_4csew"]
+[ext_resource type="Texture2D" uid="uid://bkrn5coh58l32" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background3.png" id="5_xqr0f"]
+[ext_resource type="Texture2D" uid="uid://c0w2iyjfk18b2" path="res://assets/Tiles/Szadi Tiles/PixelFantasy_Caves_1.0/background4a.png" id="6_8aus4"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3axgt"]
 texture = ExtResource("2_cuc60")
@@ -1058,7 +1066,11 @@ limit_bottom = 20000000
 [node name="playerCharacter" parent="." index="2"]
 position = Vector2(-405, 564)
 
+<<<<<<< Updated upstream
 [node name="RemoteTransform2D" parent="playerCharacter" index="7"]
+=======
+[node name="RemoteTransform2D" parent="playerCharacter" index="26"]
+>>>>>>> Stashed changes
 position = Vector2(2, 63)
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="." index="3"]

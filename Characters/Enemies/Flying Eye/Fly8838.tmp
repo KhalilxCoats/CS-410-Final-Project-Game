@@ -1,0 +1,661 @@
+[gd_scene load_steps=40 format=3 uid="uid://dqbkyiqfhsl2v"]
+
+[ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/Flying Eye.gd" id="1_b8uqd"]
+[ext_resource type="Texture2D" uid="uid://dsiarn1qlh8f" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="2_r5c6s"]
+[ext_resource type="Texture2D" uid="uid://cvwgjap3i2vov" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="3_lpmu0"]
+[ext_resource type="Texture2D" uid="uid://62awigw5gvqn" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_vfjln"]
+[ext_resource type="Texture2D" uid="uid://bud5ps2ovypsm" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="5_871ox"]
+[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Damageable.gd" id="6_ifpj6"]
+[ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="7_ykp1n"]
+[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Walk.gd" id="8_54o7o"]
+[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Dead.gd" id="9_ee0om"]
+[ext_resource type="Script" path="res://Characters/HitState.gd" id="10_m8nip"]
+[ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Attack.gd" id="11_w4tpe"]
+[ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/attack damage hitbox.gd" id="12_nt5xm"]
+[ext_resource type="Script" path="res://Characters/Fire Knight/stateLabel.gd" id="13_uf6yg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_liar7"]
+radius = 11.7021
+height = 44.0
+
+[sub_resource type="Animation" id="Animation_nsrvf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flying eye animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_r5c6s")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flying eye animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("flying eye animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("attack damage hitbox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6.6, -0.3)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.94, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:z_index")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CollisionShape2D:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:collision_layer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_og2jd"]
+resource_name = "attack"
+length = 0.655
+step = 0.083
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flying eye animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_lpmu0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flying eye animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("flying eye animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("attack damage hitbox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.498, 0.581),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.0831, 0.166, 0.1661, 0.249, 0.332, 0.415, 0.498, 0.664),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3.28, -0.3), Vector2(3.28, -0.3), Vector2(0.625, -0.3), Vector2(0.625, -0.3), Vector2(0.625, -0.3), Vector2(0.625, -0.3), Vector2(0.625, -0.3), Vector2(5.595, 0.405), Vector2(6.12, 4.99), Vector2(1.045, 6.085)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.083, 0.166, 0.249, 0.332, 0.415, 0.498, 0.664),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.94, 1), Vector2(0.94, 1), Vector2(0.695, 1), Vector2(0.707, 0.969), Vector2(0.707, 0.969), Vector2(0.707, 0.969), Vector2(0.682, 0.722), Vector2(0.755, 0.72)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:z_index")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.498, 0.664),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [-1, 1, -1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CollisionShape2D:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_q75ht"]
+resource_name = "death"
+length = 0.368
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flying eye animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_vfjln")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flying eye animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("flying eye animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.685, -1.26)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.907, 0.887)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:collision_layer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_dkbg6"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flying eye animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_r5c6s")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flying eye animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("flying eye animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.685, -1.26)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CollisionShape2D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.907, 0.887)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_ft4ft"]
+resource_name = "take hit"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flying eye animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_871ox")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flying eye animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("flying eye animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_dhpgd"]
+resource_name = "walk"
+length = 0.8065
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flying eye animation sprites:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_r5c6s")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flying eye animation sprites:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("flying eye animation sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_03m7o"]
+_data = {
+"RESET": SubResource("Animation_nsrvf"),
+"attack": SubResource("Animation_og2jd"),
+"death": SubResource("Animation_q75ht"),
+"idle": SubResource("Animation_dkbg6"),
+"take hit": SubResource("Animation_ft4ft"),
+"walk": SubResource("Animation_dhpgd")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pnkev"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mysul"]
+animation = &"death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dklwg"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aondn"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_12w5u"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_n75eo"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_dklwg")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_aondn")
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_12w5u")
+blend_point_2/pos = -1.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q4oud"]
+animation = &"take hit"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_va6jk"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q7u6g"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r14fb"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_stsx4"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7wi7v"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b3guf"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sykae"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rsvwn"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_axk01"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ajdgk"]
+states/End/position = Vector2(1044, 183)
+states/Start/position = Vector2(344, 183)
+states/attack/node = SubResource("AnimationNodeAnimation_pnkev")
+states/attack/position = Vector2(681, 71)
+states/death/node = SubResource("AnimationNodeAnimation_mysul")
+states/death/position = Vector2(763, 183)
+states/move/node = SubResource("AnimationNodeBlendSpace1D_n75eo")
+states/move/position = Vector2(546, 183)
+"states/take hit/node" = SubResource("AnimationNodeAnimation_q4oud")
+"states/take hit/position" = Vector2(670, 289)
+transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_va6jk"), "move", "take hit", SubResource("AnimationNodeStateMachineTransition_q7u6g"), "take hit", "move", SubResource("AnimationNodeStateMachineTransition_r14fb"), "move", "death", SubResource("AnimationNodeStateMachineTransition_stsx4"), "move", "attack", SubResource("AnimationNodeStateMachineTransition_7wi7v"), "attack", "move", SubResource("AnimationNodeStateMachineTransition_b3guf"), "attack", "take hit", SubResource("AnimationNodeStateMachineTransition_sykae"), "take hit", "death", SubResource("AnimationNodeStateMachineTransition_rsvwn"), "attack", "death", SubResource("AnimationNodeStateMachineTransition_axk01")]
+graph_offset = Vector2(-84.8551, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_14qim"]
+radius = 8.0
+
+[node name="Flying Eye" type="CharacterBody2D" node_paths=PackedStringArray("nav")]
+z_index = -1
+collision_layer = 4
+motion_mode = 1
+script = ExtResource("1_b8uqd")
+nav = NodePath("NavigationAgent2D")
+
+[node name="flying eye animation sprites" type="Sprite2D" parent="."]
+texture = ExtResource("2_r5c6s")
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.6, -0.3)
+rotation = 1.5708
+scale = Vector2(0.94, 1)
+shape = SubResource("CapsuleShape2D_liar7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_03m7o")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_03m7o")
+}
+tree_root = SubResource("AnimationNodeStateMachine_ajdgk")
+anim_player = NodePath("../AnimationPlayer")
+parameters/move/blend_position = 0.0
+
+[node name="Damageable" type="Node" parent="."]
+script = ExtResource("6_ifpj6")
+
+[node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
+script = ExtResource("7_ykp1n")
+current_state = NodePath("Walk")
+character = NodePath("..")
+animation_tree = NodePath("../AnimationTree")
+
+[node name="Walk" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("attack_state")]
+script = ExtResource("8_54o7o")
+attack_state = NodePath("../Attack")
+
+[node name="Dead" type="Node" parent="CharacterStateMachine"]
+script = ExtResource("9_ee0om")
+can_move = false
+
+[node name="Hit" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("state_machine", "damageable", "dead_state", "return_state")]
+script = ExtResource("10_m8nip")
+state_machine = NodePath("..")
+damageable = NodePath("../../Damageable")
+dead_state = NodePath("../Dead")
+return_state = NodePath("../Walk")
+can_move = false
+can_fall = false
+
+[node name="Timer" type="Timer" parent="CharacterStateMachine/Hit"]
+wait_time = 0.25
+one_shot = true
+
+[node name="Attack" type="Node" parent="CharacterStateMachine" node_paths=PackedStringArray("walk_state", "attack_cooldown_timer", "state_machine")]
+script = ExtResource("11_w4tpe")
+walk_state = NodePath("../Walk")
+attack_cooldown_timer = NodePath("../attack cooldown")
+state_machine = NodePath("..")
+can_move = false
+
+[node name="attack cooldown" type="Timer" parent="CharacterStateMachine"]
+wait_time = 1.5
+one_shot = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 5.0
+target_desired_distance = 5.0
+path_postprocessing = 1
+
+[node name="Nav path maker" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="attack damage hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+monitoring = false
+script = ExtResource("12_nt5xm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack damage hitbox"]
+position = Vector2(18, 9)
+shape = SubResource("CircleShape2D_14qim")
+
+[node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+offset_left = -34.0
+offset_top = -47.0
+offset_right = 80.0
+offset_bottom = -24.0
+text = "state:"
+script = ExtResource("13_uf6yg")
+state_machine = NodePath("../CharacterStateMachine")
+
+[connection signal="animation_finished" from="AnimationTree" to="Damageable" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Hit" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_finished" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_tree_animation_started"]
+[connection signal="animation_started" from="AnimationTree" to="CharacterStateMachine/Attack" method="_on_animation_tree_animation_started"]
+[connection signal="timeout" from="CharacterStateMachine/Hit/Timer" to="CharacterStateMachine/Hit" method="_on_timer_timeout"]
+[connection signal="timeout" from="CharacterStateMachine/attack cooldown" to="CharacterStateMachine/Walk" method="_on_attack_cooldown_timeout"]
+[connection signal="navigation_finished" from="NavigationAgent2D" to="CharacterStateMachine/Walk" method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="timeout" from="Nav path maker" to="." method="_on_nav_path_maker_timeout"]
+[connection signal="body_entered" from="attack damage hitbox" to="attack damage hitbox" method="_on_body_entered"]
