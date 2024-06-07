@@ -7,7 +7,7 @@ const SPEED = 30.0
 @export var facing = 1
 
 var direction : Vector2 = Vector2.ZERO
-
+#@onready var healthbar = $ProgressBar
 @onready var state_machine : CharacterStateMachine = $CharacterStateMachine
 
 @export var target : Node2D
@@ -71,7 +71,9 @@ func change_animation():
 func update_facing():
 	if velocity.x > 0 && facing == -1:
 		scale.x = -1
+		#healthbar.scale.x = 1
 		facing = 1
 	elif velocity.x < 0 && facing == 1:
 		scale.x = -1
+		#healthbar.scale.x = -1
 		facing = -1

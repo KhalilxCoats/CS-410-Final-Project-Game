@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bsx3pnh5sigak"]
+[gd_scene load_steps=42 format=3 uid="uid://bsx3pnh5sigak"]
 
 [ext_resource type="PackedScene" uid="uid://4hocmloskhgs" path="res://Levels/GRIM_level_3_PIXELFANTASTYCAVE.tscn" id="1_vxj2i"]
 [ext_resource type="Texture2D" uid="uid://b2ium8i3ca750" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="2_21vv8"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d28cj44adlnpy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="4_n8dm8"]
 [ext_resource type="PackedScene" uid="uid://ca46g8lg5wftk" path="res://Menus/pause_menu.tscn" id="8_rrhin"]
 [ext_resource type="PackedScene" uid="uid://bxc4kmiipp8yb" path="res://Menus/death_menu.tscn" id="9_4gvbq"]
+[ext_resource type="PackedScene" uid="uid://dqbkyiqfhsl2v" path="res://Characters/Enemies/Flying Eye/Flying Eye.tscn" id="9_berkr"]
 [ext_resource type="PackedScene" uid="uid://c3ko8h04d4s4g" path="res://Characters/Enemies/Ghost Warrior(Walking)/ghost_warrior(walking).tscn" id="10_kdrxc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f51h8"]
@@ -340,6 +341,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="FadeLayer/AnimationPlayer" index="0"]
+visible = false
 offset_right = 1152.0
 offset_bottom = 641.0
 color = Color(0, 0, 0, 1)
@@ -351,6 +353,27 @@ visible = false
 
 [node name="DeathMenu" parent="CanvasLayer" index="1" instance=ExtResource("9_4gvbq")]
 visible = false
+
+[node name="Character_Health" type="ProgressBar" parent="CanvasLayer" index="2"]
+modulate = Color(0.0441187, 1, 0.269935, 1)
+z_index = -1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -34.0
+offset_right = 208.0
+offset_bottom = -7.0
+grow_vertical = 0
+show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer/Character_Health" index="0"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -28.0
+offset_right = 107.0
+offset_bottom = -5.0
+text = "Player Health:"
 
 [node name="KillBox" type="Area2D" parent="." index="9" groups=["KillBox"]]
 position = Vector2(2324, 508)
@@ -371,7 +394,11 @@ navigation_polygon = SubResource("NavigationPolygon_4cdp7")
 navigation_polygon = SubResource("NavigationPolygon_edp2r")
 navigation_layers = 2
 
-[node name="Ghost Warrior(Walking)" parent="." index="13" node_paths=PackedStringArray("target") instance=ExtResource("10_kdrxc")]
+[node name="Flying Eye" parent="." index="13" node_paths=PackedStringArray("target") instance=ExtResource("9_berkr")]
+position = Vector2(554, 262)
+target = NodePath("../playerCharacter")
+
+[node name="Ghost Warrior(Walking)" parent="." index="14" node_paths=PackedStringArray("target") instance=ExtResource("10_kdrxc")]
 position = Vector2(347, 385)
 target = NodePath("../playerCharacter")
 

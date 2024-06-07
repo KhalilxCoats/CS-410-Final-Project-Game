@@ -24331,6 +24331,50 @@ visible = false
 
 [node name="DeathMenu" parent="CanvasLayer" instance=ExtResource("5_kcluw")]
 
+[node name="Character_Health" type="ProgressBar" parent="CanvasLayer"]
+modulate = Color(0.0441187, 1, 0.269935, 1)
+z_index = -1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -34.0
+offset_right = 208.0
+offset_bottom = -7.0
+grow_vertical = 0
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer/Character_Health"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -28.0
+offset_right = 107.0
+offset_bottom = -5.0
+text = "Player Health:"
+
+[node name="Boss_health" type="ProgressBar" parent="CanvasLayer"]
+modulate = Color(0.996518, 0.0373258, 1.54018e-06, 1)
+z_index = -1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 53.0
+offset_right = 250.0
+offset_bottom = 80.0
+grow_horizontal = 2
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer/Boss_health"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = -30.0
+offset_right = 333.0
+offset_bottom = -7.0
+text = "Undead Executioner"
+
 [node name="Floor" type="TileMap" parent="."]
 position = Vector2(58, -194)
 tile_set = SubResource("TileSet_v14jc")
