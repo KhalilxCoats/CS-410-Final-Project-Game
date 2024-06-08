@@ -582,6 +582,7 @@ parameters/move/blend_position = 0.0
 
 [node name="Damageable" type="Node" parent="."]
 script = ExtResource("6_ifpj6")
+health = 10.0
 
 [node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("current_state", "character", "animation_tree")]
 script = ExtResource("7_ykp1n")
