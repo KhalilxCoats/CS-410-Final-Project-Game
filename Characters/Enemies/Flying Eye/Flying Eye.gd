@@ -14,7 +14,7 @@ var direction : Vector2 = Vector2.ZERO
 @export var nav :NavigationAgent2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+#var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	animation_tree.active = true
@@ -25,15 +25,25 @@ func _ready():
 
 func _physics_process(delta):
 	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
+	#if not is_on_floor():
+		#velocity.y += gravity * delta
+	
+	# Sets a speed limit to prevent overshoot
+	var distance = global_transform.origin.distance_to(nav.target_position)
+	var max_speed = SPEED
+	if distance < 10:
+		max_speed = 0
 	
 	var current_agent_position: Vector2 = global_position
 	var next_path_position = nav.get_next_path_position()
 	var new_velocity : Vector2 =  next_path_position - current_agent_position
 	new_velocity = new_velocity.normalized()
-	new_velocity *= SPEED
+	new_velocity *= min(SPEED, max_speed)
 	
+	# Makes sure velocity is zero when it should be to avoid float math problems
+	if(velocity.is_zero_approx()):
+		velocity.x = 0
+		velocity.y = 0
 	
 	var direction = to_local(nav.get_next_path_position())
 	if direction.x != 0 && state_machine.current_state.can_move:
@@ -41,8 +51,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	move_and_slide()
 	change_animation()
+	move_and_slide()
 	
 	if(state_machine.current_state.can_flip == true):
 		update_facing()
@@ -54,12 +64,14 @@ func actor_setup():
 func set_target():
 	if(target.global_position.x - global_position.x < 0):
 		var target_calc : Vector2 = target.global_position
-		target_calc.x +=20
+		target_calc.x += 20
 		nav.target_position = target_calc
+		nav.target_position.y -= 20
 	elif(target.global_position.x - global_position.x > 0):
 		var target_calc : Vector2 = target.global_position
 		target_calc.x -= 20
 		nav.target_position = target_calc
+		nav.target_position.y -= 20
 
 func _on_nav_path_maker_timeout():
 	set_target()
@@ -69,9 +81,11 @@ func change_animation():
 	animation_tree.set("parameters/move/blend_position",velocity.x)
 
 func update_facing():
-	if velocity.x > 0 && facing == -1:
+	if(target.global_position.x - global_position.x < 0 && facing == 1):
 		scale.x = -1
-		facing = 1
-	elif velocity.x < 0 && facing == 1:
-		scale.x = -1
+		#healthbar.scale.x = 1
 		facing = -1
+	elif(target.global_position.x - global_position.x > 0 && facing == -1):
+		scale.x = -1
+		#healthbar.scale.x = -1
+		facing = 1

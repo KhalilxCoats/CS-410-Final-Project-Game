@@ -1,14 +1,14 @@
 [gd_scene load_steps=41 format=3 uid="uid://c3ko8h04d4s4g"]
 
-[ext_resource type="Texture2D" uid="uid://dc3q7qifp5wma" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Idle.png" id="1_m3nop"]
+[ext_resource type="Texture2D" uid="uid://c3m03rsx6cff0" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Idle.png" id="1_m3nop"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/ghost_warrior(walking).gd" id="1_q0d2n"]
-[ext_resource type="Texture2D" uid="uid://cpeia2kkmmxxw" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Death.png" id="2_4rvxm"]
+[ext_resource type="Texture2D" uid="uid://c0hg360e6rud3" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Death.png" id="2_4rvxm"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Damageable.gd" id="2_23lm2"]
-[ext_resource type="Texture2D" uid="uid://dgl7l4jrsq2g" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Walk.png" id="3_x7qg8"]
+[ext_resource type="Texture2D" uid="uid://ccpxlupshmic5" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Walk.png" id="3_x7qg8"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="5_b6isw"]
-[ext_resource type="Texture2D" uid="uid://yvr2n55cg7no" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Take Hit.png" id="5_mfmot"]
+[ext_resource type="Texture2D" uid="uid://b2diw82nmrncm" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Take Hit.png" id="5_mfmot"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Walk.gd" id="6_uehsr"]
-[ext_resource type="Texture2D" uid="uid://dctck0doieowq" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/attack.png" id="6_x7yej"]
+[ext_resource type="Texture2D" uid="uid://cs6a82epi1ubj" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/attack.png" id="6_x7yej"]
 [ext_resource type="Script" path="res://Characters/HitState.gd" id="7_a34l3"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Dead.gd" id="8_0er3o"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Attack.gd" id="12_46eor"]
@@ -424,6 +424,7 @@ states/move/position = Vector2(546, 183)
 "states/take hit/node" = SubResource("AnimationNodeAnimation_q4oud")
 "states/take hit/position" = Vector2(670, 289)
 transitions = ["Start", "move", SubResource("AnimationNodeStateMachineTransition_va6jk"), "move", "take hit", SubResource("AnimationNodeStateMachineTransition_q7u6g"), "take hit", "move", SubResource("AnimationNodeStateMachineTransition_r14fb"), "move", "death", SubResource("AnimationNodeStateMachineTransition_stsx4"), "move", "attack", SubResource("AnimationNodeStateMachineTransition_7wi7v"), "attack", "move", SubResource("AnimationNodeStateMachineTransition_b3guf"), "attack", "take hit", SubResource("AnimationNodeStateMachineTransition_sykae"), "take hit", "death", SubResource("AnimationNodeStateMachineTransition_rsvwn"), "attack", "death", SubResource("AnimationNodeStateMachineTransition_axk01")]
+graph_offset = Vector2(-93, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axr86"]
 size = Vector2(50, 52)

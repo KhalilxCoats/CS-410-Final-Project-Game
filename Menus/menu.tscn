@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://cpqieb0xluenk"]
 
-[ext_resource type="FontFile" uid="uid://d12kh0rgf53tv" path="res://assets/joystix monospace.otf" id="1_am1gc"]
-[ext_resource type="Texture2D" uid="uid://d23n4mktqm60j" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
-[ext_resource type="Texture2D" uid="uid://cm45qp7naobae" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="3_d3fis"]
-[ext_resource type="Texture2D" uid="uid://caihc14qnx3td" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="4_r2qry"]
-[ext_resource type="Texture2D" uid="uid://be4viyg0lsn6o" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="5_cs31r"]
+[ext_resource type="FontFile" uid="uid://lq86lyyfjq0t" path="res://assets/joystix monospace.otf" id="1_am1gc"]
+[ext_resource type="Texture2D" uid="uid://cvoqcrslfxl6d" path="res://assets/Tiles/Background Cave/03 water.png" id="1_i8hxu"]
+[ext_resource type="Texture2D" uid="uid://bj20p1c8bpppy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="3_d3fis"]
+[ext_resource type="Texture2D" uid="uid://bibhu1fpboi53" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="4_r2qry"]
+[ext_resource type="Texture2D" uid="uid://brgev06qbb11i" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="5_cs31r"]
 
 [sub_resource type="Theme" id="Theme_mbkgx"]
 

@@ -16,7 +16,7 @@ func hit(damage : float):
 		if(state_machine.current_state.name != "Defend" && state_machine.current_state.name != "Dodge"):
 			health -= damage
 			emit_signal("on_hit", get_parent(), damage)
-		elif state_machine.current_state.name != "Defend":
+		elif state_machine.current_state.name == "Defend":
 			health -= damage / 5
 			emit_signal("on_hit", get_parent(), damage / 5)
 		elif state_machine.current_state.name == "Dodge":

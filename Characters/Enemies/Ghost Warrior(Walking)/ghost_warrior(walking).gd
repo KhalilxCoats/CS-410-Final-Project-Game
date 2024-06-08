@@ -69,11 +69,11 @@ func change_animation():
 	animation_tree.set("parameters/move/blend_position",velocity.x)
 
 func update_facing():
-	if velocity.x > 0 && facing == -1:
+	if(target.global_position.x - global_position.x < 0 && facing == 1):
 		scale.x = -1
 		#healthbar.scale.x = 1
-		facing = 1
-	elif velocity.x < 0 && facing == 1:
+		facing = -1
+	elif(target.global_position.x - global_position.x > 0 && facing == -1):
 		scale.x = -1
 		#healthbar.scale.x = -1
-		facing = -1
+		facing = 1

@@ -8,6 +8,7 @@ func _on_animation_tree_animation_finished(anim_name):
 	if(anim_name == "attack"):
 		next_state = walk_state
 		playback.travel("move")
+		$"../attack cooldown".start()
 
 
 
