@@ -15,7 +15,9 @@ func _ready():
 	damageable.connect("on_hit", on_damageable_hit)
 	
 func on_enter():
-	timer.start()
+	for child in get_parent().get_parent().get_children():
+		if child is Area2D:
+			child.monitoring = false
 
 func on_damageable_hit(node:Node,damage_amount:float):
 	if(damageable.health > 0 && state_machine.current_state.name != "Defend" && state_machine.current_state.name != "Transform"):

@@ -1,10 +1,10 @@
 [gd_scene load_steps=40 format=3 uid="uid://dqbkyiqfhsl2v"]
 
 [ext_resource type="Script" path="res://Characters/Enemies/Flying Eye/Flying Eye.gd" id="1_b8uqd"]
-[ext_resource type="Texture2D" uid="uid://gegcj6mpk44c" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="2_r5c6s"]
-[ext_resource type="Texture2D" uid="uid://b71m3sdlblxv7" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="3_lpmu0"]
-[ext_resource type="Texture2D" uid="uid://d0srxhv8mqya8" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_vfjln"]
-[ext_resource type="Texture2D" uid="uid://cspowwxwnohrr" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="5_871ox"]
+[ext_resource type="Texture2D" uid="uid://btjgy6jgei7s4" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="2_r5c6s"]
+[ext_resource type="Texture2D" uid="uid://bg3314c3t28dn" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Attack.png" id="3_lpmu0"]
+[ext_resource type="Texture2D" uid="uid://epd827rqq8tw" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Death.png" id="4_vfjln"]
+[ext_resource type="Texture2D" uid="uid://boo3e6wu1lbi7" path="res://assets/characters/npc/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" id="5_871ox"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Damageable.gd" id="6_ifpj6"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="7_ykp1n"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Walk.gd" id="8_54o7o"]
@@ -102,7 +102,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [-1]
+"values": [0]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -215,7 +215,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.498, 0.664),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [-1, 1, -1]
+"values": [0, 1, 0]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -315,7 +315,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [4]
 }
 
 [sub_resource type="Animation" id="Animation_dkbg6"]
@@ -550,9 +550,9 @@ graph_offset = Vector2(-84.8551, 0)
 radius = 8.0
 
 [node name="Flying Eye" type="CharacterBody2D" node_paths=PackedStringArray("nav")]
-z_index = -1
 collision_layer = 4
 motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_b8uqd")
 nav = NodePath("NavigationAgent2D")
 
@@ -573,6 +573,9 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
+libraries = {
+"": SubResource("AnimationLibrary_03m7o")
+}
 tree_root = SubResource("AnimationNodeStateMachine_ajdgk")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = 0.0
@@ -621,7 +624,6 @@ one_shot = true
 path_desired_distance = 5.0
 target_desired_distance = 5.0
 path_postprocessing = 1
-debug_enabled = true
 
 [node name="Nav path maker" type="Timer" parent="."]
 wait_time = 0.5
@@ -638,6 +640,7 @@ position = Vector2(18, 9)
 shape = SubResource("CircleShape2D_14qim")
 
 [node name="stateLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+visible = false
 offset_left = -34.0
 offset_top = -47.0
 offset_right = 80.0

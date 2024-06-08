@@ -58,7 +58,7 @@ func set_target():
 		nav.target_position = target_calc
 	elif(target.global_position.x - global_position.x > 0):
 		var target_calc : Vector2 = target.global_position
-		target_calc.x -= 50
+		target_calc.x -= 35
 		nav.target_position = target_calc
 
 func _on_nav_path_maker_timeout():
