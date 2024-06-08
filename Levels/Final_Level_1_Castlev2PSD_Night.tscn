@@ -23193,7 +23193,7 @@ size = Vector2(1522, 160)
 size = Vector2(2400, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muew0"]
-size = Vector2(59, 59)
+size = Vector2(59, 427.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q1c0i"]
 size = Vector2(138.5, 132.5)
@@ -23476,7 +23476,7 @@ remote_path = NodePath("../../Camera2D")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-29, 396)
+position = Vector2(-29, 211.75)
 shape = SubResource("RectangleShape2D_muew0")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
