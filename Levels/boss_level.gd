@@ -7,13 +7,23 @@ extends Level
 @onready var level = $"."
 @onready var Health = $CanvasLayer/Character_Health
 @onready var boss_Health = $CanvasLayer/Boss_health
+@onready var player = $playerCharacter
+@onready var portal_player = $PortalPlayer
 
 func _ready():
 	pause_menu.hide()
-	animation_player.play("Transition_in")
-	MenuMusic.play_boss_music()
+	player.hide()
 	Health.max_value = find_child("playerCharacter").find_child("Damageable").health
 	boss_Health.max_value = find_child("Ghost Warrior(Walking)").find_child("Damageable").health
+	animation_player.play("Transition_in")
+	MenuMusic.play_boss_music()
+	portal_player.play("Portal_Enter")
+	await portal_player.animation_finished
+	player.show()
+	portal_player.play("Portal_exit")
+	
+	
+	
 func _physics_process(delta):
 	update_health()
 	update_boss_health()
