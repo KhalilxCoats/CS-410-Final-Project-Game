@@ -1,14 +1,14 @@
 [gd_scene load_steps=41 format=3 uid="uid://c3ko8h04d4s4g"]
 
-[ext_resource type="Texture2D" uid="uid://bgc3nmconp27t" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Idle.png" id="1_m3nop"]
+[ext_resource type="Texture2D" uid="uid://dc3q7qifp5wma" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Idle.png" id="1_m3nop"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/ghost_warrior(walking).gd" id="1_q0d2n"]
-[ext_resource type="Texture2D" uid="uid://dhsb0yhe7kflr" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Death.png" id="2_4rvxm"]
+[ext_resource type="Texture2D" uid="uid://cpeia2kkmmxxw" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Death.png" id="2_4rvxm"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Damageable.gd" id="2_23lm2"]
-[ext_resource type="Texture2D" uid="uid://c48fyk2d8wxu1" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Walk.png" id="3_x7qg8"]
+[ext_resource type="Texture2D" uid="uid://dgl7l4jrsq2g" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Walk.png" id="3_x7qg8"]
 [ext_resource type="Script" path="res://Characters/CharacterStateMachine.gd" id="5_b6isw"]
-[ext_resource type="Texture2D" uid="uid://ci353i4nmhac1" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Take Hit.png" id="5_mfmot"]
+[ext_resource type="Texture2D" uid="uid://yvr2n55cg7no" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/Take Hit.png" id="5_mfmot"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Walk.gd" id="6_uehsr"]
-[ext_resource type="Texture2D" uid="uid://joxqpedu56k2" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/attack.png" id="6_x7yej"]
+[ext_resource type="Texture2D" uid="uid://dctck0doieowq" path="res://assets/characters/npc/enemies/Ghost Warrior 2/Ghost Warrior 2/Sprites/attack.png" id="6_x7yej"]
 [ext_resource type="Script" path="res://Characters/HitState.gd" id="7_a34l3"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Dead.gd" id="8_0er3o"]
 [ext_resource type="Script" path="res://Characters/Enemies/Ghost Warrior(Walking)/Attack.gd" id="12_46eor"]
@@ -450,6 +450,9 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
+libraries = {
+"": SubResource("AnimationLibrary_03m7o")
+}
 tree_root = SubResource("AnimationNodeStateMachine_ajdgk")
 anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = 0.0

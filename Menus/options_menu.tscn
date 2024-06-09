@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://dmukigmubv50o"]
 
-[ext_resource type="FontFile" uid="uid://y77fwrdavu6t" path="res://assets/joystix monospace.otf" id="1_6san2"]
+[ext_resource type="FontFile" uid="uid://d12kh0rgf53tv" path="res://assets/joystix monospace.otf" id="1_6san2"]
 [ext_resource type="Script" path="res://Menus/options_menu.gd" id="1_btul3"]
-[ext_resource type="Texture2D" uid="uid://b2ium8i3ca750" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="3_veg6g"]
-[ext_resource type="Texture2D" uid="uid://b2xhgq664tmt3" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="4_nxm7u"]
-[ext_resource type="Texture2D" uid="uid://d28cj44adlnpy" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="5_vv026"]
+[ext_resource type="Texture2D" uid="uid://cm45qp7naobae" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night1.png" id="3_veg6g"]
+[ext_resource type="Texture2D" uid="uid://caihc14qnx3td" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night2.png" id="4_nxm7u"]
+[ext_resource type="Texture2D" uid="uid://be4viyg0lsn6o" path="res://assets/Tiles/Szadi Tiles/PF_Castle_v2.0/background_night3.png" id="5_vv026"]
 
 [sub_resource type="Theme" id="Theme_5jvyb"]
 default_font = ExtResource("1_6san2")
